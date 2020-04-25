@@ -48,3 +48,25 @@ CREATE TABLE `product` (
 INSERT INTO `product` (`id`, `product_name`, `categories`, `sub_cat`, `brand`, `supplier`, `description`, `price`, `cover`, `qty`, `created_date`, `modified_date`) VALUES
 (10, 'item1', '13', '14', '1', '5', '', '49.22', 'sweater5.PNG', 5, '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (11, 'item2', '13', '12', '1', '5', '', '42.99', 'sweater.PNG', 2, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+
+CREATE TABLE `shipping` (
+  `shipping_id` int(11) NOT NULL,
+  `full_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `store_id` int(11) NOT NULL,
+  `phone` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `status` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `shipping_type` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `street_address` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `country` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `state` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `city` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `zipcode` int(11) NOT NULL,
+  `created_date` datetime NOT NULL,
+  `modified_date` datetime NOT NULL,
+  `shipping_time` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO `shipping` (`shipping_id`, `full_name`, `email`, `store_id`, `phone`, `status`, `shipping_type`, `street_address`, `country`, `state`, `city`, `zipcode`, `created_date`, `modified_date`, `shipping_time`) VALUES
+(1, 'John', 'john12@gmail.com', 0, '0198000000', 'register', 'home', 'no(241),aung thiri street,DAWBON TOWNSHIP', 'MYANMAR', 'YANGON', 'YANGON', 12312, '2020-02-09 15:50:11', '0000-00-00 00:00:00', '2020-02-09 15:50:11');
+
