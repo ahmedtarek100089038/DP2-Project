@@ -1,5 +1,8 @@
-<!DOCTYPE html>
+<?php
+if (isset($_GET["v-register"])) {
+?>
 
+<!DOCTYPE html>
 <html lang="en">
 
 	<!-- Description: SWE30010 DEVELOPMENT PROJECT 2-DESIGN, PLANNING AND MANAGEMENT  -->
@@ -128,31 +131,47 @@
 			<div class="card card-signin my-5">
 			  <div class="card-body">	
 				<h2 class="page-header text-center">Register</h2>
-				<form class="form-signin">
+				
+				<form class="form-signin" id="signup_form" onsubmit="return false">
 				
 				<div class="form-label-group">
-					<label for="inputFirstName">First Name</label>
-					<input type="text" id="inputFirstName" class="form-control" placeholder="First Name" required autofocus>
+					<label for="f_name">First Name</label>
+					<input type="text" id="f_name" name="f_name" class="form-control" placeholder="First Name" required autofocus>
 				</div>
 				  
 				<div class="form-label-group">
-					<label for="inputLastName">Last Name</label>
-					<input type="text" id="inputLastName" class="form-control" placeholder="Last Name" required autofocus>
+					<label for="f_name">Last Name</label>
+					<input type="text" id="l_name" name="l_name" class="form-control" placeholder="Last Name" required autofocus>
 				</div>
 				
 				<div class="form-label-group">
-					<label for="inputEmail">Email Address</label>
-					<input type="text" id="inputEmail" class="form-control" placeholder="Email Address" required autofocus>
+					<label for="email">Email Address</label>
+					<input type="text" id="email" name="email" class="form-control" placeholder="Email Address" required autofocus>
 				</div>
 				
 				<div class="form-label-group">
-					<label for="inputPassword">Password</label>
-					<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+					<label for="password">Password</label>
+					<input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
 				</div>
 				
 				<div class="form-label-group">
-					<label for="inputConfirmPassword">Confirm Password</label>
-					<input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirm Password" required>
+					<label for="repassword">Confirm Password</label>
+					<input type="password" id="repassword" name="repassword" class="form-control" placeholder="Confirm Password" required>
+				</div>
+				
+				<div class="form-label-group">
+					<label for="mobile">Mobile</label>
+					<input type="text" id="mobile" name="mobile" class="form-control" placeholder="Phone" required>
+				</div>
+				
+				<div class="form-label-group">
+					<label for="address1">Address Line 1</label>
+					<input type="text" id="address1" name="address1" class="form-control" placeholder="Address Line 1" required>
+				</div>
+				
+				<div class="form-label-group">
+					<label for="address2">Address Line 2</label>
+					<input type="text" id="address2" name="address2" class="form-control" placeholder="Address Line 1" required>
 				</div>
 				
 				<div class="form-label-group">
@@ -272,3 +291,6 @@
   </script>
 </body>
 </html>
+<?php
+}
+?>

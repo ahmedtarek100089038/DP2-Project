@@ -1,3 +1,15 @@
+<?php
+if (isset($_SESSION["uid"])) {
+	header("location:profile.php");
+}
+if (isset($_POST("login_user_with_product"])) {
+	$product_list = $_POST["product_id"];
+	$json_e = json_encode($product_list);
+	setcookie("product_list",$json_e, strtotime("+1 day"),"/","","",TRUE);
+	
+}
+?>
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -125,15 +137,17 @@
 			<div class="card card-signin my-5">
 			  <div class="card-body">
 				<h2 class="page-header text-center">Login</h2>
-				<form class="form-signin">
+				
+				
+				<form onsubmit="return false" id="login" class="form-signin">
 				  <div class="form-label-group">
-				  <label for="inputEmail">Email address</label>
-					<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+				  <label for="email">Email address</label>
+					<input type="email" name="email" id="email" class="form-control" placeholder="Email address" required autofocus>
 				  </div>
 
 				  <div class="form-label-group">
-					<label for="inputPassword">Password</label>
-					<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+					<label for="password">Password</label>
+					<input type="password" id="password" id="password" class="form-control" placeholder="Password" required>
 				  </div>
 				  <br/>
 				  <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
