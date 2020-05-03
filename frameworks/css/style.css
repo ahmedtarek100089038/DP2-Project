@@ -472,10 +472,37 @@ display: block;
 }
 
 
-  
-  
-  
-  
+/*--------------------PopUp(START)--------------------*/
+
+#popUpMain{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+	
+#popup{
+	width: 100%;
+	height: 100%;
+	top: 30%;
+	background-size: cover;
+	position: absolute;
+	text-align: center;
+}
+	
+.submitId{
+	background-color: #212529;
+	border:none;
+	font-size: 0.8rem;
+	padding: 0.6rem 1rem;
+	color: white; 
+}
+.new{
+	width: 10%;
+	height: 30%;
+}
+
+/*--------------------PopUp(END)--------------------*/
   
   
   
