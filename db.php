@@ -2,10 +2,10 @@
 
 require "config/constants.php";
 
-$servername = HOST;
-$username = USER;
-$password = PASSWORD;
-$db = DATABASE_NAME;
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "craftpophouse_db";
 
 //Create Connection
 $con = mysql_connect($servername, $username, $password, $db);

@@ -2,7 +2,7 @@
 if (isset($_SESSION["uid"])) {
 	header("location:profile.php");
 }
-if (isset($_POST("login_user_with_product"])) {
+if (isset($_POST(["login_user_with_product"])) {
 	$product_list = $_POST["product_id"];
 	$json_e = json_encode($product_list);
 	setcookie("product_list",$json_e, strtotime("+1 day"),"/","","",TRUE);
