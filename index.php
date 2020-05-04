@@ -3,7 +3,7 @@
 <html lang="en">
 
 	<!-- Description: SWE30010 DEVELOPMENT PROJECT 2-DESIGN, PLANNING AND MANAGEMENT  -->
-	<!-- Page: Homepage (index.html) -->
+	<!-- Page: Homepage (index.php) -->
 	<!-- Author: DP2 -->
 	<!-- Date: 25/4/2020 -->
 	
@@ -18,31 +18,26 @@
 	
 	<!--Boostrap-->
 	<link href="frameworks/css/bootstrap.min.css" rel="stylesheet"/>
-	
     <link href="frameworks/css/style.css" rel="stylesheet" />
-	
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
-	
 	<script src="frameworks/js/scrollbutton.js"></script>
-	
 	<link rel="icon" href="images/logo.png"/>
 
 </head>
 <body>
 	<div onload="myFunction()">
-	<div id="loading"></div>
-	<div id="popUpMain" style="display: none;">
-
-		<div id="popup">
-			<img class="new" src="images/welcome.png" alt="new arrival">
-			<br>
-			<button class="submitId btn btn-danger"> Close </button>
+		<div id="loading"></div>
+		<div id="popUpMain" style="display: none;">
+			<div id="popup">
+				<img class="new" src="images/welcome.png" alt="new arrival">
+				<br>
+				<button class="submitId btn btn-danger"> Close </button>
+			</div>
 		</div>
-	</div>
 
-	<script src="frameworks/js/jquery.min.js"></script>
+		<script src="frameworks/js/jquery.min.js"></script>
 	
-	<script>
+		<script>
 	var preloader = document.getElementById("loading");
 		function myFunction(){
 			preloader.style.display = 'none';
@@ -57,96 +52,20 @@
 		$('#popUpMain').css('display','none');
 	});
 
-	</script>
-</div>
-	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
-		
-		<a href="index.html"><img class="navbar-brand" src="images/logo.png" style="max-width: 50%;" alt="logo" /></a>
-		
-		<button class="navbar-toggler"  data-toggle="collapse" data-target="#collapse_navbar">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		
-		<div class="collapse navbar-collapse" id="collapse_navbar">
-			<ul class="navbar-nav ml-auto">  
-				<li class="nav-item active">
-					<a class="nav-link" href="index.html"><i class="fa fa-home" style="font-size: 20px;"></i></a>
-				</li>
-				<li class="navbar-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_categories" href="#">
-					Categories
-					<span class="carrot"></span>
-					</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown_categories">
-						<a class="dropdown-item" href="product1.html">Clothing</a>
-							<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="product2.html">Jewellery</a>
-							<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="product3.html">Soft Toys</a>
-							<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="product4.html">Handmade Items</a>
-							<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="product5.html">Room Decor</a>
-							<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="product6.html">Vintage Goods</a>
-					</div>
-				</li>
-				<li class="navbar-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_about" href="#">
-					About
-					<span class="carrot"></span>
-					</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown_categories">
-						<a class="dropdown-item" href="about.html">About Us</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="developers.html">Developers</a>
-					</div>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="contactus.php">Contact Us</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="faq.html">FAQ</a>
-				</li>
-				<li class="navbar-item dropdown">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_support" href="#">
-					Support
-					<span class="carrot"></span>
-					</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown_support">
-						<a class="dropdown-item" href="termsandconditions.html">Terms and Conditions</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="feedback.html">Feedback</a>
-					</div>
-				</li>	
-			</ul>
-			
-			<div class="cart ml-auto">
-				<a href="cart.html"><span class="fa fa-shopping-cart my-cart-icon"></span></a>
-			</div>
-			
-			<ul class="navbar-nav ml-auto"> 
-				<li class="navbar-item dropdown active">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_about" href="#">
-						<i class="fa fa-user" aria-hidden="true"></i>   Register/Login
-						<span class="carrot"></span>
-					</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown_categories">
-						<a class="dropdown-item " href="register.html">Register</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="login.html">Login</a>
-					</div>
-				</li>	
-			</ul>	
-		</div>
-		
-	</nav>
-	
-	<div id="scroll-up">
-		<button onclick="topFunction()" id="scroll-btn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+		</script>
 	</div>
 
+	<!-- PHP to launch navigation bar -->
+		<?php	
+			include_once'nav.php';
+		?>
+		
+	<!-- PHP to launch Scroll Up -->
+		<?php	
+			include_once'scrollup.php';
+		?>
 	
+
 	<div id="carousel" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
 			<li data-target="#carousel" data-slide-to="0" class="active"></li>
@@ -159,25 +78,25 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-			  <img class="d-block w-100" src="images/slideshow1.png" alt="First slide">
+				<img class="d-block w-100" src="images/slideshow1.png" alt="First slide">
 			</div>
 			<div class="carousel-item">
-			  <img class="d-block w-100" src="images/slideshow2.png" alt="Second slide">
+				<img class="d-block w-100" src="images/slideshow2.png" alt="Second slide">
 			</div>
 			<div class="carousel-item">
-			  <img class="d-block w-100" src="images/slideshow3.png" alt="Third slide">
+				<img class="d-block w-100" src="images/slideshow3.png" alt="Third slide">
 			</div>
 			<div class="carousel-item">
-			  <img class="d-block w-100" src="images/slideshow4.png" alt="Fourth slide">
+				<img class="d-block w-100" src="images/slideshow4.png" alt="Fourth slide">
 			</div>
 			<div class="carousel-item">
-			  <img class="d-block w-100" src="images/slideshow5.png" alt="Fifth slide">
+				<img class="d-block w-100" src="images/slideshow5.png" alt="Fifth slide">
 			</div>
 			<div class="carousel-item">
-			  <img class="d-block w-100" src="images/slideshow6.png" alt="Sixth slide">
+				<img class="d-block w-100" src="images/slideshow6.png" alt="Sixth slide">
 			</div>
 			<div class="carousel-item">
-			  <img class="d-block w-100" src="images/slideshow7.png" alt="Seventh slide">
+				<img class="d-block w-100" src="images/slideshow7.png" alt="Seventh slide">
 			</div>
 		</div>
 		<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -215,12 +134,13 @@
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
 						
 					</div>
 				</div>
 			</div>
+			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">	
 					<img class="card-img-top"  src="images/clothes18.jpg" alt="">
@@ -244,12 +164,13 @@
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
 						
 					</div>
 				</div>
 			</div>
+			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card  text-center">
 					<img class="card-img-top"  src="images/clothes14.jpg" alt="">
@@ -273,12 +194,13 @@
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
 						
 					</div>
 				</div>
 			</div>
+			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
 					<img class="card-img-top"  src="images/clothes3.jpg" alt="">
@@ -302,7 +224,7 @@
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
 						
 					</div>
@@ -320,27 +242,27 @@
 						<h4 class="card-title">Gold Necklaces</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Pure Gold Necklaces & Earring</h6>
 						<ul class="list">
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star last"></i></li>
-						  <li><p> 43 Sold</p></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star last"></i></li>
+							<li><p> 43 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 2000.00</label><em class="item_price">RM 1899.00</em></p>
+							<p><label>RM 2000.00</label><em class="item_price">RM 1899.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
-						
 					</div>
 				</div>
 			</div>
+			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card  text-center">
 					<img class="card-img-top"  src="images/jewellery11.jpg" alt="">
@@ -349,12 +271,12 @@
 						<h4 class="card-title">Silver Ring</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Genuine Silver Large Ring</h6>
 						<ul class="list">
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><p> 275 Sold</p></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><p> 275 Sold</p></li>
 						</ul>
 						<div class="mid-2">
 							<p ><label>RM 600.00</label><em class="item_price">RM 250.00</em></p>
@@ -364,12 +286,12 @@
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
-						
 					</div>
 				</div>
 			</div>
+			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
 					<img class="card-img-top"  src="images/jewellery10.jpg" alt="">
@@ -378,12 +300,12 @@
 						<h4 class="card-title">Diamond Necklaces</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Diamond Necklaces with gift</h6>
 						<ul class="list">
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><p> 137 Sold</p></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><p> 137 Sold</p></li>
 						</ul>
 						<div class="mid-2">
 							<p ><label>RM 5500.00</label><em class="item_price">RM 4500.00</em></p>
@@ -393,7 +315,7 @@
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
 					</div>
 				</div>
@@ -407,12 +329,12 @@
 						<h4 class="card-title">Gold Necklaces</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Gold Necklaces with Gift Box</h6>
 						<ul class="list">
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star last"></i></li>
-						  <li><p> 50 Sold</p></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star last"></i></li>
+							<li><p> 50 Sold</p></li>
 						</ul>
 						<div class="mid-2">
 							<p ><label>RM 3758.00</label><em class="item_price">RM 3125.00</em></p>
@@ -422,16 +344,15 @@
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
-						
 					</div>
 				</div>
 			</div>
+			
 		</div>
 		<!-- /.row -->
 	</div>
-
 
 	<!-- subscribe_area part start-->
     <section class="subscribe_area section_padding">
@@ -465,27 +386,27 @@
 						<h4 class="card-title">Feather Crafts</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Home Decoration Feather Crafts</h6>
 						<ul class="list">
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><p> 302 Sold</p></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><p> 302 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 50.00</label><em class="item_price">RM 20.00</em></p>
+							<p><label>RM 50.00</label><em class="item_price">RM 20.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
-						
 					</div>
 				</div>
 			</div>
+			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
 					<img class="card-img-top"  src="images/decor0.jpg" alt="">
@@ -494,27 +415,27 @@
 						<h4 class="card-title">Wine bottle craft</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Wine bottle craft decoration</h6>
 						<ul class="list">
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><p> 86 Sold</p></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><p> 86 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 80.00</label><em class="item_price">RM 40.00</em></p>
+							<p><label>RM 80.00</label><em class="item_price">RM 40.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
-						
 					</div>
 				</div>
 			</div>
+			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card  text-center">
 					<img class="card-img-top"  src="images/decor11.jpg" alt="">
@@ -523,15 +444,15 @@
 						<h4 class="card-title">Tulle Roll</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Tulle Roll 25Yard </h6>
 						<ul class="list">
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star last"></i></li>
-						  <li><i class="fa fa-star last"></i></li>
-						  <li><p> 31 Sold</p></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star last"></i></li>
+							<li><i class="fa fa-star last"></i></li>
+							<li><p> 31 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 30.00</label><em class="item_price">RM 10.00</em></p>
+							<p><label>RM 30.00</label><em class="item_price">RM 10.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
@@ -539,12 +460,12 @@
 						</div>
 						
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
-						
 					</div>
 				</div>
 			</div>
+			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
 					<img class="card-img-top"  src="images/homemade.jpg" alt="">
@@ -553,15 +474,15 @@
 						<h4 class="card-title">LED Decoration</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Homemade LED Decoration</h6>
 						<ul class="list">
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><p> 212 Sold</p></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><p> 212 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 100.00</label><em class="item_price">RM 54.00</em></p>
+							<p><label>RM 100.00</label><em class="item_price">RM 54.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
@@ -569,9 +490,8 @@
 						</div>
 						
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
-						
 					</div>
 				</div>
 			</div>
@@ -579,7 +499,6 @@
 		<!-- /.row -->
 		
 		<div class="row">
-			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
 					<img class="card-img-top"  src="images/vintage8.jpg" alt="">
@@ -588,15 +507,15 @@
 						<h4 class="card-title">Vintage Watch</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Vintage Watch</h6>
 						<ul class="list">
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star last"></i></li>
-						  <li><p> 94 Sold</p></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star last"></i></li>
+							<li><p> 94 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 1832.00</label><em class="item_price">RM 970.00</em></p>
+							<p><label>RM 1832.00</label><em class="item_price">RM 970.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
@@ -604,13 +523,11 @@
 						</div>
 						
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
-						
 					</div>
 				</div>
 			</div>
-			
 			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
@@ -620,27 +537,27 @@
 						<h4 class="card-title">Vintage Camera</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Vintage Camera - High Quality</h6>
 						<ul class="list">
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><p> 49 Sold</p></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><p> 49 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 1200.00</label><em class="item_price">RM 780.00</em></p>
+							<p><label>RM 1200.00</label><em class="item_price">RM 780.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
-						
 					</div>
 				</div>
 			</div>
+			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card  text-center">
 					<img class="card-img-top"  src="images/vintage5.jpg" alt="">
@@ -649,15 +566,15 @@
 						<h4 class="card-title">Vintage Gramophone</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Vintage Gramophone</h6>
 						<ul class="list">
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><i class="fa fa-star"></i></li>
-						  <li><p> 10 Sold</p></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><p> 10 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 600.00</label><em class="item_price">RM 450.00</em></p>
+							<p><label>RM 600.00</label><em class="item_price">RM 450.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
@@ -665,9 +582,8 @@
 						</div>
 						
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
-						
 					</div>
 				</div>
 			</div>
@@ -688,7 +604,7 @@
 						  <li><p> 28 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 199.00</label><em class="item_price">RM 99.00</em></p>
+							<p><label>RM 199.00</label><em class="item_price">RM 99.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
@@ -696,9 +612,8 @@
 						</div>
 						
 						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.html">View Product</a>
+							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
 						</div>
-						
 					</div>
 				</div>
 			</div>
@@ -707,60 +622,16 @@
 		<!-- /.row -->
 	</div>
 	
-	<footer class="py-5 bg-dark">
-		<div class="footerwrap">	<!-- Footer Navigation -->
-			<div class="footer_logo">	<!-- Footer Logo (navigate to homepage) -->
-				<a href="index.html"><img src="images/logo.png" alt="Logo"/></a>
-			</div>
-			<div class="col-lg-4 col-md-6 column one">	<!-- column 1 -->
-				<ul>
-					<li><p class="strong"> Categories </p></li>
-					<li><a href="product1.html"> Clothing </a></li>
-					<li><a href="product2.html"> Jewellery </a></li>
-					<li><a href="product3.html"> Soft Toys </a></li>
-					<li><a href="product4.html"> Homemade Items </a></li>
-					<li><a href="product5.html"> Room Decor </a></li>
-					<li><a href="product6.html"> Vintage Goods </a></li>
-				</ul>
-			</div>
-			
-			<div class="col-lg-4 col-md-6 column two">	<!-- column 2 -->
-				<ul>
-					<li><p class="strong"> About </p></li>
-					<li><a href="about.html"> About Us </a></li>
-					<li><a href="developers.html"> Developers </a></li>
-				</ul>
-			</div>
-			
-			<div class="col-lg-4 col-md-6 column two">	<!-- column 3 -->
-				<ul>
-					<li><p class="strong"> Support </p></li>
-					<li><a href="termsandconditions.html"> Terms & Conditions </a></li>
-					<li><a href="faq.html"> FAQ </a></li>
-					<li><a href="feedback.html"> Feedback </a></li>
-				</ul>
-			</div>
-			
-			<div class="col-lg-4 col-md-6 footer-newsletter">
-            <h5>Join Our Newsletter</h5>
-            <form action="" method="post">
-             <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-		</div>
-		
-		<div class="bottom">	<!-- Page Information -->
-			<p> &copy; Copyright <strong><span>Craft Pop House</span></strong>. All Rights Reserved <br/> Last Updated: 04/05/2020</p>
-		</div>
-	</footer>
+	<!-- PHP to launch Footer -->
+		<?php	
+			include_once'footer.php';
+		?>
 	
-		
 	<!-- jQuery – required for Bootstrap's JavaScript plugins) --> 
     <script src="frameworks/js/jquery.min.js"></script>
 	<!--All bootstrap plug in file -->
 	<script src="frameworks/js/bootstrap.min.js"></script> 
 	<script type='text/javascript' src="frameworks/js/jquery.shop.js"></script>
-
 	
 </body>
 </html>
