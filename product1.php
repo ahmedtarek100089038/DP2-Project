@@ -38,7 +38,7 @@
 	
 	<div class="container">	
 	
-		<h1>Clothes Category</h1>
+		<h1>Clothing Category</h1>
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item">
 				<a href="index.php">Home</a>

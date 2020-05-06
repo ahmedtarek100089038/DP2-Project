@@ -341,7 +341,7 @@ class Products
 
 
 if (isset($_POST['GET_PRODUCT'])) {
-	if (isset($_SESSION['admin_id'])) {
+	if (isset($_SESSION['seller_id'])) {
 		$p = new Products();
 		echo json_encode($p->getProducts());
 		exit();
@@ -447,7 +447,7 @@ if (isset($_POST['GET_BRAND'])) {
 }
 
 if (isset($_POST['add_category'])) {
-	if (isset($_SESSION['admin_id'])) {
+	if (isset($_SESSION['seller_id'])) {
 		$cat_title = $_POST['cat_title'];
 		if (!empty($cat_title)) {
 			$p = new Products();
@@ -469,7 +469,7 @@ if (isset($_POST['GET_CATEGORIES'])) {
 
 if (isset($_POST['DELETE_PRODUCT'])) {
 	$p = new Products();
-	if (isset($_SESSION['admin_id'])) {
+	if (isset($_SESSION['seller_id'])) {
 		if(!empty($_POST['pid'])){
 			$pid = $_POST['pid'];
 			echo json_encode($p->deleteProduct($pid));
@@ -509,7 +509,7 @@ if (isset($_POST['edit_category'])) {
 }
 
 if (isset($_POST['add_brand'])) {
-	if (isset($_SESSION['admin_id'])) {
+	if (isset($_SESSION['seller_id'])) {
 		$brand_title = $_POST['brand_title'];
 		if (!empty($brand_title)) {
 			$p = new Products();

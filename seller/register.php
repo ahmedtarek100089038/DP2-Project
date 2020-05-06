@@ -5,9 +5,9 @@
 <div class="container">
 	<div class="row justify-content-center" style="margin:100px 0;">
 		<div class="col-md-4">
-			<h4>Admin Register</h4>
+			<h4>Seller Register</h4>
 			<p class="message"></p>
-			<form id="admin-register-form">
+			<form id="seller-register-form">
 			  <div class="form-group">
 			    <label for="name">Name</label>
 			    <input type="text" class="form-control" name="name" id="name" placeholder="Enter Name">
@@ -24,7 +24,7 @@
 			    <label for="cpassword">Confirm Password</label>
 			    <input type="password" class="form-control" name="cpassword" id="cpassword" placeholder="Password">
 			  </div>
-			  <input type="hidden" name="admin_register" value="1">
+			  <input type="hidden" name="seller_register" value="1">
 			  <button type="button" class="btn btn-primary register-btn">Register</button>
 			</form>
 		</div>

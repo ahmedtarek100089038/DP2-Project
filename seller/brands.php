@@ -9,10 +9,10 @@
 
       <div class="row">
       	<div class="col-10">
-      		<h2>Manage Category</h2>
+      		<h2>Manage Brand</h2>
       	</div>
       	<div class="col-2">
-      		<a href="#" data-toggle="modal" data-target="#add_category_modal" class="btn btn-primary btn-sm">Add Category</a>
+      		<a href="#" data-toggle="modal" data-target="#add_brand_modal" class="btn btn-primary btn-sm">Add Brand</a>
       	</div>
       </div>
       
@@ -25,14 +25,14 @@
               <th>Action</th>
             </tr>
           </thead>
-          <tbody id="category_list">
+          <tbody id="brand_list">
             <!-- <tr>
-              <td>Category1</td>
-              <td>Category2</td>
-              <td>Category3</td>
-              <td>Category4</td>
-              <td>Category5</td>
-              <td>Category6</td>
+              <td>Brand1</td>
+              <td>Brand2</td>
+              <td>Brand3</td>
+              <td>Brand4</td>
+              <td>Brand5/td>
+              <td>Brand6</td>
               <td><a class="btn btn-sm btn-info"></a><a class="btn btn-sm btn-danger">Delete</a></td>
             </tr> -->
           </tbody>
@@ -44,28 +44,28 @@
 
 
 
-<!-- Add category Modal -->
-<div class="modal fade" id="add_category_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Add brand Modal -->
+<div class="modal fade" id="add_brand_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add New Brand</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form id="add-category-form" enctype="multipart/form-data">
+        <form id="add-brand-form" enctype="multipart/form-data">
         	<div class="row">
         		<div class="col-12">
         			<div class="form-group">
-		        		<label>Category Name</label>
-		        		<input type="text" name="cat_title" class="form-control" placeholder="Enter Brand Name">
+		        		<label>Brand Name</label>
+		        		<input type="text" name="brand_title" class="form-control" placeholder="Enter Brand Name">
 		        	</div>
         		</div>
-        		<input type="hidden" name="add_category" value="1">
+        		<input type="hidden" name="add_brand" value="1">
         		<div class="col-12">
-        			<button type="button" class="btn btn-primary add-category">Add Category</button>
+        			<button type="button" class="btn btn-primary add-brand">Add Brand</button>
         		</div>
         	</div>
         	
@@ -76,29 +76,29 @@
 </div>
 <!-- Modal -->
 
-<!--Edit category Modal -->
-<div class="modal fade" id="edit_category_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Edit brand Modal -->
+<div class="modal fade" id="edit_brand_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edit Category</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add Brand</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form id="edit-category-form" enctype="multipart/form-data">
+        <form id="edit-brand-form" enctype="multipart/form-data">
           <div class="row">
             <div class="col-12">
-              <input type="hidden" name="cat_id">
+              <input type="hidden" name="brand_id">
               <div class="form-group">
-                <label>Category Name</label>
-                <input type="text" name="e_cat_title" class="form-control" placeholder="Enter Brand Name">
+                <label>Brand Name</label>
+                <input type="text" name="e_brand_title" class="form-control" placeholder="Enter Brand Name">
               </div>
             </div>
-            <input type="hidden" name="edit_category" value="1">
+            <input type="hidden" name="edit_brand" value="1">
             <div class="col-12">
-              <button type="button" class="btn btn-primary edit-category-btn">Update Category</button>
+              <button type="button" class="btn btn-primary edit-brand-btn">Update Brand</button>
             </div>
           </div>
           
@@ -113,4 +113,4 @@
 
 
 
-<script type="text/javascript" src="./js/categories.js"></script>
+<script type="text/javascript" src="./js/brands.js"></script>

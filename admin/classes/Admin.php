@@ -26,6 +26,42 @@ class Admin
 		}
 		return ['status'=> 303, 'message'=> 'No Admin'];
 	}
+	
+	
+
+	public function deleteAdmin($bid = null){
+		if ($bid != null) {
+			$q = $this->con->query("DELETE FROM admin WHERE id = '$bid'");
+			if ($q) {
+				return ['status'=> 202, 'message'=> 'Admin removed'];
+			}else{
+				return ['status'=> 202, 'message'=> 'Failed to run query'];
+			}
+			
+		}else{
+			return ['status'=> 303, 'message'=>'Invalid admin id'];
+		}
+
+	}
+	
+	
+	
+
+	public function updateAdmin($post = null){
+		extract($post);
+		if (!empty($id) && !empty($e_admin_title)) {
+			$q = $this->con->query("UPDATE admin SET is_active = '$e_admin_title' WHERE id = '$id'");
+			if ($q) {
+				return ['status'=> 202, 'message'=> 'Admin Approval updated'];
+			}else{
+				return ['status'=> 202, 'message'=> 'Failed to run query'];
+			}
+			
+		}else{
+			return ['status'=> 303, 'message'=>'Invalid admin id'];
+		}
+
+	}
 
 
 }
@@ -37,5 +73,30 @@ if (isset($_POST['GET_ADMIN'])) {
 	exit();
 	
 }
+
+
+if (isset($_POST['DELETE_ADMIN'])) {
+	if (!empty($_POST['bid'])) {
+		$p = new Admin();
+		echo json_encode($p->deleteAdmin($_POST['bid']));
+		exit();
+	}else{
+		echo json_encode(['status'=> 303, 'message'=> 'Invalid details']);
+		exit();
+	}
+}
+
+if (isset($_POST['edit_admin'])) {
+	if (!empty($_POST['id'])) {
+		$p = new Admin();
+		echo json_encode($p->updateAdmin($_POST));
+		exit();
+	}else{
+		echo json_encode(['status'=> 303, 'message'=> 'Invalid details']);
+		exit();
+	}
+}
+
+
 
 ?>

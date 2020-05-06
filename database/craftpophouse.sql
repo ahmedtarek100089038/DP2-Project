@@ -25,13 +25,27 @@ Create TABLE `admin` (
 	`is_active` enum('0', '1') NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `admin`
+-- Table structure for table `seller`
 --
 
-Insert INTO `admin` (`id`, `name`, `email`, `password`, `is_active`) VALUES
-(1, 'Lee', 'jetixljj335@gmail.com', '1234567890abc', '1'),
-(2, 'Ahmed', 'ahmed@gmail.com', '1234567890abcd', '0'); 
+Create TABLE `seller` (
+	`id` int(11) NOT NULL,
+	`name` varchar(50) NOT NULL,
+	`email` varchar(100) NOT NULL,
+	`password` varchar(255) NOT NULL,
+	`is_active` enum('0', '1') NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `seller`
+--
+
+Insert INTO `seller` (`id`, `name`, `email`, `password`, `is_active`) VALUES
+(1, 'Lu', 'lu@gmail.com', '1234567890abc', '1'),
+(2, 'Simon', 'simon@gmail.com', '1234567890abcd', '0'); 
 
 -- --------------------------------------------------------
 
@@ -180,6 +194,13 @@ ALTER TABLE `admin`
 	ADD UNIQUE KEY `email` (`email`);
 	
 --
+-- Indexes for table `seller`
+--
+ALTER TABLE `seller`
+	ADD PRIMARY KEY (`id`),
+	ADD UNIQUE KEY `email` (`email`);
+	
+--
 -- Indexes for table `brands`
 --
 ALTER TABLE `brands`
@@ -225,6 +246,12 @@ ALTER TABLE `user_info`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `seller`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
   
 --
