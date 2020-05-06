@@ -127,7 +127,7 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`order_id`, `user_id`, `product_id`, `qty`, `trx_id`, `p_status`) VALUES
 (1, 1, 1, 1, '9L434522M7706801A', 'Completed'),
 (2, 1, 3, 1, '9L434523M7706801A', 'Completed'),
-(3, 1, 3, 1, '8L434523M7706801B', 'Completed')
+(3, 1, 3, 1, '8L434523M7706801B', 'Completed'),
 (4, 1, 4, 2, '7L434523M7706801A', 'Completed');
 
 -- --------------------------------------------------------
