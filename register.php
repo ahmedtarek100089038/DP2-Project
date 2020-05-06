@@ -98,7 +98,7 @@
 					</div>
 				
 					<br/>
-					<button onclick="window.location.href='index.php'" id="btn" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
+					<button onclick="window.location.href='login.php'" id="btn" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
 					
 	
 				  	
