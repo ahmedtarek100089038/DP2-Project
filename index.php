@@ -364,7 +364,7 @@
                         <h2>Subscribe to get Updated
                             with new offers</h2>
                         <form class="input-group">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="johnlee@gmail.com" required autofocus
+                            <input type="email" class="form-control" name="email" id="email" placeholder="johnlee@gmail.com" 
                                 aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button type="submit" class="input-group-text btn_2" id="basic-addon2">subscribe now</button>
