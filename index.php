@@ -359,17 +359,17 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
-                    <div class="subscribe_area_text text-center">
+                    <div class="subscribe_area_text text-center" method="post" action="subscribe-to-email.php">
                         <h5>Join Our Newsletter</h5>
                         <h2>Subscribe to get Updated
                             with new offers</h2>
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="enter email address"
+                        <form class="input-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="johnlee@gmail.com" required autofocus
                                 aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <a href="#" class="input-group-text btn_2" id="basic-addon2">subscribe now</a>
-                            </div>
-                        </div>
+                                <button type="submit" class="input-group-text btn_2" id="basic-addon2">subscribe now</button>
+							</div>
+                        </form>
                     </div>
                 </div>
             </div>
