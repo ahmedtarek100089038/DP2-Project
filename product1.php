@@ -38,7 +38,7 @@
 	
 	<div class="container">	
 	
-		<h1>Clothes Category</h1>
+		<h1>Clothing Category</h1>
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item">
 				<a href="index.php">Home</a>
@@ -47,125 +47,6 @@
 			<li class="breadcrumb-item active">Clothes</li>
 		</ol>
 	
-		<div class="row">
-			<div class="col-lg-3 col-sm-6 mb-3">
-				<div class="card text-center">
-					<img class="card-img-top"  src="images/clothes1.jpg" alt="">
-					
-					<div class="card-body">
-						<h4 class="card-title">Adidas  HODIE</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Men Adidas  HODIE</h6>
-						<ul class="list">
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><p> 105 Sold</p></li>
-						</ul>
-						<div class="mid-2">
-							<p ><label>RM 100.00</label><em class="item_price">RM 50.00</em></p>
-							<div class="block">
-								<div class="starbox small ghosting"> </div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-sm-6 mb-3">
-				<div class="card text-center">	
-					<img class="card-img-top"  src="images/clothes18.jpg" alt="">
-					
-					<div class="card-body">
-						<h4 class="card-title">Men short</h4>
-						<h6 class="card-subtitle mb-2 text-muted">New Cotton Short</h6>
-						<ul class="list">
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><p> 235 Sold</p></li>
-						</ul>
-						<div class="mid-2">
-							<p ><label>RM 50.00</label><em class="item_price">RM 35.00</em></p>
-							<div class="block">
-								<div class="starbox small ghosting"> </div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-sm-6 mb-3">
-				<div class="card  text-center">
-					<img class="card-img-top"  src="images/clothes14.jpg" alt="">
-
-					<div class="card-body">
-						<h4 class="card-title">Black Jeans</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Mens Slim Black Stretch Denim Jeans</h6>
-						<ul class="list">
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><p> 375 Sold</p></li>
-						</ul>
-						<div class="mid-2">
-							<p ><label>RM 150.00</label><em class="item_price">RM 75.00</em></p>
-							<div class="block">
-								<div class="starbox small ghosting"> </div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-sm-6 mb-3">
-				<div class="card text-center">
-					<img class="card-img-top"  src="images/clothes3.jpg" alt="">
-					
-					<div class="card-body">
-						<h4 class="card-title">Polo Shirt</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Original Polo Shirt for men</h6>
-						<ul class="list">
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><i class="fa fa-star"></i></li>
-							<li><p> 163 Sold</p></li>
-						</ul>
-						<div class="mid-2">
-							<p ><label>RM 200.00</label><em class="item_price">RM 125.00</em></p>
-							<div class="block">
-								<div class="starbox small ghosting"> </div>
-							</div>
-							<div class="clearfix"></div>
-						</div>
-						<div class="add add-2">
-							<a class="btn btn-danger my-cart-btn my-cart-b" href="product_details.php">View Product</a>
-						</div>
-						
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /.row -->
 		
 		<div class="row">
 			<div class="col-lg-3 col-sm-6 mb-3">
@@ -234,8 +115,8 @@
 						<img class="card-img-top"  src="images/clothing3.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Men's Patterned Tee</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Tradisional patterned white tee</h6>
+						<h4 class="card-title">Men's Patterned White Tee</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Tradisional patterned tee</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
@@ -264,8 +145,8 @@
 						<img class="card-img-top"  src="images/clothing4.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Men's Formal Shirt</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Formal Shirt with Stars design</h6>
+						<h4 class="card-title">Men's Mismatched Flannel</h4>
+						<h6 class="card-subtitle mb-2 text-muted">New blue & red design</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
@@ -298,8 +179,8 @@
 						<img class="card-img-top"  src="images/clothing5.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Men's Cotton Shirt</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Small Red Couple Figured Cotton Shirt</h6>
+						<h4 class="card-title">Men's Figured Cotton Shirt</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Small Red Couple Figured</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
@@ -328,7 +209,7 @@
 						<img class="card-img-top"  src="images/clothing6.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Short Sleeves Fringed Shirt</h4>
+						<h4 class="card-title">Short Sleeves Fringed</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Tradition Tribal Design</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
@@ -352,9 +233,70 @@
 					</div>
 				</div>
 			</div>
+			<div class="col-lg-3 col-sm-6 mb-3">
+				<div class="card  text-center">
+					<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
+						<img class="card-img-top"  src="images/clothing7.jpg" alt="">
+					</a>
+					<div class="card-body">
+						<h4 class="card-title">Black & White Striped Dress</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Black & White officer wear</h6>
+						<ul class="list">
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><p> 275 Sold</p></li>
+						</ul>
+						<div class="mid-2">
+							<p ><label>RM 199.00</label><em class="item_price">RM 99.00</em></p>
+							<div class="block">
+								<div class="starbox small ghosting"> </div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="add add-2">
+							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="6" data-name="Striped Dress" data-summary="summary 6" data-price="99.00" data-quantity="1" data-image="images/clothing7.jpg">Add to Cart</button>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-sm-6 mb-3">
+				<div class="card  text-center">
+					<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
+						<img class="card-img-top"  src="images/clothing8.png" alt="">
+					</a>
+					<div class="card-body">
+						<h4 class="card-title">Polka Dotted Red Dress</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Modern Polka Dotted Dress</h6>
+						<ul class="list">
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><i class="fa fa-star"></i></li>
+							<li><p> 377 Sold</p></li>
+						</ul>
+						<div class="mid-2">
+							<p ><label>RM 190.00</label><em class="item_price">RM 79.00</em></p>
+							<div class="block">
+								<div class="starbox small ghosting"> </div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<div class="add add-2">
+							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="6" data-name="Polka Dotted Red Dress" data-summary="summary 6" data-price="79.00" data-quantity="1" data-image="images/clothing8.png">Add to Cart</button>
+						</div>
+						
+					</div>
+				</div>
+			</div>
 		</div>
 		<!-- /.row -->
 	</div>
+	
 	
 	<!-- PHP to launch Footer -->
 		<?php	

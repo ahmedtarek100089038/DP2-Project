@@ -51,21 +51,21 @@
 			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
-					<img class="card-img-top"  src="images/vintage8.jpg" alt="">
+					<img class="card-img-top"  src="images/vintage1.jpg" alt="">
 
 					<div class="card-body">
-						<h4 class="card-title">Vintage Watch</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Vintage Watch</h6>
+						<h4 class="card-title">Vintage Camera</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Vintage Camera from 1955</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star last"></i></li>
-							<li><p> 94 Sold</p></li>
+							<li><p> 4 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 1832.00</label><em class="item_price">RM 970.00</em></p>
+							<p ><label>RM 999.00</label><em class="item_price">RM 499.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
@@ -83,18 +83,18 @@
 			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
-					<img class="card-img-top"  src="images/vintage1.jpg" alt="">
+					<img class="card-img-top"  src="images/vintage2.jpg" alt="">
 
 					<div class="card-body">
-						<h4 class="card-title">Vintage Camera</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Vintage Camera - High Quality</h6>
+						<h4 class="card-title">Vintage Watch</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Vintage Watch from 1942</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
-							<li><p> 49 Sold</p></li>
+							<li><p> 3 Sold</p></li>
 						</ul>
 						<div class="mid-2">
 							<p ><label>RM 1200.00</label><em class="item_price">RM 780.00</em></p>
@@ -112,11 +112,11 @@
 			</div>
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card  text-center">
-					<img class="card-img-top"  src="images/vintage5.jpg" alt="">
+					<img class="card-img-top"  src="images/vintage3.jpg" alt="">
 
 					<div class="card-body">
-						<h4 class="card-title">Vintage Gramophone</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Vintage Gramophone</h6>
+						<h4 class="card-title">CD Player</h4>
+						<h6 class="card-subtitle mb-2 text-muted">CD player from 1966</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
@@ -143,21 +143,21 @@
 			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
-					<img class="card-img-top"  src="images/vintage0.jpg" alt="">
+					<img class="card-img-top"  src="images/vintage4.jpg" alt="">
 
 					<div class="card-body">
-						<h4 class="card-title">Golden Wheel</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Vintage Golden Wheel Good</h6>
+						<h4 class="card-title">Gramophone</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Gramophone from 1945</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star last"></i></li>
-							<li><p> 28 Sold</p></li>
+							<li><p> 8 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 199.00</label><em class="item_price">RM 99.00</em></p>
+							<p ><label>RM 399.00</label><em class="item_price">RM 199.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
@@ -179,21 +179,21 @@
 			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
-					<img class="card-img-top"  src="images/vintage8.jpg" alt="">
+					<img class="card-img-top"  src="images/vintage5.jpg" alt="">
 
 					<div class="card-body">
-						<h4 class="card-title">Vintage Watch</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Vintage Watch</h6>
+						<h4 class="card-title">Vintage Lamp</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Lamp from year 1978</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star last"></i></li>
-							<li><p> 94 Sold</p></li>
+							<li><p> 19 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 1832.00</label><em class="item_price">RM 970.00</em></p>
+							<p ><label>RM 299.00</label><em class="item_price">RM 99.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
@@ -211,18 +211,18 @@
 			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
-					<img class="card-img-top"  src="images/vintage1.jpg" alt="">
+					<img class="card-img-top"  src="images/vintage6.jpg" alt="">
 
 					<div class="card-body">
-						<h4 class="card-title">Vintage Camera</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Vintage Camera - High Quality</h6>
+						<h4 class="card-title">Gramophone</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Gramophone 1955 Vintage</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
-							<li><p> 49 Sold</p></li>
+							<li><p> 3 Sold</p></li>
 						</ul>
 						<div class="mid-2">
 							<p ><label>RM 1200.00</label><em class="item_price">RM 780.00</em></p>
@@ -240,11 +240,11 @@
 			</div>
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card  text-center">
-					<img class="card-img-top"  src="images/vintage5.jpg" alt="">
+					<img class="card-img-top"  src="images/vintage7.png" alt="">
 
 					<div class="card-body">
-						<h4 class="card-title">Vintage Gramophone</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Vintage Gramophone</h6>
+						<h4 class="card-title">Vivitar Camera</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Camera from year 1977</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
@@ -271,18 +271,18 @@
 			
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
-					<img class="card-img-top"  src="images/vintage0.jpg" alt="">
+					<img class="card-img-top"  src="images/vintage8.jpg" alt="">
 
 					<div class="card-body">
 						<h4 class="card-title">Golden Wheel</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Vintage Golden Wheel Good</h6>
+						<h6 class="card-subtitle mb-2 text-muted">Golden wheel collection</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star last"></i></li>
-							<li><p> 28 Sold</p></li>
+							<li><p> 13 Sold</p></li>
 						</ul>
 						<div class="mid-2">
 							<p ><label>RM 199.00</label><em class="item_price">RM 99.00</em></p>
