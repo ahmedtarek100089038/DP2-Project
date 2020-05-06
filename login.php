@@ -1,15 +1,3 @@
-<?php
-if (isset($_SESSION["uid"])) {
-	header("location:profile.php");
-}
-if (isset($_POST(["login_user_with_product"])) {
-	$product_list = $_POST["product_id"];
-	$json_e = json_encode($product_list);
-	setcookie("product_list",$json_e, strtotime("+1 day"),"/","","",TRUE);
-	
-}
-?>
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -74,7 +62,7 @@ if (isset($_POST(["login_user_with_product"])) {
 							<input type="password" id="password" id="password" class="form-control" placeholder="Password" required>
 						</div>
 						<br/>
-						<button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
+						<button onclick="window.location.href='index.php'" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign in</button>
 				  
 						<hr>
 				

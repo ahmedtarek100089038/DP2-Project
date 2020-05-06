@@ -1,7 +1,3 @@
-<?php
-if (isset($_GET["v-register"])) {
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -102,7 +98,9 @@ if (isset($_GET["v-register"])) {
 					</div>
 				
 					<br/>
-					<button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
+					<button onclick="window.location.href='index.php'" id="btn" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
+					
+	
 				  	
 					<hr>
 				
@@ -173,6 +171,3 @@ if (isset($_GET["v-register"])) {
   
 </body>
 </html>
-<?php
-}
-?>
