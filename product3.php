@@ -36,7 +36,19 @@
 			include_once'scrollup.php';
 		?>
 	
+	
 	<div class="container">	
+	
+		<h1>Soft Toys Category</h1>
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="index.php">Home</a>
+			</li>
+			<li class="breadcrumb-item">Categories</li>
+			<li class="breadcrumb-item active">Soft Toys</li>
+		</ol>
+		
+	
 		<div class="row">
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
@@ -44,8 +56,8 @@
 						<img class="card-img-top"  src="images/softtoy1.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Pokemon Soft Toy</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Charmander</h6>
+						<h4 class="card-title">Lion Soft Toy</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Lion</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
@@ -74,7 +86,7 @@
 						<img class="card-img-top"  src="images/softtoy2.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Monster Inc Soft Toy</h4>
+						<h4 class="card-title">Monster Inc Toy</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Mike Wazowski</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
@@ -199,7 +211,7 @@
 					</a>
 					<div class="card-body">
 						<h4 class="card-title">Stuffed Penguin</h4>
-						<h6 class="card-subtitle mb-2 text-muted">All the way from the South Pole</h6>
+						<h6 class="card-subtitle mb-2 text-muted">Cute little penguins</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
@@ -258,7 +270,7 @@
 						<img class="card-img-top"  src="images/softtoy8.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Handmade Fox Soft Toy</h4>
+						<h4 class="card-title">Handmade Fox Toy</h4>
 						<h6 class="card-subtitle mb-2 text-muted">Limited Edition!!</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>

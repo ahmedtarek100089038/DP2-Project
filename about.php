@@ -6,7 +6,6 @@
 	<!-- Page: About Page (about.php) -->
 	<!-- Author: DP2 -->
 	<!-- Date: 25/4/2020 -->
-	
 	<!-- =========HEAD STARTS HERE========= -->
 <head>
     <title>Craft Pop House |About Page</title>
