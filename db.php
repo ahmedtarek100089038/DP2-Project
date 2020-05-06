@@ -1,6 +1,6 @@
 <?php
 
-require "constants.php";
+require "config/constants.php";
 
 $servername = "localhost";
 $username = "root";

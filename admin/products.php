@@ -1,10 +1,10 @@
 <?php session_start(); ?>
-<?php include_once("./linker/top.php"); ?>
-<?php include_once("./linker/navbar.php"); ?>
+<?php include_once("./templates/top.php"); ?>
+<?php include_once("./templates/navbar.php"); ?>
 <div class="container-fluid">
   <div class="row">
     
-    <?php include "./linker/sidebar.php"; ?>
+    <?php include "./templates/sidebar.php"; ?>
 
       <div class="row">
       	<div class="col-10">
@@ -189,7 +189,9 @@
               <div class="form-group">
                 <label>Product Image <small>(format: jpg, jpeg, png)</small></label>
                 <input type="file" name="e_product_image" class="form-control">
+
                 <img src="../images/clothing1.jpg" class="img-fluid" width="50">
+
               </div>
             </div>
             <input type="hidden" name="pid">
@@ -206,7 +208,7 @@
 </div>
 <!-- Edit Product Modal end -->
 
-<?php include_once("./linker/footer.php"); ?>
+<?php include_once("./templates/footer.php"); ?>
 
 
 

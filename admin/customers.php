@@ -1,10 +1,10 @@
 <?php session_start(); ?>
-<?php include_once("./linker/top.php"); ?>
-<?php include_once("./linker/navbar.php"); ?>
+<?php include_once("./templates/top.php"); ?>
+<?php include_once("./templates/navbar.php"); ?>
 <div class="container-fluid">
   <div class="row">
     
-    <?php include "./linker/sidebar.php"; ?>
+    <?php include "./templates/sidebar.php"; ?>
 
       <div class="row">
       	<div class="col-10">
@@ -42,7 +42,7 @@
 
 
 
-<!-- Add product Modal -->
+<!-- Modal -->
 <div class="modal fade" id="add_product_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -114,7 +114,7 @@
 </div>
 <!-- Modal -->
 
-<?php include_once("./linker/footer.php"); ?>
+<?php include_once("./templates/footer.php"); ?>
 
 
 

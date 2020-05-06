@@ -1,6 +1,6 @@
-<?php include "./linker/top.php"; ?>
+<?php include "./templates/top.php"; ?>
 
-<?php include "./linker/navbar.php"; ?>
+<?php include "./templates/navbar.php"; ?>
 
 <div class="container">
 	<div class="row justify-content-center" style="margin:100px 0;">
@@ -16,10 +16,9 @@
 			    <label for="password">Password</label>
 			    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
 			  </div>
-			  <input type="hidden" name="admin_login" value="1"> 
+			  <input type="hidden" name="admin_login" value="1">
 			  <button type="button" class="btn btn-primary login-btn">Submit</button>
-			  <!--<a href="index.php" class="btn btn-primary btn-md my-0 p">Submit</a>-->
-
+			  <!-- <a href="index.php" class="btn btn-primary btn-md my-0 p">Submit</a> -->
 			</form>
 		</div>
 	</div>
@@ -29,6 +28,6 @@
 
 
 
-<?php include "./linker/footer.php"; ?>
+<?php include "./templates/footer.php"; ?>
 
 <script type="text/javascript" src="./js/main.js"></script>

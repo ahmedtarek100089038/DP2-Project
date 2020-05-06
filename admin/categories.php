@@ -1,10 +1,10 @@
 <?php session_start(); ?>
-<?php include_once("./linker/top.php"); ?>
-<?php include_once("./linker/navbar.php"); ?>
+<?php include_once("./templates/top.php"); ?>
+<?php include_once("./templates/navbar.php"); ?>
 <div class="container-fluid">
   <div class="row">
     
-    <?php include "./linker/sidebar.php"; ?>
+    <?php include "./templates/sidebar.php"; ?>
 
 
       <div class="row">
@@ -44,7 +44,7 @@
 
 
 
-<!-- Add category Modal -->
+<!-- Modal -->
 <div class="modal fade" id="add_category_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -81,7 +81,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Edit Category</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -109,7 +109,7 @@
 </div>
 <!-- Modal -->
 
-<?php include_once("./linker/footer.php"); ?>
+<?php include_once("./templates/footer.php"); ?>
 
 
 
