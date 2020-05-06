@@ -22,7 +22,7 @@ $(document).ready(function(){
 							productHTML += '<tr>'+
 								              '<td>'+''+'</td>'+
 								              '<td>'+ value.product_title +'</td>'+
-								              '<td><img width="60" height="60" src="../product_images/'+value.product_image+'"></td>'+
+								              '<td><img width="60" height="60" src="../images/'+value.product_image+'"></td>'+
 								              '<td>'+ value.product_price +'</td>'+
 								              '<td>'+ value.product_qty +'</td>'+
 								              '<td>'+ value.cat_title +'</td>'+
@@ -106,7 +106,7 @@ $(document).ready(function(){
 		$("input[name='e_product_qty']").val(product.product_qty);
 		$("input[name='e_product_price']").val(product.product_price);
 		$("input[name='e_product_keywords']").val(product.product_keywords);
-		$("input[name='e_product_image']").siblings("img").attr("src", "../product_images/"+product.product_image);
+		$("input[name='e_product_image']").siblings("img").attr("src", "../images/"+product.product_image);
 		$("input[name='pid']").val(product.product_id);
 		$("#edit_product_modal").modal('show');
 
