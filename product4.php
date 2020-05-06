@@ -36,23 +36,34 @@
 			include_once'scrollup.php';
 		?>
 	
-	<div class="container">	
+	<div class="container">
+	
+		<h1>Handmade Items Category</h1>
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="index.php">Home</a>
+			</li>
+			<li class="breadcrumb-item">Categories</li>
+			<li class="breadcrumb-item active">Handmade Items</li>
+		</ol>
+		
+		
 		<div class="row">
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
 					<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-						<img class="card-img-top"  src="images/clothes1.jpg" alt="">
+						<img class="card-img-top"  src="images/handmade1.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Adidas  HODIE</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Men Adidas  HODIE</h6>
+						<h4 class="card-title">Handmade Rattan Basket</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Different colours to choose from</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
-							<li><p> 105 Sold</p></li>
+							<li><p> 119 Sold</p></li>
 						</ul>
 						<div class="mid-2">
 							<p ><label>RM 100.00</label><em class="item_price">RM 50.00</em></p>
@@ -62,7 +73,7 @@
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="Adidas  HODIE" data-summary="summary 1" data-price="50.00" data-quantity="1" data-image="images/clothes1.jpg">Add to Cart</button>
+							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="1" data-name="Handmade Rattan Basket" data-summary="summary 1" data-price="50.00" data-quantity="1" data-image="images/handmade1.jpg">Add to Cart</button>
 						</div>
 						
 					</div>
@@ -71,28 +82,28 @@
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
 					<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-						<img class="card-img-top"  src="images/clothes18.jpg" alt="">
+						<img class="card-img-top"  src="images/handmade2.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Men short</h4>
-						<h6 class="card-subtitle mb-2 text-muted">New Cotton Short</h6>
+						<h4 class="card-title">Handmade Crayon Bookmark</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Made by young children from age 7-10</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
-							<li><p> 235 Sold</p></li>
+							<li><p> 479 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 50.00</label><em class="item_price">RM 35.00</em></p>
+							<p ><label>RM 20.00</label><em class="item_price">RM 15.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="2" data-name="Men short" data-summary="summary 2" data-price="35.00" data-quantity="1" data-image="images/clothes18.jpg">Add to Cart</button>
+							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="2" data-name="Handmade Crayon Bookmark" data-summary="summary 2" data-price="15.00" data-quantity="1" data-image="images/handmade2.jpg">Add to Cart</button>
 						</div>
 						
 					</div>
@@ -101,18 +112,18 @@
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card  text-center">
 					<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-						<img class="card-img-top"  src="images/clothes14.jpg" alt="">
+						<img class="card-img-top"  src="images/handmade3.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Black Jeans</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Mens Slim Black Stretch Denim Jeans</h6>
+						<h4 class="card-title">Handmade Patterned Basket</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Beautiful coloured mosaic design</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
-							<li><p> 375 Sold</p></li>
+							<li><p> 389 Sold</p></li>
 						</ul>
 						<div class="mid-2">
 							<p ><label>RM 150.00</label><em class="item_price">RM 75.00</em></p>
@@ -122,7 +133,7 @@
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Black Jeans" data-summary="summary 3" data-price="75.00" data-quantity="1" data-image="images/clothes14.jpg">Add to Cart</button>
+							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="3" data-name="Handmade Patterned Basket" data-summary="summary 3" data-price="75.00" data-quantity="1" data-image="images/handmade3.jpg">Add to Cart</button>
 						</div>
 						
 					</div>
@@ -131,28 +142,28 @@
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
 					<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-						<img class="card-img-top"  src="images/clothes3.jpg" alt="">
+						<img class="card-img-top"  src="images/handmade4.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Polo Shirt</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Original Polo Shirt for men</h6>
+						<h4 class="card-title">Handmade Cup Holder</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Knitted special sunflower design</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
-							<li><p> 163 Sold</p></li>
+							<li><p> 122 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 200.00</label><em class="item_price">RM 125.00</em></p>
+							<p ><label>RM 40.00</label><em class="item_price">RM 25.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="4" data-name="Polo Shirt" data-summary="summary 4" data-price="125.00" data-quantity="1" data-image="images/clothes3.jpg">Add to Cart</button>
+							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="4" data-name="Handmade Cup Holder" data-summary="summary 4" data-price="25.00" data-quantity="1" data-image="images/handmade4.jpg">Add to Cart</button>
 						</div>
 						
 					</div>
@@ -165,11 +176,11 @@
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
 					<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-						<img class="card-img-top"  src="images/jewellery2.jpg" alt="">
+						<img class="card-img-top"  src="images/handmade5.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Gold Necklaces</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Pure Gold Necklaces & Earring</h6>
+						<h4 class="card-title">Handmade Animal Figurine</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Wood-Crafted Animal Figurine</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
@@ -179,14 +190,14 @@
 							<li><p> 43 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 2000.00</label><em class="item_price">RM 1899.00</em></p>
+							<p ><label>RM 129.00</label><em class="item_price">RM 89.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="5" data-name="Gold Necklaces & Earring" data-summary="summary 5" data-price="1899.00" data-quantity="1" data-image="images/jewellery2.jpg">Add to Cart</button>
+							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="5" data-name="Handmade Animal Figurine" data-summary="summary 5" data-price="89.00" data-quantity="1" data-image="images/handmade5.jpg">Add to Cart</button>
 						</div>
 						
 					</div>
@@ -195,28 +206,28 @@
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card  text-center">
 					<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-						<img class="card-img-top"  src="images/jewellery11.jpg" alt="">
+						<img class="card-img-top"  src="images/handmade6.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Silver Ring</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Genuine Silver Large Ring</h6>
+						<h4 class="card-title">Handmade Wooden Plates</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Minimal hand carved nature designs</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
-							<li><p> 275 Sold</p></li>
+							<li><p> 267 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 600.00</label><em class="item_price">RM 250.00</em></p>
+							<p ><label>RM 40.00</label><em class="item_price">RM 15.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="6" data-name="Silver Ring" data-summary="summary 6" data-price="250.00" data-quantity="1" data-image="images/jewellery11.jpg">Add to Cart</button>
+							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="6" data-name="Handmade Wooden Plates" data-summary="summary 6" data-price="15.00" data-quantity="1" data-image="images/handmade6.jpg">Add to Cart</button>
 						</div>
 						
 					</div>
@@ -225,11 +236,11 @@
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
 					<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-						<img class="card-img-top"  src="images/jewellery10.jpg" alt="">
+						<img class="card-img-top"  src="images/handmade7.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Diamond Necklaces</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Diamond Necklaces with gift</h6>
+						<h4 class="card-title">Handmade Cylindrical Basket</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Long strap design for shoulder carrying</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
@@ -239,14 +250,14 @@
 							<li><p> 137 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 5500.00</label><em class="item_price">RM 4500.00</em></p>
+							<p ><label>RM 79.00</label><em class="item_price">RM 39.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="7" data-name="Diamond Necklaces" data-summary="summary 7" data-price="4500.00" data-quantity="1" data-image="images/jewellery10.jpg">Add to Cart</button>
+							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="7" data-name="Diamond Necklaces" data-summary="summary 7" data-price="39.00" data-quantity="1" data-image="images/handmade7.jpg">Add to Cart</button>
 						</div>
 					</div>
 				</div>
@@ -255,11 +266,11 @@
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
 					<a href="#" data-toggle="modal" data-target="#myModal1" class="offer-img">
-						<img class="card-img-top"  src="images/jewellery.jpg" alt="">
+						<img class="card-img-top"  src="images/handmade8.jpg" alt="">
 					</a>
 					<div class="card-body">
-						<h4 class="card-title">Gold Necklaces</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Gold Necklaces with Gift Box</h6>
+						<h4 class="card-title">Handmade Spherical Gift Box</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Coloured Romantic Gift Box for loved ones</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
@@ -269,14 +280,14 @@
 							<li><p> 50 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 3758.00</label><em class="item_price">RM 3125.00</em></p>
+							<p ><label>RM 50.00</label><em class="item_price">RM 25.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
 							<div class="clearfix"></div>
 						</div>
 						<div class="add add-2">
-							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="8" data-name="Gold Necklaces" data-summary="summary 8" data-price="3125.00" data-quantity="1" data-image="images/jewellery.jpg">Add to Cart</button>
+							<button class="btn btn-danger my-cart-btn my-cart-b" data-id="8" data-name="Handmade Gift Box" data-summary="summary 8" data-price="25.00" data-quantity="1" data-image="images/handmade8.jpg">Add to Cart</button>
 						</div>
 					</div>
 				</div>

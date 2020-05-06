@@ -50,11 +50,11 @@
 		<div class="row">
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
-					<img class="card-img-top"  src="images/craft1.jpg" alt="">
+					<img class="card-img-top"  src="images/decor1.jpg" alt="">
 
 					<div class="card-body">
 						<h4 class="card-title">Feather Crafts</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Home Decoration Feather Crafts</h6>
+						<h6 class="card-subtitle mb-2 text-muted">Home Decoration Feather</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
@@ -79,7 +79,7 @@
 			</div>
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
-					<img class="card-img-top"  src="images/decor0.jpg" alt="">
+					<img class="card-img-top"  src="images/decor2.jpg" alt="">
 
 					<div class="card-body">
 						<h4 class="card-title">Wine bottle craft</h4>
@@ -108,7 +108,7 @@
 			</div>
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card  text-center">
-					<img class="card-img-top"  src="images/decor11.jpg" alt="">
+					<img class="card-img-top"  src="images/decor3.jpg" alt="">
 
 					<div class="card-body">
 						<h4 class="card-title">Tulle Roll</h4>
@@ -138,7 +138,7 @@
 			</div>
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
-					<img class="card-img-top"  src="images/homemade.jpg" alt="">
+					<img class="card-img-top"  src="images/decor4.jpg" alt="">
 
 					<div class="card-body">
 						<h4 class="card-title">LED Decoration</h4>
@@ -172,21 +172,21 @@
 		<div class="row">
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
-					<img class="card-img-top"  src="images/craft1.jpg" alt="">
+					<img class="card-img-top"  src="images/decor5.jpg" alt="">
 
 					<div class="card-body">
-						<h4 class="card-title">Feather Crafts</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Home Decoration Feather Crafts</h6>
+						<h4 class="card-title">Vase and Jar Set Decor</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Home Decoration Vase & Jar Set</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
-							<li><p> 302 Sold</p></li>
+							<li><p> 144 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 50.00</label><em class="item_price">RM 20.00</em></p>
+							<p ><label>RM 50.00</label><em class="item_price">RM 25.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
@@ -201,21 +201,21 @@
 			</div>
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
-					<img class="card-img-top"  src="images/decor0.jpg" alt="">
+					<img class="card-img-top"  src="images/decor6.jpg" alt="">
 
 					<div class="card-body">
-						<h4 class="card-title">Wine bottle craft</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Wine bottle craft decoration</h6>
+						<h4 class="card-title">Flower Ceiling Decor</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Handmade flower design decor</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
-							<li><p> 86 Sold</p></li>
+							<li><p> 66 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 80.00</label><em class="item_price">RM 40.00</em></p>
+							<p ><label>RM 80.00</label><em class="item_price">RM 30.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
@@ -230,18 +230,18 @@
 			</div>
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card  text-center">
-					<img class="card-img-top"  src="images/decor11.jpg" alt="">
+					<img class="card-img-top"  src="images/decor7.jpg" alt="">
 
 					<div class="card-body">
-						<h4 class="card-title">Tulle Roll</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Tulle Roll 25Yard </h6>
+						<h4 class="card-title">Wooden Designed Vase</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Authentic Nature Home Decor </h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star last"></i></li>
 							<li><i class="fa fa-star last"></i></li>
-							<li><p> 31 Sold</p></li>
+							<li><p> 79 Sold</p></li>
 						</ul>
 						<div class="mid-2">
 							<p ><label>RM 30.00</label><em class="item_price">RM 10.00</em></p>
@@ -260,21 +260,21 @@
 			</div>
 			<div class="col-lg-3 col-sm-6 mb-3">
 				<div class="card text-center">
-					<img class="card-img-top"  src="images/homemade.jpg" alt="">
+					<img class="card-img-top"  src="images/decor8.jpg" alt="">
 
 					<div class="card-body">
-						<h4 class="card-title">LED Decoration</h4>
-						<h6 class="card-subtitle mb-2 text-muted">Homemade LED Decoration</h6>
+						<h4 class="card-title">Hanging Transparent Vase</h4>
+						<h6 class="card-subtitle mb-2 text-muted">Colourful polka dots outer layer design</h6>
 						<ul class="list">
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
 							<li><i class="fa fa-star"></i></li>
-							<li><p> 212 Sold</p></li>
+							<li><p> 23 Sold</p></li>
 						</ul>
 						<div class="mid-2">
-							<p ><label>RM 100.00</label><em class="item_price">RM 54.00</em></p>
+							<p ><label>RM 100.00</label><em class="item_price">RM 60.00</em></p>
 							<div class="block">
 								<div class="starbox small ghosting"> </div>
 							</div>
