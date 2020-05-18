@@ -54,7 +54,7 @@
 					<div class="dropdown-menu" aria-labelledby="dropdown_support">
 						<a class="dropdown-item" href="termsandconditions.php">Terms and Conditions</a>
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="#">Feedback</a>
+						<a class="dropdown-item" href="feedback_form.php">Feedback</a>
 					</div>
 				</li>	
 			</ul>

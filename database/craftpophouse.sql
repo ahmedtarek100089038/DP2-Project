@@ -14,6 +14,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `poll`
+--
+
+CREATE TABLE `poll` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `email` text NOT NULL,
+  `phone` text NOT NULL,
+  `feedback` text NOT NULL,
+  `suggestions` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+--
 -- Table structure for table `admin`
 --
 
@@ -108,8 +123,38 @@ INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orders`
+-- Table structure for table `email_info`
 --
+
+CREATE TABLE `email_info` (
+  `email_id` int(100) NOT NULL,
+  `email` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `email_info`
+--
+
+INSERT INTO `email_info` (`email_id`, `email`) VALUES
+(3, 'admin@gmail.com'),
+(4, 'puneethreddy951@gmail.com'),
+(5, 'puneethreddy@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `logs`
+--
+
+CREATE TABLE `logs` (
+  `id` int(11) NOT NULL,
+  `user_id` varchar(50) NOT NULL,
+  `action` varchar(50) NOT NULL,
+  `date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
 
 CREATE TABLE `orders` (
 	`order_id` int(11) NOT NULL,
@@ -209,14 +254,14 @@ INSERT INTO `products` (`product_id`, `product_cat`, `product_brand`, `product_t
 --
 
 CREATE TABLE `user_info` (
-	`user_id` int(10) NOT NULL,
-	`first_name` varchar(100) NOT NULL,
-	`last_name` varchar(100) NOT NULL,
-	`email` varchar(300) NOT NULL,
-	`password` varchar(300) NOT NULL,
-	`mobile` varchar(10) NOT NULL,
-	`address1` varchar(300) NOT NULL,
-	`address2` varchar(11) NOT NULL
+  `user_id` int(10) NOT NULL,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `email` varchar(300) NOT NULL,
+  `password` varchar(300) NOT NULL,
+  `mobile` varchar(10) NOT NULL,
+  `address1` varchar(300) NOT NULL,
+  `address2` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -224,15 +269,81 @@ CREATE TABLE `user_info` (
 --
 
 INSERT INTO `user_info` (`user_id`, `first_name`, `last_name`, `email`, `password`, `mobile`, `address1`, `address2`) VALUES
-(1, 'Simon', 'Lu', 'simonlu@gmail.com', '1234567890abc', '0198008888', 'Simpang Tiga', '93300'),
-(2, 'Xavier', 'Lee', 'xavierlee@gmail.com', '1234567890abcd', '0190800991', 'Simpang Tiga', '93300'),
-(3, 'Tommy', 'Lim', 'tommylim@gmail.com', '1234567890abcde', '0190880991', 'Simpang Tiga', '93300'),
-(4, 'Jenny', 'Chua', 'jennychua@gmail.com', '1234567890abcdf', '0190801992', 'Simpang Tiga', '93300'),
-(5, 'Arthur', 'Lee', 'arthurlee@gmail.com', '1234567890abcdg', '0190830991', 'Simpang Tiga', '93300');
+(12, 'puneeth', 'Reddy', 'puneethreddy951@gmail.com', 'puneeth', '9448121558', '123456789', 'sdcjns,djc'),
+(15, 'hemu', 'ajhgdg', 'puneethreddy951@gmail.com', '346778', '536487276', ',mdnbca', 'asdmhmhvbv'),
+(16, 'venky', 'vs', 'venkey@gmail.com', '1234534', '9877654334', 'snhdgvajfehyfygv', 'asdjbhfkeur'),
+(19, 'abhishek', 'bs', 'abhishekbs@gmail.com', 'asdcsdcc', '9871236534', 'bangalore', 'hassan'),
+(21, 'prajval', 'mcta', 'prajvalmcta@gmail.com', '1234545662', '202-555-01', 'bangalore', 'kumbalagodu'),
+(22, 'puneeth', 'v', 'hemu@gmail.com', '1234534', '9877654334', 'snhdgvajfehyfygv', 'asdjbhfkeur'),
+(23, 'hemanth', 'reddy', 'hemanth@gmail.com', 'Puneeth@123', '9876543234', 'Bangalore', 'Kumbalagodu'),
+(24, 'newuser', 'user', 'newuser@gmail.com', 'puneeth@123', '9535688928', 'Bangalore', 'Kumbalagodu'),
+(25, 'otheruser', 'user', 'otheruser@gmail.com', 'puneeth@123', '9535688928', 'Bangalore', 'Kumbalagodu');
+
+--
+-- Triggers `user_info`
+--
+DELIMITER $$
+CREATE TRIGGER `after_user_info_insert` AFTER INSERT ON `user_info` FOR EACH ROW BEGIN 
+INSERT INTO user_info_backup VALUES(new.user_id,new.first_name,new.last_name,new.email,new.password,new.mobile,new.address1,new.address2);
+END
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_info_backup`
+--
+
+CREATE TABLE `user_info_backup` (
+  `user_id` int(10) NOT NULL,
+  `first_name` varchar(100) NOT NULL,
+  `last_name` varchar(100) NOT NULL,
+  `email` varchar(300) NOT NULL,
+  `password` varchar(300) NOT NULL,
+  `mobile` varchar(10) NOT NULL,
+  `address1` varchar(300) NOT NULL,
+  `address2` varchar(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_info_backup`
+--
+
+INSERT INTO `user_info_backup` (`user_id`, `first_name`, `last_name`, `email`, `password`, `mobile`, `address1`, `address2`) VALUES
+(12, 'puneeth', 'Reddy', 'puneethreddy951@gmail.com', '123456789', '9448121558', '123456789', 'sdcjns,djc'),
+(14, 'hemanthu', 'reddy', 'hemanthreddy951@gmail.com', '123456788', '6526436723', 's,dc wfjvnvn', 'b efhfhvvbr'),
+(15, 'hemu', 'ajhgdg', 'keeru@gmail.com', '346778', '536487276', ',mdnbca', 'asdmhmhvbv'),
+(16, 'venky', 'vs', 'venkey@gmail.com', '1234534', '9877654334', 'snhdgvajfehyfygv', 'asdjbhfkeur'),
+(19, 'abhishek', 'bs', 'abhishekbs@gmail.com', 'asdcsdcc', '9871236534', 'bangalore', 'hassan'),
+(20, 'pramod', 'vh', 'pramod@gmail.com', '124335353', '9767645653', 'ksbdfcdf', 'sjrgrevgsib'),
+(21, 'prajval', 'mcta', 'prajvalmcta@gmail.com', '1234545662', '202-555-01', 'bangalore', 'kumbalagodu'),
+(22, 'puneeth', 'v', 'hemu@gmail.com', '1234534', '9877654334', 'snhdgvajfehyfygv', 'asdjbhfkeur'),
+(23, 'hemanth', 'reddy', 'hemanth@gmail.com', 'Puneeth@123', '9876543234', 'Bangalore', 'Kumbalagodu'),
+(24, 'newuser', 'user', 'newuser@gmail.com', 'puneeth@123', '9535688928', 'Bangalore', 'Kumbalagodu'),
+(25, 'otheruser', 'user', 'otheruser@gmail.com', 'puneeth@123', '9535688928', 'Bangalore', 'Kumbalagodu');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `poll`
+--
+ALTER TABLE `poll`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `poll`
+--
+ALTER TABLE `poll`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+--
+
 
 --
 -- Indexes for table `admin`
@@ -321,6 +432,18 @@ ALTER TABLE `categories`
   MODIFY `cat_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- Indexes for table `email_info`
+--
+ALTER TABLE `email_info`
+  ADD PRIMARY KEY (`email_id`);
+
+--
+-- Indexes for table `logs`
+--
+ALTER TABLE `logs`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
@@ -333,11 +456,20 @@ ALTER TABLE `products`
   MODIFY `product_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `user_info`
+-- Indexes for table `user_info`
 --
 ALTER TABLE `user_info`
-  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  ADD PRIMARY KEY (`user_id`);
 
+--
+-- Indexes for table `user_info_backup`
+--
+ALTER TABLE `user_info_backup`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
 --
 -- Constraints for dumped tables
 --

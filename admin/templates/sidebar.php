@@ -48,6 +48,12 @@
               Customers
             </a>
           </li>
+		  <li class="nav-item">
+            <a class="nav-link <?php echo ($page == 'feedback.php') ? 'active' : ''; ?>" href="feedback.php">
+              <span data-feather="bookmark"></span>
+              Buyer's Feedback
+            </a>
+          </li>
         </ul>
 
        
