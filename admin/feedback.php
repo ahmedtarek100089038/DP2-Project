@@ -56,4 +56,4 @@
   
 <?php include "./templates/footer.php"; ?>
 
-<script type="text/javascript" src="./js/admin.js"></script>
+<script type="text/javascript" src="./js/jquery-2.1.3.js"></script>
