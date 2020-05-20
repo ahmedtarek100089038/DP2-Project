@@ -155,6 +155,33 @@ CREATE TABLE `logs` (
 
 -- --------------------------------------------------------
 
+--
+-- Table structure for table `details`
+--
+
+CREATE TABLE IF NOT EXISTS `details` (
+`id` int(11) NOT NULL,
+  `sales_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `details`
+--
+
+INSERT INTO `details` (`id`, `sales_id`, `product_id`, `quantity`) VALUES
+(14, 9, 11, 2),
+(15, 9, 13, 5),
+(16, 9, 3, 2),
+(17, 9, 1, 3),
+(18, 10, 13, 3),
+(19, 10, 2, 4),
+(20, 10, 19, 5);
+
+-- --------------------------------------------------------
+
+
 
 CREATE TABLE `orders` (
 	`order_id` int(11) NOT NULL,
@@ -176,6 +203,7 @@ INSERT INTO `orders` (`order_id`, `user_id`, `product_id`, `qty`, `trx_id`, `p_s
 (4, 1, 4, 2, '7L434523M7706801A', 'Completed');
 
 -- --------------------------------------------------------
+
 
 --
 -- Table structure for table `products`
@@ -244,84 +272,39 @@ INSERT INTO `products` (`product_id`, `product_cat`, `product_brand`, `product_t
 (44, 6, 1, 'Gramophone', 199, 100, 'Gramophone from 1945', 'vintage4.jpg', 'gramophone, 1945'),
 (45, 6, 1, 'Vintage Lamp', 99, 100, 'Lamp from year 1978', 'vintage5.jpg', 'lamp, year, 1978'),
 (46, 6, 1, 'Gramophone', 780, 100, 'Gramiphone 1955 Vintage', 'vintage6.jpg', 'vintage, gramophone, 1955'),
-(47, 6, 1, 'Vivitar Camera', 450, 100, 'Camera from year 1977', 'vintage7.jpg', 'vivitar, camera, 1977'),
+(47, 6, 1, 'Vivitar Camera', 450, 100, 'Camera from year 1977', 'vintage7.png', 'vivitar, camera, 1977'),
 (48, 6, 1, 'Golden Wheel', 99, 100, 'Golden wheel collection', 'vintage8.jpg', 'golden, wheel, collection');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user_info`
+-- Table structure for table `users`
 --
 
-CREATE TABLE `user_info` (
-  `user_id` int(10) NOT NULL,
-  `first_name` varchar(100) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
-  `email` varchar(300) NOT NULL,
-  `password` varchar(300) NOT NULL,
-  `mobile` varchar(10) NOT NULL,
-  `address1` varchar(300) NOT NULL,
-  `address2` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `users` (
+`id` int(11) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `password` varchar(60) NOT NULL,
+  `type` int(1) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `address` text NOT NULL,
+  `contact_info` varchar(100) NOT NULL,
+  `photo` varchar(200) NOT NULL,
+  `status` int(1) NOT NULL,
+  `activate_code` varchar(15) NOT NULL,
+  `reset_code` varchar(15) NOT NULL,
+  `created_on` date NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user_info`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `user_info` (`user_id`, `first_name`, `last_name`, `email`, `password`, `mobile`, `address1`, `address2`) VALUES
-(12, 'puneeth', 'Reddy', 'puneethreddy951@gmail.com', 'puneeth', '9448121558', '123456789', 'sdcjns,djc'),
-(15, 'hemu', 'ajhgdg', 'puneethreddy951@gmail.com', '346778', '536487276', ',mdnbca', 'asdmhmhvbv'),
-(16, 'venky', 'vs', 'venkey@gmail.com', '1234534', '9877654334', 'snhdgvajfehyfygv', 'asdjbhfkeur'),
-(19, 'abhishek', 'bs', 'abhishekbs@gmail.com', 'asdcsdcc', '9871236534', 'bangalore', 'hassan'),
-(21, 'prajval', 'mcta', 'prajvalmcta@gmail.com', '1234545662', '202-555-01', 'bangalore', 'kumbalagodu'),
-(22, 'puneeth', 'v', 'hemu@gmail.com', '1234534', '9877654334', 'snhdgvajfehyfygv', 'asdjbhfkeur'),
-(23, 'hemanth', 'reddy', 'hemanth@gmail.com', 'Puneeth@123', '9876543234', 'Bangalore', 'Kumbalagodu'),
-(24, 'newuser', 'user', 'newuser@gmail.com', 'puneeth@123', '9535688928', 'Bangalore', 'Kumbalagodu'),
-(25, 'otheruser', 'user', 'otheruser@gmail.com', 'puneeth@123', '9535688928', 'Bangalore', 'Kumbalagodu');
-
---
--- Triggers `user_info`
---
-DELIMITER $$
-CREATE TRIGGER `after_user_info_insert` AFTER INSERT ON `user_info` FOR EACH ROW BEGIN 
-INSERT INTO user_info_backup VALUES(new.user_id,new.first_name,new.last_name,new.email,new.password,new.mobile,new.address1,new.address2);
-END
-$$
-DELIMITER ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user_info_backup`
---
-
-CREATE TABLE `user_info_backup` (
-  `user_id` int(10) NOT NULL,
-  `first_name` varchar(100) NOT NULL,
-  `last_name` varchar(100) NOT NULL,
-  `email` varchar(300) NOT NULL,
-  `password` varchar(300) NOT NULL,
-  `mobile` varchar(10) NOT NULL,
-  `address1` varchar(300) NOT NULL,
-  `address2` varchar(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user_info_backup`
---
-
-INSERT INTO `user_info_backup` (`user_id`, `first_name`, `last_name`, `email`, `password`, `mobile`, `address1`, `address2`) VALUES
-(12, 'puneeth', 'Reddy', 'puneethreddy951@gmail.com', '123456789', '9448121558', '123456789', 'sdcjns,djc'),
-(14, 'hemanthu', 'reddy', 'hemanthreddy951@gmail.com', '123456788', '6526436723', 's,dc wfjvnvn', 'b efhfhvvbr'),
-(15, 'hemu', 'ajhgdg', 'keeru@gmail.com', '346778', '536487276', ',mdnbca', 'asdmhmhvbv'),
-(16, 'venky', 'vs', 'venkey@gmail.com', '1234534', '9877654334', 'snhdgvajfehyfygv', 'asdjbhfkeur'),
-(19, 'abhishek', 'bs', 'abhishekbs@gmail.com', 'asdcsdcc', '9871236534', 'bangalore', 'hassan'),
-(20, 'pramod', 'vh', 'pramod@gmail.com', '124335353', '9767645653', 'ksbdfcdf', 'sjrgrevgsib'),
-(21, 'prajval', 'mcta', 'prajvalmcta@gmail.com', '1234545662', '202-555-01', 'bangalore', 'kumbalagodu'),
-(22, 'puneeth', 'v', 'hemu@gmail.com', '1234534', '9877654334', 'snhdgvajfehyfygv', 'asdjbhfkeur'),
-(23, 'hemanth', 'reddy', 'hemanth@gmail.com', 'Puneeth@123', '9876543234', 'Bangalore', 'Kumbalagodu'),
-(24, 'newuser', 'user', 'newuser@gmail.com', 'puneeth@123', '9535688928', 'Bangalore', 'Kumbalagodu'),
-(25, 'otheruser', 'user', 'otheruser@gmail.com', 'puneeth@123', '9535688928', 'Bangalore', 'Kumbalagodu');
+INSERT INTO `users` (`id`, `email`, `password`, `type`, `firstname`, `lastname`, `address`, `contact_info`, `photo`, `status`, `activate_code`, `reset_code`, `created_on`) VALUES
+(1, 'admin@admin.com', '$2y$10$0SHFfoWzz8WZpdu9Qw//E.tWamILbiNCX7bqhy3od0gvK5.kSJ8N2', 1, 'Code', 'Projects', '', '', 'thanos1.jpg', 1, '', '', '2018-05-01'),
+(9, 'harry@den.com', '$2y$10$Oongyx.Rv0Y/vbHGOxywl.qf18bXFiZOcEaI4ZpRRLzFNGKAhObSC', 0, 'Harry', 'Den', 'Silay City, Negros Occidental', '09092735719', 'male2.png', 1, 'k8FBpynQfqsv', 'wzPGkX5IODlTYHg', '2018-05-09'),
+(12, 'christine@gmail.com', '$2y$10$ozW4c8r313YiBsf7HD7m6egZwpvoE983IHfZsPRxrO1hWXfPRpxHO', 0, 'Christine', 'becker', 'demo', '7542214500', 'female3.jpg', 1, '', '', '2018-07-09');
 
 --
 -- Indexes for dumped tables
@@ -342,7 +325,6 @@ ALTER TABLE `poll`
 --
 ALTER TABLE `poll`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
 
 
 --
@@ -378,6 +360,13 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Indexes for table `details`
+--
+ALTER TABLE `details`
+ ADD PRIMARY KEY (`id`);
+
+
+--
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
@@ -391,11 +380,7 @@ ALTER TABLE `products`
   ADD KEY `fk_product_cat` (`product_cat`),
   ADD KEY `fk_product_brand` (`product_brand`);
 
---
--- Indexes for table `user_info`
---
-ALTER TABLE `user_info`
-  ADD PRIMARY KEY (`user_id`);
+
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -444,6 +429,12 @@ ALTER TABLE `logs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- AUTO_INCREMENT for table `details`
+--
+ALTER TABLE `details`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=21;
+
+--
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
@@ -456,17 +447,18 @@ ALTER TABLE `products`
   MODIFY `product_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- Indexes for table `user_info`
+-- Indexes for table `users`
 --
-ALTER TABLE `user_info`
-  ADD PRIMARY KEY (`user_id`);
+ALTER TABLE `users`
+ ADD PRIMARY KEY (`id`);
+
+
 
 --
--- Indexes for table `user_info_backup`
+-- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `user_info_backup`
-  ADD PRIMARY KEY (`user_id`);
-
+ALTER TABLE `users`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for dumped tables
 --
