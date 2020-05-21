@@ -107,7 +107,7 @@
 			<div class="card">
 				<div class="card-header" role="tab" id="headingFive">
 					<h5 class="mb-0">
-						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">WHY MUST I MAKE PAYMENT IMMEDIATELY AT CHECKOUT?3</a>
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">WHY MUST I MAKE PAYMENT IMMEDIATELY AT CHECKOUT?</a>
 					</h5>
 				</div>
 			
@@ -134,6 +134,54 @@
 						1. In the event of damaged samples received, we will require photo proof of the affected samples and your D.O (Delivery Order) in order for us to investigate and review before a decision is made to re-send the sample to you at no cost, subject to availability. In light of this, any sample that falls into this category should not be thrown away before taking photo proof and emailing the photo to us at craftpophouse@gmail.com
 						<br />
 						2. In the event of lost mail, we will try to locate the delivery team in Singpost and if there's a clear indication that your order is indeed lost, we'll re-send the order to you at no cost, subject to availability.
+					</div>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-header" role="tab" id="headingSeven">
+					<h5 class="mb-0">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">HOW SOON WILL I RECEIVE MY REFUND AFTER CANCELLING AN ORDER?</a>
+					</h5>
+				</div>
+			
+				<div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven">
+					<div class="card-body">
+						1. You will first receive an E-mail to confirm the cancellation of your order.
+						<br />
+						2. Note that different payment method will result in different time taken for your refund.
+						<br />
+						3. Normally refund takes around 7-14 working days to be returned to your bank account or your E-wallet.
+					</div>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-header" role="tab" id="headingEight">
+					<h5 class="mb-0">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">HOW CAN I RECEIVE THE LATEST PROMOTION NEWS FROM CRAFT POP HOUSE?</a>
+					</h5>
+				</div>
+			
+				<div id="collapseEight" class="collapse" role="tabpanel" aria-labelledby="headingEight">
+					<div class="card-body">
+						You can subscribe to our newsletter with your email and we will email you whenever there is a promotion of the products. Subscribe now!
+					</div>
+				</div>
+			</div>
+			
+			<div class="card">
+				<div class="card-header" role="tab" id="headingNine">
+					<h5 class="mb-0">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">WILL THE REFUNDED AMOUNT INCLUDE SHIPPING FEE?</a>
+					</h5>
+				</div>
+			
+				<div id="collapseNine" class="collapse" role="tabpanel" aria-labelledby="headingNine">
+					<div class="card-body">
+						The refund for your item is the actual paid price which includes the shipping fee.
+						<br />
+						Note: If your order has more than one item, the shipping fee will be divided accordingly.
 					</div>
 				</div>
 			</div>
