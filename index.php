@@ -124,32 +124,28 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<main>
 		<div class="container">
 			<div class="row">
-				<div calss="col-md-4">
 					<div class="recentlyadded content-wrapper">
 						<div class="products">
 							<?php 
 							foreach ($recently_added_products as $product): ?>
-							<a href="index.php?page=product&id=<?=$product['product_id']?>" class="product">
+							<a href="product.php?product=<?=$product['product_id']?>" class="product">
 								<img src="images/<?=$product['product_image']?>" width="250" height="250" alt="">
 								<hr>
-								<span class="name"><?=$product['product_title']?></span>
-								<span class="name"><?=$product['product_desc']?></span>
+								<h4 class="name"><?=$product['product_title']?></h4>
+								<h6 class="name"><?=$product['product_desc']?></h6>
 								<ul class="list">
 									<li><i class="fa fa-star"></i></li>
 									<li><i class="fa fa-star"></i></li>
 									<li><i class="fa fa-star"></i></li>
 									<li><i class="fa fa-star"></i></li>
 									<li><i class="fa fa-star"></i></li>
-									<li><p> 375 Sold</p></li>
 								</ul>
 								<span class="price">
-									<div class="mid-2">
-									<p><label>RM 150.00</label><em class="item_price"> RM <?=$product['product_price']?></em></p>
+									<p><strong><em class="item_price"> RM <?=$product['product_price']?></em></strong></p>
 									<div class="block">
 										<div class="starbox small ghosting"> </div>
 									</div>
 									<div class="clearfix"></div>
-									</div>
 								</span>
 								<div class="add add-2">
 								<button class="btn btn-danger my-cart-btn my-cart-b" href="index.php?page=product&id=<?=$product['product_id']?>">View Product</button>
@@ -159,7 +155,6 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 							<?php endforeach; ?>
 						</div>
 					</div>
-				</div>
 			</div>
 		</div>
 	</main>

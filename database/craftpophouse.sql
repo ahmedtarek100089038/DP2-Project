@@ -105,20 +105,21 @@ CREATE TABLE `cart` (
 
 CREATE TABLE `categories` (
 	`cat_id` int(100) NOT NULL,
-	`cat_title` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+	`cat_title` text NOT NULL,
+	`cat_slug` varchar(150) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `categories`
 --
 
-INSERT INTO `categories` (`cat_id`, `cat_title`) VALUES
-(1, 'Clothing'),
-(2, 'Jewellery'),
-(3, 'Soft Toys'),
-(4, 'Handmade Items'),
-(5, 'Room Decor'),
-(6, 'Vintage Goods');
+INSERT INTO `categories` (`cat_id`, `cat_title`, `cat_slug`) VALUES
+(1, 'Clothing', 'clothing'),
+(2, 'Jewellery', 'jewellery'),
+(3, 'Soft Toys', 'soft-toys'),
+(4, 'Handmade Items', 'handmade-items'),
+(5, 'Room Decor', 'room-decor'),
+(6, 'Vintage Goods', 'vintage-goods');
 
 -- --------------------------------------------------------
 
@@ -211,7 +212,7 @@ INSERT INTO `orders` (`order_id`, `user_id`, `product_id`, `qty`, `trx_id`, `p_s
 
 CREATE TABLE `products` (
   `product_id` int(100) NOT NULL,
-  `product_cat` int(11) NOT NULL,
+  `cat_id` int(11) NOT NULL,
   `product_brand` int(100) NOT NULL,
   `product_title` varchar(255) NOT NULL,
   `product_price` int(100) NOT NULL,
@@ -225,7 +226,7 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`product_id`, `product_cat`, `product_brand`, `product_title`, `product_price`, `product_qty`, `product_desc`, `product_image`, `product_keywords`) VALUES
+INSERT INTO `products` (`product_id`, `cat_id`, `product_brand`, `product_title`, `product_price`, `product_qty`, `product_desc`, `product_image`, `product_keywords`) VALUES
 (1, 1, 1, 'Pink Checkered Skirt', 50, 100, 'Pink Checkered Skirt', 'clothing1.jpg', 'pink, checkered, skirt'),
 (2, 1, 1, 'Womens Purple Dress', 70, 100, 'Womens Purple Dress', 'clothing2.jpg', 'womens, purple, dress'),
 (3, 1, 1, 'Mens Patterned White Tee', 55, 100, 'Tradisional Patterned White Tee', 'clothing3.jpg', 'mens, white, patterned, tee'),
@@ -233,7 +234,7 @@ INSERT INTO `products` (`product_id`, `product_cat`, `product_brand`, `product_t
 (5, 1, 1, 'Mens Figured Cotton Shirt', 79, 100, 'Small Red Couple Figured Cotton Shirt', 'clothing5.jpg', 'mens, red, cotton, shirt'),
 (6, 1, 1, 'Short Sleeves Fringed Shirt', 99, 100, 'Tradition Tribal Design', 'clothing6.jpg', 'short, sleeves, fringed, shirt'),
 (7, 1, 1, 'Black & White Striped Dress', 99, 100, 'Black & White officer wear', 'clothing7.jpg', 'black, white, officer, wear'),
-(8, 1, 1, 'Polka Dotted Red Dress', 79, 100, 'Modern Polka Dotted Dress', 'clothing8.jpg', 'modern, polka, dotted, dress'),
+(8, 1, 1, 'Polka Dotted Red Dress', 79, 100, 'Modern Polka Dotted Dress', 'clothing8.png', 'modern, polka, dotted, dress'),
 (9, 2, 1, 'Indian Handmade Jewellery', 12, 100, 'Green Orange Jewellery', 'jewellery1.jpg', 'green, indian, orange, handmade, jewellery'),
 (10, 2, 1, 'Indian Handmade Jewellery', 12, 100, 'Light Green Fuchsia Pink', 'jewellery2.jpg', 'indian, handmade, jewellery'),
 (11, 2, 1, 'Handmade 925 Sterling Silver', 149, 100, 'Oval shaped with "X" design', 'jewellery3.jpg', 'oval, shaped, with, x'),
@@ -377,7 +378,7 @@ ALTER TABLE `orders`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`product_id`),
-  ADD KEY `fk_product_cat` (`product_cat`),
+  ADD KEY `fk_cat_id` (`cat_id`),
   ADD KEY `fk_product_brand` (`product_brand`);
 
 
@@ -471,5 +472,5 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `fk_product_brand` FOREIGN KEY (`product_brand`) REFERENCES `brands` (`brand_id`),
-  ADD CONSTRAINT `fk_product_cat` FOREIGN KEY (`product_cat`) REFERENCES `categories` (`cat_id`);
+  ADD CONSTRAINT `fk_cat_id` FOREIGN KEY (`cat_id`) REFERENCES `categories` (`cat_id`);
 COMMIT;
