@@ -133,13 +133,15 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 								<hr>
 								<h4 class="name"><?=$product['product_title']?></h4>
 								<h6 class="name"><?=$product['product_desc']?></h6>
-								<ul class="list">
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-								</ul>
+								<div class="col-md-12">
+									<ul class="list">
+									  <li><i class="fa fa-star"></i></li>
+									  <li><i class="fa fa-star"></i></li>
+									  <li><i class="fa fa-star"></i></li>
+									  <li><i class="fa fa-star"></i></li>
+									  <li><i class="fa fa-star"></i></li>
+									</ul>
+								</div>
 								<span class="price">
 									<p><strong><em class="item_price"> RM <?=$product['product_price']?></em></strong></p>
 									<div class="block">

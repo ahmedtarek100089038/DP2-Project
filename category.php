@@ -113,13 +113,15 @@ $pdo = pdo_connect_mysql();
 															<hr>
 															<h4 class='name'>".$row["product_title"]."</h4>
 															<h6 class='name'>".$row['product_desc']."</h6>
-															<ul class='list'>
-																<li><i class='fa fa-star'></i></li>
-																<li><i class='fa fa-star'></i></li>
-																<li><i class='fa fa-star'></i></li>
-																<li><i class='fa fa-star'></i></li>
-																<li><i class='fa fa-star'></i></li>
-															</ul>
+															<div class='col-md-12'>
+																<ul class='list'>
+																	<li><i class='fa fa-star'></i></li>
+																	<li><i class='fa fa-star'></i></li>
+																	<li><i class='fa fa-star'></i></li>
+																	<li><i class='fa fa-star'></i></li>
+																	<li><i class='fa fa-star'></i></li>
+																</ul>
+															</div>
 															<span class='price'>
 																<p><strong><em class='item_price'> RM ".$row['product_price']."</em></strong></p>
 																<div class='block'>
