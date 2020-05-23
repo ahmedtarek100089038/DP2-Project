@@ -372,9 +372,8 @@ if (isset($_POST['add_product'])) {
 								$product_keywords,
 								$_FILES['product_image']);
 		
-		header("Content-type: application/json");
 		echo json_encode($result);
-		http_response_code($result['status']);
+		
 		exit();
 
 

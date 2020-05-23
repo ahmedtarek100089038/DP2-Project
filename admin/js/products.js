@@ -81,6 +81,7 @@ $(document).ready(function(){
 					$("#add-product-form").trigger("reset");
 					$("#add_product_modal").modal('hide');
 					getProducts();
+					alert(resp.message);
 				}else if(resp.status == 303){
 					alert(resp.message);
 				}
