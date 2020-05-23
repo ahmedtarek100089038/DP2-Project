@@ -110,7 +110,14 @@
 							<div>
 								<div>
 									<label for="qty-1"><strong>Quantity</strong></label>
-									<input type="number" name="qty-1" id="qty-1" class="qty" value="1" min="1">
+									<select name="qty" id="qty">
+										<option value ="1">1</option>
+										<option value ="2">2</option>
+										<option value ="3">3</option>
+										<option value ="4">4</option>
+										<option value ="5">5</option>
+									</select>
+							
 								</div>
 							</div>
 							<p><input type="submit" value="ADD TO CART" class="btn btn-danger btn-md my-0 p"></p>
