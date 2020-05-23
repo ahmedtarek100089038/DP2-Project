@@ -252,7 +252,7 @@
 						var product = item.product;
 						var price = this.currency + " " + item.price;
 						var qty = item.qty;
-						var html = "<tr><td class='pname'>" + product + "</td>" + "<td class='qty'><select name='qty'><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option><option value='5'>5</option></select>";
+						var html = "<tr><td class='pname'>" + product + "</td>" + "<td class='pqty'><select name="pqty"><option value='1'>1</option><option value='2'>2</option><option value='3'>3</option><option value='4'>4</option></select>" + qty + "' class='qty'/></td>";
 					    	html += "<td class='pprice'>" + price + "</td><td class='pdelete'><a href='' data-product='" + product + "'>&times;</a></td></tr>";
 					
 						$tableCartBody.html( $tableCartBody.html() + html );

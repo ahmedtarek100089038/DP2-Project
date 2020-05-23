@@ -27,7 +27,6 @@ CREATE TABLE `poll` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
-
 --
 -- Table structure for table `admin`
 --
@@ -336,11 +335,13 @@ ALTER TABLE `poll`
 -- AUTO_INCREMENT for dumped tables
 --
 
+
 --
 -- AUTO_INCREMENT for table `poll`
 --
 ALTER TABLE `poll`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 
 
 --

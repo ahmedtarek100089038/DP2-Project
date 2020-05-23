@@ -9,7 +9,7 @@
 
 	<div class="row">
       	<div class="col-10">
-      		<h2>User's Review</h2>
+      		<h2>Buyer's Feedback</h2>
       	</div>
       </div>
 	  
@@ -25,7 +25,7 @@
             echo "<table class='table table-striped table-sm'>
             <tr>
             <th>Name</th>
-            <th>Riview</th>
+            <th>Review</th>
             <th>Date</th>
             </tr>";
 
@@ -35,7 +35,6 @@
             echo "<td>" . $row['comment_sender_name'] . "</td>";
             echo "<td>" . $row['comment'] . "</td>";
             echo "<td>" . $row['date'] . "</td>";
-            echo "</tr>";
             }
             echo "</table>";                                                                    
 }

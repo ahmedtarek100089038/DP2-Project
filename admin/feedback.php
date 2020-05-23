@@ -15,10 +15,11 @@
 	  
 	  <hr>
 	  
-  <?php 
+ <?php 
+
   require 'config.php';
-   if (isset($_SESSION['login_user'])) {
-          $userLoggedIn = $_SESSION['login_user'];
+   if (isset($_SESSION['admin_id'])) {
+          $userLoggedIn = $_SESSION['admin_id'];
           $result = mysqli_query($con,"SELECT * FROM poll");
 
             echo "<table class='table table-striped table-sm'>
@@ -56,4 +57,3 @@
   
 <?php include "./templates/footer.php"; ?>
 
-<script type="text/javascript" src="./js/jquery-2.1.3.js"></script>

@@ -54,6 +54,12 @@
               Buyer's Feedback
             </a>
           </li>
+		  <li class="nav-item">
+            <a class="nav-link <?php echo ($page == 'user_review.php') ? 'active' : ''; ?>" href="user_review.php">
+              <span data-feather="bookmark"></span>
+              User's Review
+            </a>
+          </li>
         </ul>
 
        
