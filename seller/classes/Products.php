@@ -6,7 +6,7 @@ session_start();
 
 	CREATE TABLE `products` (
  `product_id` int(100) NOT NULL AUTO_INCREMENT,
- `product_cat` int(11) NOT NULL,
+ `cat_id` int(11) NOT NULL,
  `product_brand` int(100) NOT NULL,
  `product_title` varchar(255) NOT NULL,
  `product_price` int(100) NOT NULL,
@@ -14,7 +14,7 @@ session_start();
  `product_desc` text NOT NULL,
  `product_image` text NOT NULL,
  `product_keywords` text NOT NULL,
-  CONSTRAINT fk_product_cat FOREIGN KEY fk_product_cat (product_cat) REFERENCES categories(cat_id),
+  CONSTRAINT fk_cat_id FOREIGN KEY fk_cat_id (cat_id) REFERENCES categories(cat_id),
     CONSTRAINT fk_product_brand FOREIGN KEY fk_product_brand (product_brand) REFERENCES brands(brand_id),
  PRIMARY KEY (`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1
@@ -33,7 +33,7 @@ class Products
 	}
 
 	public function getProducts(){
-		$q = $this->con->query("SELECT p.product_id, p.product_title, p.product_price,p.product_qty, p.product_desc, p.product_image, p.product_keywords, c.cat_title, c.cat_id, b.brand_id, b.brand_title FROM products p JOIN categories c ON c.cat_id = p.product_cat JOIN brands b ON b.brand_id = p.product_brand");
+		$q = $this->con->query("SELECT p.product_id, p.product_title, p.product_price,p.product_qty, p.product_desc, p.product_image, p.product_keywords, c.cat_title, c.cat_id, b.brand_id, b.brand_title FROM products p JOIN categories c ON c.cat_id = p.cat_id JOIN brands b ON b.brand_id = p.product_brand");
 		
 		$products = [];
 		if ($q->num_rows > 0) {
@@ -92,7 +92,7 @@ class Products
 				$uniqueImageName = time()."_".$file['name'];
 				if (move_uploaded_file($file['tmp_name'], $_SERVER['DOCUMENT_ROOT']."/DP2-Project/images/".$uniqueImageName)) {
 					
-					$q = $this->con->query("INSERT INTO `products`(`product_cat`, `product_brand`, `product_title`, `product_qty`, `product_price`, `product_desc`, `product_image`, `product_keywords`) VALUES ('$category_id', '$brand_id', '$product_name', '$product_qty', '$product_price', '$product_desc', '$uniqueImageName', '$product_keywords')");
+					$q = $this->con->query("INSERT INTO `products`(`cat_id`, `product_brand`, `product_title`, `product_qty`, `product_price`, `product_desc`, `product_image`, `product_keywords`) VALUES ('$category_id', '$brand_id', '$product_name', '$product_qty', '$product_price', '$product_desc', '$uniqueImageName', '$product_keywords')");
 
 					if ($q) {
 						return ['status'=> 202, 'message'=> 'Product Added Successfully..!'];
@@ -141,7 +141,7 @@ class Products
 				if (move_uploaded_file($file['tmp_name'], $_SERVER['DOCUMENT_ROOT']."/DP2-Project/images/".$uniqueImageName)) {
 					
 					$q = $this->con->query("UPDATE `products` SET 
-										`product_cat` = '$category_id', 
+										`cat_id` = '$category_id', 
 										`product_brand` = '$brand_id', 
 										`product_title` = '$product_name', 
 										`product_qty` = '$product_qty', 
@@ -182,7 +182,7 @@ class Products
 
 		if ($pid != null) {
 			$q = $this->con->query("UPDATE `products` SET 
-										`product_cat` = '$category_id', 
+										`cat_id` = '$category_id', 
 										`product_brand` = '$brand_id', 
 										`product_title` = '$product_name', 
 										`product_qty` = '$product_qty', 
