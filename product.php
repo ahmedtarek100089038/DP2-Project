@@ -212,6 +212,27 @@ session_start();
 	<!--Start of Tawk.to Script-->
 	<script type='text/javascript' src="frameworks/js/livechat.js"></script>
 	
+	
+	<script>
+$(function(){
+	$('#add').click(function(e){
+		e.preventDefault();
+		var quantity = $('#quantity').val();
+		quantity++;
+		$('#quantity').val(quantity);
+	});
+	$('#minus').click(function(e){
+		e.preventDefault();
+		var quantity = $('#quantity').val();
+		if(quantity > 1){
+			quantity--;
+		}
+		$('#quantity').val(quantity);
+	});
+
+});
+</script>
+	
 	<script>
 $(document).ready(function(){
  
