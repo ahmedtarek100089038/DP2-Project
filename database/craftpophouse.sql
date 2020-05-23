@@ -307,6 +307,21 @@ INSERT INTO `users` (`id`, `email`, `password`, `type`, `firstname`, `lastname`,
 (9, 'harry@den.com', '$2y$10$Oongyx.Rv0Y/vbHGOxywl.qf18bXFiZOcEaI4ZpRRLzFNGKAhObSC', 0, 'Harry', 'Den', 'Silay City, Negros Occidental', '09092735719', 'male2.png', 1, 'k8FBpynQfqsv', 'wzPGkX5IODlTYHg', '2018-05-09'),
 (12, 'christine@gmail.com', '$2y$10$ozW4c8r313YiBsf7HD7m6egZwpvoE983IHfZsPRxrO1hWXfPRpxHO', 0, 'Christine', 'becker', 'demo', '7542214500', 'female3.jpg', 1, '', '', '2018-07-09');
 
+
+
+--
+-- Table structure for table `tbl_comment`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_comment` (
+  `comment_id` int(11) NOT NULL,
+  `parent_comment_id` int(11) NOT NULL,
+  `comment` varchar(200) NOT NULL,
+  `comment_sender_name` varchar(40) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 --
 -- Indexes for dumped tables
 --
@@ -359,6 +374,13 @@ ALTER TABLE `cart`
 --
 ALTER TABLE `categories`
   ADD PRIMARY KEY (`cat_id`);
+  
+--
+-- Indexes for table `poll`
+--
+ALTER TABLE `email_info`
+  ADD PRIMARY KEY (`email_id`);
+
 
 --
 -- Indexes for table `details`
@@ -381,6 +403,11 @@ ALTER TABLE `products`
   ADD KEY `fk_cat_id` (`cat_id`),
   ADD KEY `fk_product_brand` (`product_brand`);
 
+--
+-- Indexes for table `tbl_comment`
+--
+ALTER TABLE `tbl_comment`
+  ADD PRIMARY KEY (`comment_id`);
 
 
 --
@@ -418,10 +445,10 @@ ALTER TABLE `categories`
   MODIFY `cat_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
--- Indexes for table `email_info`
+-- AUTO_INCREMENT for table `poll`
 --
 ALTER TABLE `email_info`
-  ADD PRIMARY KEY (`email_id`);
+  MODIFY `email_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Indexes for table `logs`
@@ -460,6 +487,13 @@ ALTER TABLE `users`
 --
 ALTER TABLE `users`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+
+
+--
+-- AUTO_INCREMENT for table `tbl_comment`
+--
+ALTER TABLE `tbl_comment`
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for dumped tables
 --

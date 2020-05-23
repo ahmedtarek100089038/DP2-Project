@@ -33,6 +33,7 @@ session_start();
 	<link href="frameworks/css/bootstrap.min.css" rel="stylesheet"/>
 	<script src="frameworks/js/jquery.shop.js"></script>
     <link href="frameworks/css/style.css" rel="stylesheet" />
+	
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
 	<script src="frameworks/js/scrollbutton.js"></script>
@@ -76,13 +77,16 @@ session_start();
 					<div class="product-description" data-name="<?php echo $product['product_title']; ?>" data-price="<?php echo number_format($product['product_price'], 2); ?>">
 						<h1 class="page-header"><?php echo $product['product_title']; ?></h1>
 						
-						<ul class="list">
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-									<li><i class="fa fa-star"></i></li>
-								</ul>
+						<div class="mx-auto">
+							<ul class="list">
+								<li><i class="fa fa-star"></i></li>
+								<li><i class="fa fa-star"></i></li>
+								<li><i class="fa fa-star"></i></li>
+								<li><i class="fa fa-star"></i></li>
+								<li><i class="fa fa-star"></i></li>
+							</ul>
+						</div>
+
 					
 						<h3><b><em class="item_price"> RM <?php echo number_format($product['product_price'], 2); ?></em></b></h3>
 		            	
@@ -146,84 +150,53 @@ session_start();
 		<hr>
 
 		<!--Grid row-->
-		<div class="row d-flex justify-content-center wow fadeIn">
+		
+		<!--Grid row-->
+		
+		 <div class="row d-flex justify-content-center wow fadeIn">
 			<!--Grid column-->
-			<div class="col-md-6 text-center">
-				<h4 class="my-4 h4">REVIEWS</h4>
-			</div>
+				<h2 class="my-4 h4">REVIEWS</h2>
 			<!--Grid column-->
 		</div>
-		<!--Grid row-->
-
-		<!--Grid row-->
-		<div class="row wow fadeIn">
-			<!-- Comments Form -->
-			<div class="card my-4">
-				<h5 class="card-header">Leave a Comment:</h5>
-				<div class="card-body">
-					<form>
-						<div class="form-group">
-							<textarea class="form-control" rows="3"></textarea>
-						</div>
-						<button type="submit" class="btn btn-primary">Submit</button>
-					</form>
-				</div>
+		
+	 <div class="container">
+		  
+		   <form method="POST" id="comment_form">
+			<div class="form-group">
+			 <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
 			</div>
-
-			<!-- Single Comment -->
-			<div class="media mb-4">
-				<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-				<div class="media-body">
-					<h5 class="mt-0">Commenter Name</h5>
-					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-				</div>
+			<div class="form-group">
+			 <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5"></textarea>
 			</div>
-
-			<!-- Comment with nested comments -->
-			<div class="media mb-4">
-				<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-				<div class="media-body">
-					<h5 class="mt-0">Commenter Name</h5>
-					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+			<div class="form-group">
+			 <input type="hidden" name="comment_id" id="comment_id" value="0" />
+			 <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
+			</div>
 			
-				<div class="media mt-4">
-					<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-					<div class="media-body">
-						<h5 class="mt-0">Commenter Name</h5>
-						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-					</div>
-				</div>
+		   </form>
+		   
+		   <?php
+			include_once 'db.php';
 
-				<div class="media mt-4">
-					<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-					<div class="media-body">
-					<h5 class="mt-0">Commenter Name</h5>
-						Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-					</div>
-				</div>
+			$sql_sel = "SELECT * FROM tbl_comment ORDER BY comment_id DESC";
+			$result = $con->query($sql_sel);
+			$count = $result->num_rows;
 
-				</div>
-			</div>
-		
-			<div class="media mb-4">
-				<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-				<div class="media-body">
-					<h5 class="mt-0">Commenter Name</h5>
-					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-				</div>
-				</div>
-		
-				<div class="media mb-4">
-				<img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
-				<div class="media-body">
-					<h5 class="mt-0">Commenter Name</h5>
-					Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-				</div>
-				</div>
-		</div>
-      <!--Grid row-->
-		</div>
+				if($count > 0) {
+			?>
+        <div id="comment-count" style="text-align: right;">
+        <span id="count-number"><?php echo $count;?></span> Comment(s)
+        </div>
+		<?php } ?>
+
+		   <span id="comment_message"></span>
+		   <br />
+		   <div id="display_comment"></div>
+		  </div>
+	
+
     </div>
+	
 	
 	<!-- PHP to launch Footer -->
 		<?php	
@@ -236,6 +209,59 @@ session_start();
 	<!--All bootstrap plug in file -->
 	<script src="frameworks/js/bootstrap.min.js"></script> 
 	<script type='text/javascript' src="frameworks/js/jquery.shop.js"></script>
+	
+	<script>
+$(document).ready(function(){
+ 
+ $('#comment_form').on('submit', function(event){
+  event.preventDefault();
+  var form_data = $(this).serialize();
+  $.ajax({
+   url:"add_comment.php",
+   method:"POST",
+   data:form_data,
+   dataType:"JSON",
+   success:function(data)
+   {
+    if(data.error != '')
+    {
+     $('#comment_form')[0].reset();
+     $('#comment_message').html(data.error);
+     $('#comment_id').val('0');
+     load_comment();
+	 if($("#count-number").length > 0) {
+                             var currentCount = parseInt($("#count-number").text());
+                             var newCount = currentCount + 1;
+                             $("#count-number").text(newCount)
+                         }
+    }
+   }
+  })
+ });
+
+ load_comment();
+
+ function load_comment()
+ {
+  $.ajax({
+   url:"fetch_comment.php",
+   method:"POST",
+   success:function(data)
+   {
+    $('#display_comment').html(data);
+	
+   }
+  })
+ }
+
+ $(document).on('click', '.reply', function(){
+  var comment_id = $(this).attr("id");
+  $('#comment_id').val(comment_id);
+  $('#comment_name').focus();
+ });
+ 
+});
+</script>
 
 </body>
 </html>
