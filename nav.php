@@ -13,21 +13,29 @@
 				<li class="navbar-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_categories" href="#">
 					Categories
-					<span class="carrot"></span>
+					<span>
 					</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown_categories">
-						<a class="dropdown-item" href="product1.php">Clothing</a>
-							<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="product2.php">Jewellery</a>
-							<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="product3.php">Soft Toys</a>
-							<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="product4.php">Handmade Items</a>
-							<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="product5.php">Room Decor</a>
-							<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="product6.php">Vintage Goods</a>
-					</div>
+					<ul class="dropdown-menu" aria-labelledby="dropdown_categories" role="menu">
+					  <?php
+					 
+						$pdo = pdo_connect_mysql();
+						try{
+						  $stmt = $pdo->prepare("SELECT * FROM categories");
+						  $stmt->execute();
+						  foreach($stmt as $row){
+							echo "
+							  <li><a class='dropdown-item' href='category.php?category=".$row['cat_slug']."'>".$row['cat_title']."</a></li>
+							  <div class='dropdown-divider'></div>
+							";                  
+						  }
+						}
+						catch(PDOException $e){
+						  echo "There is some problem in connection: " . $e->getMessage();
+						}
+
+
+					  ?>
+					</ul>
 				</li>
 				<li class="navbar-item dropdown">
 					<a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_about" href="#">
