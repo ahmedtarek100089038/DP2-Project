@@ -41,6 +41,6 @@
 		</div>
 		
 		<div class="bottom">	<!-- Page Information -->
-			<p> &copy; Copyright <strong><span>Craft Pop House</span></strong>. All Rights Reserved <br/> Last Updated: 04/05/2020</p>
+			<p> &copy; Copyright <strong><span>Craft Pop House</span></strong>. All Rights Reserved <br/> Last Updated: 24/05/2020</p>
 		</div>
 	</footer>

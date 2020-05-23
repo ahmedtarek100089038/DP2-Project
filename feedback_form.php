@@ -1,3 +1,15 @@
+<?php
+session_start();
+// Include functions and connect to the database using PDO MySQL
+include 'functions.php';
+$pdo = pdo_connect_mysql();
+
+$stmt = $pdo->prepare('SELECT * FROM products ORDER BY product_title DESC LIMIT 18');
+$stmt->execute();
+$recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
+
 <!DOCTYPE html>
 
 <html lang="en">

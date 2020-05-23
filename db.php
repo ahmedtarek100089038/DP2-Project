@@ -1,18 +1,18 @@
 <?php
 
-require "config/constants.php";
+require "constants.php";
 
 $servername = "localhost";
 $username = "root";
 $password = "";
 $db = "craftpophouse_db";
 
-//Create Connection
-$con = mysql_connect($servername, $username, $password, $db);
+// Create connection
+$con = mysqli_connect($servername, $username, $password,$db);
 
-// Check Connection
+// Check connection
 if (!$con) {
-	die("Connection failed: " . mysqli_connect_error());
+    die("Connection failed: " . mysqli_connect_error());
 }
 
 ?>
