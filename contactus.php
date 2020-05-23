@@ -134,6 +134,10 @@
 	<script src="frameworks/js/bootstrap.min.js"></script> 
 
 	<script type='text/javascript' src="frameworks/js/jquery.mycart.js"></script>
+	
+	<!--Start of Tawk.to Script-->
+	<script type='text/javascript' src="frameworks/js/livechat.js"></script>
+	
 	<script type="text/javascript">
   $(function () {
 

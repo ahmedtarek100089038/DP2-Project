@@ -75,6 +75,8 @@
 	<!--All bootstrap plug in file -->
 	<script src="frameworks/js/bootstrap.min.js"></script> 
 	<script type='text/javascript' src="frameworks/js/jquery.shop.js"></script>
+	<!--Start of Tawk.to Script-->
+	<script type='text/javascript' src="frameworks/js/livechat.js"></script>
 	
 </body>
 </html>
