@@ -58,6 +58,7 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			<li class="breadcrumb-item active">FAQ Page</li>
 		</ol>
 		
+		<h2>Buyer section: </h2>
 		<div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
 			<div class="card">
 				<div class="card-header" role="tab" id="headingOne">
@@ -195,6 +196,113 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 						Note: If your order has more than one item, the shipping fee will be divided accordingly.
 					</div>
 				</div>
+			</div>
+		</div>
+		
+		<h2>Seller section: </h2>
+		<div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="card">
+				<div class="card-header" role="tab" id="headingTen">
+					<h5 class="mb-0">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">WHAT ACTION IS NEEDED IF THE BUYER KEPT ON DELAYING THE PAYMENTS?</a>
+					</h5>
+				</div>
+			
+				<div id="collapseTen" class="collapse" role="tabpanel" aria-labelledby="headingTen">
+					<div class="card-body">
+						1. If the buyer is not active on Craft Pop House and delay the payment please do not ship their orders first.
+						<br />
+						Note: If your order has been shipped and the buyer received without paying, we will not be responsible for any lost.
+						<br />
+						2. Contact the administrator via customer service and we will help you to investigate the situation.
+					</div>
+				</div>
+				
+				<div class="card-header" role="tab" id="headingEleven">
+					<h5 class="mb-0">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">WHAT IS THE PROCEDURE IF THE BUYER WOULD LIKE TO CANCEL THE ORDER?</a>
+					</h5>
+				</div>
+			
+				<div id="collapseEleven" class="collapse" role="tabpanel" aria-labelledby="headingEleven">
+					<div class="card-body">
+						1. If the buyer wants to cancel an order, check through the reason of cancelling and try your best to get a refund for them.
+						<br />
+						Note: Please notify the buyer that the refund process will take 7-14 of working days.
+						<br />
+					</div>
+				</div>
+				
+								
+				<div class="card-header" role="tab" id="headingTwelve">
+					<h5 class="mb-0">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">THE BUYER IS NOT HAPPY WITH MY PRODUCTS, WHAT SHOULD I DO?</a>
+					</h5>
+				</div>
+			
+				<div id="collapseTwelve" class="collapse" role="tabpanel" aria-labelledby="headingTwelve">
+					<div class="card-body">
+						1. If the product is faulty or damaged, please check if the buyer would like to have a refund or another newly exchanged product.
+						<br />
+						2. The damaged product is not recalled and the seller will have to ship a new product with no damages to the buyer without any shipping charges.
+						<br />
+						Note: This rule applies when product are in good condition but wrong color is shipped.
+						<br />
+					</div>
+				</div>
+				
+				<div class="card-header" role="tab" id="headingThirteen">
+					<h5 class="mb-0">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">CAN I SELL MY PRODUCT(S) OUTSIDE OF MALAYSIA?</a>
+					</h5>
+				</div>
+			
+				<div id="collapseThirteen" class="collapse" role="tabpanel" aria-labelledby="headingThirteen">
+					<div class="card-body">
+						No, all product are to be sold and shipped within Malaysia only.
+						<br />
+					</div>
+				</div>
+				
+				<div class="card-header" role="tab" id="headingFourteen">
+					<h5 class="mb-0">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">DOES CRAFT POP HOUSE CHARGE SELLERS ANY COMMISSIONS OR FEES?</a>
+					</h5>
+				</div>
+			
+				<div id="collapseFourteen" class="collapse" role="tabpanel" aria-labelledby="headingFourteen">
+					<div class="card-body">
+						1. Craft Pop House charges zero (0) commission for Sellers who join Craft Pop House as a marketplace Seller.
+						<br />
+						2. Sellers will be charged two (2%) percent payment fee with SST which is imposed by payment gateway online banking, credit card processing and other acceptable online payment method.
+					</div>
+				</div>
+				
+				<div class="card-header" role="tab" id="headingFifteen">
+					<h5 class="mb-0">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">DO I HAVE TO PAY FOR MY PARCEL DELIVERIES?</a>
+					</h5>
+				</div>
+			
+				<div id="collapseFifteen" class="collapse" role="tabpanel" aria-labelledby="headingFifteen">
+					<div class="card-body">
+						Yes. However, this cost is offset by the shipping charges paid by customers which you will receive in your payment cycle.
+					</div>
+				</div>
+				
+				
+				<div class="card-header" role="tab" id="headingSixteen">
+					<h5 class="mb-0">
+						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">WHEN AND HOW WILL I GET PAID?</a>
+					</h5>
+				</div>
+			
+				<div id="collapseSixteen" class="collapse" role="tabpanel" aria-labelledby="headingSixteen">
+					<div class="card-body">
+						Once a buyer receives the parcel, Craft Pop House will transfer the payment via the Seller's bank account registered during sign up within  3- 5 working days.
+					</div>
+				</div>
+				
 			</div>
 		</div>
 	</div>
