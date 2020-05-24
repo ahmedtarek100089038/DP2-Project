@@ -2,12 +2,13 @@
 if(isset($_POST['submit'])) {
 
 $mailFrom = $_POST['email'];
+$sender = 'From: ' .$mailFrom;
 
-$emailTo = "craftpophousekuching@gmail.com"; // Our email address
-$email_subject = "Subscrib to our newsletter Form Submission From: ".$mailFrom;
-$txt = "You have received a new message from the user ".$name.".\n\n".$message;
+$txt = "You have received a new subscription from the user ".$mailFrom;
 
-//Send the email
-mail($emailTo,$email_subject,$txt,$email_subject);
+mail('craftpophousekuching@gmail.com','New Customer Subscription From: ' .$mailFrom,$txt,$sender);
 header("Location: index.php?mailsend");
 }
+
+
+

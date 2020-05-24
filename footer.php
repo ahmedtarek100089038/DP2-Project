@@ -34,8 +34,8 @@
 			
 			<div class="col-lg-4 col-md-6 footer-newsletter">
 				<h5>Join Our Newsletter</h5>
-				<form action="" method="post">
-					<input type="email" name="email"><input type="submit" value="Subscribe">
+				<form method="post" action="subscribe-to-email.php" name="sendmailsubscribe">
+					<input type="email" name="email"><input type="submit" name="submit" value="Subscribe">
 				</form>
 			</div>
 		</div>

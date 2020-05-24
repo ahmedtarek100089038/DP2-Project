@@ -170,11 +170,11 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <h5>Join Our Newsletter</h5>
                         <h2>Subscribe to get Updated
                             with new offers</h2>
-                        <form class="input-group">
+                        <form method="post" action="subscribe-to-email.php" name="sendmailsubscribe" class="input-group" >
                             <input type="email" class="form-control" name="email" id="email" placeholder="johnlee@gmail.com" 
                                 aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button type="submit" class="input-group-text btn_2" id="basic-addon2">subscribe now</button>
+                                <button type="submit" name="submit" class="input-group-text btn_2" id="basic-addon2">subscribe now</button>
 							</div>
                         </form>
                     </div>
