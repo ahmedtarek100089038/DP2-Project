@@ -85,6 +85,27 @@ INSERT INTO `brands` (`brand_id`, `brand_title`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `shipping`
+--
+
+CREATE TABLE `shipping` (
+	`shipping_id` int(100) NOT NULL,
+	`shipping_det` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- 
+-- Dumping data for table `shipping`
+-- 
+
+INSERT INTO `shipping` (`shipping_id`, `shipping_det`) VALUES
+(1, 'Pending'),
+(2, 'Shipping'),
+(3, 'Completed');
+
+-- --------------------------------------------------------
+
+
+--
 -- Table structure for table `cart`
 --
 
@@ -189,18 +210,19 @@ CREATE TABLE `orders` (
 	`product_id` int(11) NOT NULL,
 	`qty` int(11) NOT NULL,
 	`trx_id` varchar(255) NOT NULL,
-	`p_status` varchar(20) NOT NULL
+	`p_status` varchar(20) NOT NULL,
+	`ship_det` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`order_id`, `user_id`, `product_id`, `qty`, `trx_id`, `p_status`) VALUES
-(1, 1, 1, 1, '9L434522M7706801A', 'Completed'),
-(2, 1, 3, 1, '9L434523M7706801A', 'Completed'),
-(3, 1, 3, 1, '8L434523M7706801B', 'Completed'),
-(4, 1, 4, 2, '7L434523M7706801A', 'Completed');
+INSERT INTO `orders` (`order_id`, `user_id`, `product_id`, `qty`, `trx_id`, `p_status`, `ship_det`) VALUES
+(1, 1, 1, 1, '9L434522M7706801A', 'Completed', 'Pending'),
+(2, 1, 3, 1, '9L434523M7706801A', 'Completed', 'Shipping'),
+(3, 1, 3, 1, '8L434523M7706801B', 'Completed', 'Shipping'),
+(4, 1, 4, 2, '7L434523M7706801A', 'Completed', 'Completed');
 
 -- --------------------------------------------------------
 
@@ -363,6 +385,12 @@ ALTER TABLE `seller`
 --
 ALTER TABLE `brands`
   ADD PRIMARY KEY (`brand_id`);
+  
+  --
+-- Indexes for table `shipping`
+--
+ALTER TABLE `shipping`
+  ADD PRIMARY KEY (`shipping_id`);
 	
 --
 -- Indexes for table `cart`
@@ -432,6 +460,12 @@ ALTER TABLE `seller`
 --
 ALTER TABLE `brands`
   MODIFY `brand_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  
+  --
+-- AUTO_INCREMENT for table `shipping`
+--
+ALTER TABLE `shipping`
+  MODIFY `shipping_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `cart`

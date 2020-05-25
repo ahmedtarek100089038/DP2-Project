@@ -62,6 +62,8 @@ $(document).ready(function(){
 								              '<td>'+ value.qty +'</td>'+
 								              '<td>'+ value.trx_id +'</td>'+
 								              '<td>'+ value.p_status +'</td>'+
+											  '<td>'+ value.ship_det +'</td>'+
+											  '<td><a class="btn btn-sm btn-info edit-shipping"><span style="display:none;">'+JSON.stringify(value)+'</span><i class="fas fa-pencil-alt"></i></a>&nbsp;</td>'+
 								            '</tr>';
 
 					});
@@ -71,11 +73,45 @@ $(document).ready(function(){
 				}else if(resp.status == 303){
 					$("#customer_order_list").html(resp.message);
 				}
+				
+					
 
 			}
 		})
 		
 	}
+	
+	$(document.body).on("click", ".edit-shipping", function(){
+
+		var shipping = $.parseJSON($.trim($(this).children("span").html()));
+		console.log(shipping);
+		$("input[name='e_shipping_title']").val(shipping.shipping_title);
+		$("input[name='shipping_id']").val(shipping.shipping_id);
+
+		$("#edit_shipping_modal").modal('show');
+
+		
+
+	});
+
+	$(".edit-shipping-btn").on("click", function(){
+		$.ajax({
+			url : '../admin/classes/Customers.php',
+			method : 'POST',
+			data : $("#edit-shipping-form").serialize(),
+			success : function(response){
+				var resp = $.parseJSON(response);
+				if (resp.status == 202) {
+					getShipping();
+					$("#edit_shipping_modal").modal('hide');
+					alert(resp.message);
+				}else if(resp.status == 303){
+					alert(resp.message);
+				}
+				
+			}
+		});
+	});
 
 
 });
