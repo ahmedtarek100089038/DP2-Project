@@ -1,131 +1,84 @@
 <?php
-session_start();
-include "db.php";
-if (isset($_POST["f_name"])) {
-	$f_name = $_POST["f_name"];
-	$l_name = $_POST["l_name"];
-	$email = $_POST['emaill'];
-	$password = $_POST['password'];
-	$repassword = $_POST['repassword'];
-	$mobile = $_POST['mobile'];
-	$address1 = $_POST['address1'];
-	$address2 = $_POST['address2'];
-	$name = "/^[a-zA-Z ]+$/";
-	$emailValidation = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9]+(\.[a-z]{2,4})$/";
-	$number = "/^[0-9]+$/";
-	
-if(empty($f_name) || empty($l_name) || empty($email) || empty($password) || empty($repassword) ||
-	empty($mobile) || empty($address1) || empty($address2)){
-		
-		echo "
-			<div class='alert alert-warning'>
-				<a hred='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><b>Please fill all the fields...</b>
-			</div>
-		";
-		exit();
+
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "craftpophouse_db";
+
+// Create connection
+$con = mysqli_connect($servername, $username, $password,$db);
+
+// Check connection
+if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Now we check if the data was submitted, isset() function will check if the data exists.
+if (!isset($_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['password'], $_POST['repassword'], $_POST['mobile'], $_POST['address1'])) {
+	// Could not get the data that should have been sent.
+	exit('Please complete the registration form!');
+}
+
+if(empty($_POST['first_name']) || empty($_POST['last_name']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['repassword']) || empty($_POST['mobile']) || empty($_POST['address1'])){
+	// One or more values are empty.
+	exit('Please complete the registration form');
+}
+
+if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+	exit('Email is not valid!');
+}
+
+if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
+	exit('Password must be between 5 and 20 characters long!');
+}
+
+if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+	exit('Email is not valid!');
+}
+
+if (preg_match('/[A-Za-z0-9]+/', $_POST['email']) == 0) {
+    exit('email is not valid!');
+}
+
+if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
+	exit('Password must be between 5 and 20 characters long!');
+}
+
+// We need to check if the account with that username exists.
+if ($stmt = $con->prepare('SELECT user_id, password FROM user_info WHERE email = ?')) {
+	// Bind parameters (s = string, i = int, b = blob, etc), hash the password using the PHP password_hash function.
+	$stmt->bind_param('s', $_POST['email']);
+	$stmt->execute();
+	$stmt->store_result();
+	// Store the result so we can check if the account exists in the database.
+	if ($stmt->num_rows > 0) {
+		// Username already exists
+		echo "<script>
+				alert('Email exists, please choose another!');
+				window.location.href='register.php';
+			</script>";
 	} else {
-		if (!preg_match($name, $f_name)){
-		echo "
-			<div class='alert alert-warning'>
-				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>this $f_name is not valid...</b>
-			</div>
-		";
-		exit();
-	}
-	if(!preg_match($name,$l_name)){
-		echo "
-			<div class='alert alert-warning'>
-				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>this $l_name is not valid...</b>
-			</div>
-		";
-		exit();
-	}
-	if(!preg_match($emailValidation,$email)){
-		echo "
-			<div class='alert alert-warning'>
-				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>this $email is not valid...</b>
-			</div>
-		";
-		exit();
-	}
-	if(strlen($password) < 9 ){
-		echo "
-			<div class='alert alert-warning'>
-				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Password is weak...</b>
-			</div>
-		";
-		exit();
-	}
-	if(strlen($repassword) < 9 ){
-		echo "
-			<div class='alert alert-warning'>
-				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Password is weak...</b>
-			</div>
-		";
-		exit();
-	}
-	if($password != $repassword){
-		echo "
-			<div class='alert alert-warning'>
-				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>password is not same!</b>
-			</div>
-		";
-	}
-	if(!preg_match($number,$mobile)){
-		echo "
-			<div class='alert alert-warning'>
-				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Mobile number $mobile is not valid...</b>
-			</div>
-		";
-		exit();
-	}
-	if(!(strlen($mobile) == 10)){
-		echo "
-			<div class='alert alert-warning'>
-				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Mobile number must be 10 digit</b>
-			</div>
-		";
-		exit();
-	}
-	//Existing email address in our database
-	$sql = "SELECT user_id FROM user_info WHERE email = '$email' LIMIT 1";
-	$check_quert = mysql_query($con,$sql);
-	$count_email = mysqli_num_rows($check_query);
-	if($count_email > 0){
-		echo "
-			<div class='alert alert-danger'>
-				<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
-				<b>Email Address is already available. Please try another email address</b>
-			</div>
-		";
-		exit();
-	} else {
-		$password = md5($password);
-		$sql = "INSERT INTO `user_info` 
-		(`user_id`, `first_name`, `last_name`, `email`, 
-		`password`, `mobile`, `address1`, `address2`) 
-		VALUES (NULL, '$f_name', '$l_name', '$email', 
-		'$password', '$mobile', '$address1', '$address2')";
-		$run_query = mysql_query($con,$sql);
-		$_SESSION["uid"] = mysql_insert_id($con);
-		$_SESSION["name"] = $f_name;
-		$ip_add = getenv("REMOTE_ADDR");
-		$sql = "UPDATE cart SET user_id = '$_SESSION[uid]' WHERE ip_add='$ip_add' AND user_id = -1";
-		if(mysql_query($con,$sql))){
-			echo "register_success";
-			exit();
+		// Username doesnt exists, insert new account
+		if ($stmt = $con->prepare('INSERT INTO user_info (first_name, last_name, email, password, mobile, address1) VALUES (?, ?, ?, ?, ?, ?)')) {
+			// We do not want to expose passwords in our database, so hash the password and use password_verify when a user logs in.
+			$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+			$uniqid = uniqid();
+			$stmt->bind_param('ssssss', $_POST['first_name'],  $_POST['last_name'], $_POST['email'], $password, $_POST['mobile'], $_POST['address1']);
+			$stmt->execute();
+			header('Location: login.php');
+		} else {
+			// Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
+			echo 'Could not prepare statement!';
 		}
 	}
-	}
+	$stmt->close();
+} else {
+	// Something is wrong with the sql statement, check to make sure accounts table exists with all 3 fields.
+	echo 'Could not prepare statement!';
 }
+$con->close();
+
 
 ?>
 		

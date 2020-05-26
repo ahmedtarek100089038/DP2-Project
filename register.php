@@ -1,3 +1,12 @@
+<?php
+session_start();
+// Include functions and connect to the database using PDO MySQL
+include 'db.php';
+include 'functions.php';
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +18,7 @@
 	<!-- =========HEAD STARTS HERE========= -->
 <head>
     <title>Craft Pop House | Register Page</title>
+
     <meta charset="utf-8">
     <meta name="author" content="DP2">
     <meta name="description" content="Craft Pop House Register Page">
@@ -51,16 +61,16 @@
 				<div class="card-body">	
 					<h2 class="page-header text-center">Register</h2>
 				
-					<form class="form-signin" id="signup_form" onsubmit="return false">
+					<form class="form-signin" id="signup_form" action="v-register.php" method="post" autocomplete="off">
 				
 					<div class="form-label-group">
-						<label for="f_name">First Name</label>
-						<input type="text" id="f_name" name="f_name" class="form-control" placeholder="First Name" required autofocus>
+						<label for="first_name">First Name</label>
+						<input type="text" id="first_name" name="first_name" class="form-control" placeholder="First Name" required autofocus>
 					</div>
 				  
 					<div class="form-label-group">
-						<label for="f_name">Last Name</label>
-						<input type="text" id="l_name" name="l_name" class="form-control" placeholder="Last Name" required autofocus>
+						<label for="last_name">Last Name</label>
+						<input type="text" id="last_name" name="last_name" class="form-control" placeholder="Last Name" required autofocus>
 					</div>
 				
 					<div class="form-label-group">
@@ -84,21 +94,16 @@
 					</div>
 				
 					<div class="form-label-group">
-						<label for="address1">Address Line 1</label>
+						<label for="address1">Address Line</label>
 						<input type="text" id="address1" name="address1" class="form-control" placeholder="Address Line 1" required>
 					</div>
-				
-					<div class="form-label-group">
-						<label for="address2">Address Line 2</label>
-						<input type="text" id="address2" name="address2" class="form-control" placeholder="Address Line 1" required>
-					</div>
-				
+					
 					<div class="form-label-group">
 						<input type="checkbox" name="termsAndConditions"> By Agree to our Terms & Privacy
 					</div>
 				
 					<br/>
-					<button onclick="window.location.href='login.php'" id="btn" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
+					<button id="btn" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
 					
 	
 				  	

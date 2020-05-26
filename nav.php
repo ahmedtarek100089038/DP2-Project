@@ -1,3 +1,4 @@
+
 	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
 		<a href="index.php"><img class="navbar-brand" src="images/logo.png" style="max-width: 50%;" alt="logo" /></a>
 		
@@ -68,21 +69,57 @@
 			</ul>
 			
 			<div class="cart ml-auto">
-				<a href="cart.php"><span class="fa fa-shopping-cart my-cart-icon"></span></a>
+				<?php
+					// Get the amount of items in the shopping cart, this will be displayed in the header.
+					$num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+					echo"
+						<a href='index.php?page=cart'>
+						<span>$num_items_in_cart</span>
+						<i class='fas fa-shopping-cart my-cart-icon'></i>
+						
+						</a>
+					";
+				?>
+				
 			</div>
 			
 			<ul class="navbar-nav ml-auto"> 
-				<li class="navbar-item dropdown active">
-					<a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_about" href="#">
-						<i class="fa fa-user" aria-hidden="true"></i>   Register/Login
-						<span class="carrot"></span>
-					</a>
-					<div class="dropdown-menu" aria-labelledby="dropdown_categories">
-						<a class="dropdown-item " href="register.php">Register</a>
-						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="login.php">Login</a>
-					</div>
-				</li>	
+				<?php
+                             include "db.php";
+                            if(isset($_SESSION["loggedin"])){
+                                $sql = "SELECT user_id, first_name FROM user_info WHERE user_id='$_SESSION[user_id]'";
+                                $query = mysqli_query($con,$sql);
+                                $row=mysqli_fetch_array($query);
+                                
+                                echo '
+								<li class="navbar-item dropdown active">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_about" ><i class="fa fa-user-o"></i> HI '.$row["first_name"].'
+										<span class="carrot"></span>
+									</a>
+									<div class="dropdown-menu" aria-labelledby="dropdown_categories">
+										<a href="profile.php" class="dropdown-item" >My Profile</a>
+										<div class="dropdown-divider"></div>
+										<a href="logout.php" class="dropdown-item" ><i class="fa fa-sign-in" aria-hidden="true"></i>Log out</a>
+                               		</div>';
+
+                            }else{ 
+                                echo '
+                                
+								<li class="navbar-item dropdown active">
+									<a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_about" href="#">
+										<i class="fa fa-user" aria-hidden="true"></i>   Register/Login
+										<span class="carrot"></span>
+									</a>
+									<div class="dropdown-menu" aria-labelledby="dropdown_categories">
+										<a class="dropdown-item " href="register.php">Register</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="login.php">Login</a>
+									</div>
+								</li>';
+                                
+                            }
+				?>	
 			</ul>	
+			
 		</div>
 	</nav>

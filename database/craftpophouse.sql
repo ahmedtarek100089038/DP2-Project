@@ -85,27 +85,6 @@ INSERT INTO `brands` (`brand_id`, `brand_title`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `shipping`
---
-
-CREATE TABLE `shipping` (
-	`shipping_id` int(100) NOT NULL,
-	`shipping_det` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- 
--- Dumping data for table `shipping`
--- 
-
-INSERT INTO `shipping` (`shipping_id`, `shipping_det`) VALUES
-(1, 'Pending'),
-(2, 'Shipping'),
-(3, 'Completed');
-
--- --------------------------------------------------------
-
-
---
 -- Table structure for table `cart`
 --
 
@@ -210,19 +189,18 @@ CREATE TABLE `orders` (
 	`product_id` int(11) NOT NULL,
 	`qty` int(11) NOT NULL,
 	`trx_id` varchar(255) NOT NULL,
-	`p_status` varchar(20) NOT NULL,
-	`ship_det` varchar(20) NOT NULL
+	`p_status` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `orders`
 --
 
-INSERT INTO `orders` (`order_id`, `user_id`, `product_id`, `qty`, `trx_id`, `p_status`, `ship_det`) VALUES
-(1, 1, 1, 1, '9L434522M7706801A', 'Completed', 'Pending'),
-(2, 1, 3, 1, '9L434523M7706801A', 'Completed', 'Shipping'),
-(3, 1, 3, 1, '8L434523M7706801B', 'Completed', 'Shipping'),
-(4, 1, 4, 2, '7L434523M7706801A', 'Completed', 'Completed');
+INSERT INTO `orders` (`order_id`, `user_id`, `product_id`, `qty`, `trx_id`, `p_status`) VALUES
+(1, 1, 1, 1, '9L434522M7706801A', 'Completed'),
+(2, 1, 3, 1, '9L434523M7706801A', 'Completed'),
+(3, 1, 3, 1, '8L434523M7706801B', 'Completed'),
+(4, 1, 4, 2, '7L434523M7706801A', 'Completed');
 
 -- --------------------------------------------------------
 
@@ -300,34 +278,26 @@ INSERT INTO `products` (`product_id`, `cat_id`, `product_brand`, `product_title`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Table structure for table `user_info`
 --
 
-CREATE TABLE IF NOT EXISTS `users` (
-`id` int(11) NOT NULL,
-  `email` varchar(200) NOT NULL,
-  `password` varchar(60) NOT NULL,
-  `type` int(1) NOT NULL,
-  `firstname` varchar(50) NOT NULL,
-  `lastname` varchar(50) NOT NULL,
-  `address` text NOT NULL,
-  `contact_info` varchar(100) NOT NULL,
-  `photo` varchar(200) NOT NULL,
-  `status` int(1) NOT NULL,
-  `activate_code` varchar(15) NOT NULL,
-  `reset_code` varchar(15) NOT NULL,
-  `created_on` date NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+CREATE TABLE `user_info` (
+	`user_id` int(10) NOT NULL,
+	`first_name` varchar(100) NOT NULL,
+	`last_name` varchar(100) NOT NULL,
+	`email` varchar(300) NOT NULL,
+	`password` varchar(300) NOT NULL,
+	`mobile` varchar(10) NOT NULL,
+	`address1` varchar(300) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `users`
+-- Dumping data for table `user_info`
 --
 
-INSERT INTO `users` (`id`, `email`, `password`, `type`, `firstname`, `lastname`, `address`, `contact_info`, `photo`, `status`, `activate_code`, `reset_code`, `created_on`) VALUES
-(1, 'admin@admin.com', '$2y$10$0SHFfoWzz8WZpdu9Qw//E.tWamILbiNCX7bqhy3od0gvK5.kSJ8N2', 1, 'Code', 'Projects', '', '', 'thanos1.jpg', 1, '', '', '2018-05-01'),
-(9, 'harry@den.com', '$2y$10$Oongyx.Rv0Y/vbHGOxywl.qf18bXFiZOcEaI4ZpRRLzFNGKAhObSC', 0, 'Harry', 'Den', 'Silay City, Negros Occidental', '09092735719', 'male2.png', 1, 'k8FBpynQfqsv', 'wzPGkX5IODlTYHg', '2018-05-09'),
-(12, 'christine@gmail.com', '$2y$10$ozW4c8r313YiBsf7HD7m6egZwpvoE983IHfZsPRxrO1hWXfPRpxHO', 0, 'Christine', 'becker', 'demo', '7542214500', 'female3.jpg', 1, '', '', '2018-07-09');
-
+INSERT INTO `user_info` (`user_id`, `first_name`, `last_name`, `email`, `password`, `mobile`, `address1`) VALUES
+(1, 'Simon', 'Lu', 'simonlu@gmail.com', '1234567890abc', '0198008888', 'Simpang Tiga'),
+(2, 'Xavier', 'Lee', 'xavierlee@gmail.com', '1234567890abcd', '0190800991', 'Simpang Tiga');
 
 
 --
@@ -385,12 +355,6 @@ ALTER TABLE `seller`
 --
 ALTER TABLE `brands`
   ADD PRIMARY KEY (`brand_id`);
-  
-  --
--- Indexes for table `shipping`
---
-ALTER TABLE `shipping`
-  ADD PRIMARY KEY (`shipping_id`);
 	
 --
 -- Indexes for table `cart`
@@ -432,6 +396,15 @@ ALTER TABLE `products`
   ADD KEY `fk_cat_id` (`cat_id`),
   ADD KEY `fk_product_brand` (`product_brand`);
 
+
+--
+-- Indexes for table `user_info`
+--
+ALTER TABLE `user_info`
+  ADD PRIMARY KEY (`user_id`);
+
+
+
 --
 -- Indexes for table `tbl_comment`
 --
@@ -460,12 +433,6 @@ ALTER TABLE `seller`
 --
 ALTER TABLE `brands`
   MODIFY `brand_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-  
-  --
--- AUTO_INCREMENT for table `shipping`
---
-ALTER TABLE `shipping`
-  MODIFY `shipping_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `cart`
@@ -510,19 +477,12 @@ ALTER TABLE `products`
   MODIFY `product_id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- Indexes for table `users`
+-- AUTO_INCREMENT for table `user_info`
 --
-ALTER TABLE `users`
- ADD PRIMARY KEY (`id`);
-
-
+ALTER TABLE `user_info`
+  MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
-
 
 --
 -- AUTO_INCREMENT for table `tbl_comment`

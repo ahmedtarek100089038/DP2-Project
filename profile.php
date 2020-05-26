@@ -7,9 +7,6 @@ include 'functions.php';
 
 ?>
 
-
-
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -49,53 +46,49 @@ include 'functions.php';
 		?>
 	
 	<div class="container">
-		<h1 class="mt-4 mb-3">Login Page</h1>
+		<h1 class="mt-4 mb-3">Profile Page</h1>
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item">
 				<a href="index.php">Home</a>
 			</li>
-			<li class="breadcrumb-item active">Login Page</li>
+			<li class="breadcrumb-item active">Profile Page</li>
 		</ol>
-		<div class="row">
-			<div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-				<div class="card card-signin my-5">
-					<div class="card-body">
-						<h2 class="page-header text-center">Login</h2>
+	
+		  <p>Your account details are below:</p>
+		
 				
-				
-					<form action="v-login.php" method="post" id="login" class="form-signin">
-						<div class="form-label-group">
-							<label for="email">Email address</label>
-							<input type="email" name="email" id="email" class="form-control" placeholder="Email address" required autofocus>
-						</div>
-
-						<div class="form-label-group">
-							<label for="password">Password</label>
-							<input type="password" name="password" id="password" id="password" class="form-control" placeholder="Password" required>
-						</div>
-						<br/>
-						<button  class="btn btn-lg btn-primary btn-block text-uppercase" name="submit" type="submit">Sign in</button>
-				  
-						<hr>
-				
-						<div class="forgotPassw">
-							<a href="#forgot">Forgot Password?</a>
-						</div>
-				
-						<hr>
-				
-						<div class="hrOr">
-							<span class="spanOr"><strong>or</strong></span>
-						</div>
-				  
-						<button class="btn btn-lg btn-google btn-block text-uppercase" type="submit"><i class="fab fa-google mr-2"></i> Sign in with Google</button>
-						<button class="btn btn-lg btn-facebook btn-block text-uppercase" type="submit"><i class="fab fa-facebook-f mr-2"></i> Sign in with Facebook</button>
-					</form>
-				
-					</div>
-				</div>
-			</div>
-		</div>
+				<table>
+					<tr>
+						<td>First Name:</td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td>Last Name:</td>
+						<td></td>
+					</tr>
+					<br />
+					<tr>
+						<td>Email:</td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td>Password:</td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td>Phone Number:</td>
+						<td></td>
+					</tr>
+					
+					<tr>
+						<td>Address:</td>
+						<td></td>
+					</tr>
+				</table>
+		  
 	</div>
 
 	<!-- PHP to launch Footer -->

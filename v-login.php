@@ -1,58 +1,54 @@
 <?php
-include "db.php";
-
 session_start();
 
-#Login script begin here
-#If user given credential matches successfully with the data available in database then we will echo string login_success
-#Login_success string will go back to called Anonymous function $("#login").click()
-if(isset($_POST["email"]) && isset($_POST["password"])){
-	$email = mysql_real_escape_string($con,$_POST["email"]);
-	$password = md5($_POST["password"]);
-	$sql = "SELECT * FROM user_info WHERE email = '$email' AND password = '$password'";
-	$run_query = mysql_query($con,$sql);
-	$count = mysql_num_rows($run_query);
-	//If user record is available in database then $count will be equal to 1
-	if($count == 1){
-		$row = mysql_fetch_array($run_query);
-		$_SESSION["uid"] = $row["user_id"];
-		$_SESSION["name"] = $row["first_name"];
-		$ip_add = getenv("REMOTE_ADDR");
-		
-		if (isset($_COOKIE["product_list"])) {
-				$p_list = stripcslashes($_COOKIE["product_list"]);
-				//here we are decoding stored json product list cookie to normal array
-				$product_list = json_decode($p_list,true);
-				for ($i=0; $i < count($product_list); $i++) { 
-					//After getting user id from database here we are checking user cart item if there is already product is listed or not
-					$verify_cart = "SELECT id FROM cart WHERE user_id = $_SESSION[uid] AND p_id = ".$product_list[$i];
-					$result  = mysqli_query($con,$verify_cart);
-					if(mysqli_num_rows($result) < 1){
-						//if user is adding first time product into cart we will update user_id into database table with valid id
-						$update_cart = "UPDATE cart SET user_id = '$_SESSION[uid]' WHERE ip_add = '$ip_add' AND user_id = -1";
-						mysqli_query($con,$update_cart);
-					}else{
-						//if already that product is available into database table we will delete that record
-						$delete_existing_product = "DELETE FROM cart WHERE user_id = -1 AND ip_add = '$ip_add' AND p_id = ".$product_list[$i];
-						mysqli_query($con,$delete_existing_product);
-					}
-				}
-				//here we are destroying user cookie
-				setcookie("product_list","",strtotime("-1 day"),"/");
-				//if user is logging from after cart page we will send cart_login
-				echo "cart_login";
-				exit();
-				
-			}
-			//if user is login from page we will send login_success
-			echo "login_success";
-			exit();
-		}else{
-			echo "<span style='color:red;'>Please register before login..!</span>";
-			exit();
-		}
-	
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "craftpophouse_db";
+
+// Create connection
+$con = mysqli_connect($servername, $username, $password,$db);
+
+if ( mysqli_connect_errno() ) {
+	// If there is an error with the connection, stop the script and display the error.
+	exit('Failed to connect to MySQL: ' . mysqli_connect_error());
 }
 
+// Now we check if the data from the login form was submitted, isset() will check if the data exists.
+if ( !isset($_POST['email'], $_POST['password']) ) {
+	// Could not get the data that should have been sent.
+	exit('Please fill both the username and password fields!');
+}
+
+// Prepare our SQL, preparing the SQL statement will prevent SQL injection.
+if ($stmt = $con->prepare('SELECT user_id, password FROM user_info WHERE email = ?')) {
+	// Bind parameters (s = string, i = int, b = blob, etc), in our case the username is a string so we use "s"
+	$stmt->bind_param('s', $_POST['email']);
+	$stmt->execute();
+	// Store the result so we can check if the account exists in the database.
+	$stmt->store_result();
+	
+	if ($stmt->num_rows > 0) {
+	$stmt->bind_result($id, $password);
+	$stmt->fetch();
+	// Account exists, now we verify the password.
+	// Note: remember to use password_hash in your registration file to store the hashed passwords.
+	if (password_verify($_POST['password'], $password)) {
+		// Verification success! User has loggedin!
+		// Create sessions so we know the user is logged in, they basically act like cookies but remember the data on the server.
+		session_regenerate_id();
+		$_SESSION['loggedin'] = TRUE;
+		$_SESSION['first_name'] = $_POST['first_name'];
+		$_SESSION['user_id'] = $id;
+		header('Location: index.php');
+	} else {
+		echo 'Incorrect password!';
+	}
+	} else {
+		echo 'Incorrect username!';
+	}
+
+
+	$stmt->close();
+}
 ?>
-			
