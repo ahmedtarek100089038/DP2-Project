@@ -2,11 +2,7 @@
 session_start();
 // Include functions and connect to the database using PDO MySQL
 include 'functions.php';
-$pdo = pdo_connect_mysql();
 
-$stmt = $pdo->prepare('SELECT * FROM products ORDER BY product_title DESC LIMIT 18');
-$stmt->execute();
-$recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
@@ -127,6 +123,11 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 					<div class="recentlyadded content-wrapper">
 						<div class="products">
 							<?php 
+							$pdo = pdo_connect_mysql();
+
+							$stmt = $pdo->prepare('SELECT * FROM products WHERE product_id BETWEEN 1 AND 9');
+							$stmt->execute();
+							$recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 							foreach ($recently_added_products as $product): ?>
 							<a href="product.php?product=<?=$product['product_id']?>" class="product">
 								<img src="images/<?=$product['product_image']?>" width="250" height="250" alt="">
@@ -183,6 +184,50 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </section>
 	
+	<main>
+		<div class="container">
+			<div class="row">
+					<div class="recentlyadded content-wrapper">
+						<div class="products">
+							<?php 
+							$pdo = pdo_connect_mysql();
+
+							$stmt = $pdo->prepare('SELECT * FROM products WHERE product_id BETWEEN 10 AND 18');
+							$stmt->execute();
+							$recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+							foreach ($recently_added_products as $product): ?>
+							<a href="product.php?product=<?=$product['product_id']?>" class="product">
+								<img src="images/<?=$product['product_image']?>" width="250" height="250" alt="">
+								<hr>
+								<h4 class="name"><?=$product['product_title']?></h4>
+								<h6 class="name"><?=$product['product_desc']?></h6>
+								<div class="col-md-12">
+									<ul class="list">
+									  <li><i class="fa fa-star"></i></li>
+									  <li><i class="fa fa-star"></i></li>
+									  <li><i class="fa fa-star"></i></li>
+									  <li><i class="fa fa-star"></i></li>
+									  <li><i class="fa fa-star"></i></li>
+									</ul>
+								</div>
+								<span class="price">
+									<p><strong><em class="item_price"> RM <?=$product['product_price']?></em></strong></p>
+									<div class="block">
+										<div class="starbox small ghosting"> </div>
+									</div>
+									<div class="clearfix"></div>
+								</span>
+								<div class="add add-2">
+								<button class="btn btn-danger my-cart-btn my-cart-b" href="index.php?page=product&id=<?=$product['product_id']?>">View Product</button>
+								</div>
+							</a>
+							
+							<?php endforeach; ?>
+						</div>
+					</div>
+			</div>
+		</div>
+	</main>
 	
 	
 	<!-- PHP to launch Footer -->
