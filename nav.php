@@ -87,13 +87,13 @@
 				<?php
                              include "db.php";
                             if(isset($_SESSION["loggedin"])){
-                                $sql = "SELECT user_id, first_name FROM user_info WHERE user_id='$_SESSION[user_id]'";
+                                $sql = "SELECT user_id, first_name, last_name FROM user_info WHERE user_id='$_SESSION[user_id]'";
                                 $query = mysqli_query($con,$sql);
                                 $row=mysqli_fetch_array($query);
                                 
                                 echo '
 								<li class="navbar-item dropdown active">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_about" ><i class="fa fa-user-o"></i> HI '.$row["first_name"].'
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_about" ><i class="fa fa-user-o"></i> HI '.$row["first_name"].' '.$row["last_name"].'
 										<span class="carrot"></span>
 									</a>
 									<div class="dropdown-menu" aria-labelledby="dropdown_categories">
