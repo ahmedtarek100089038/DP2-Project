@@ -15,17 +15,17 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html lang="en">
 
 	<!-- Description: SWE30010 DEVELOPMENT PROJECT 2-DESIGN, PLANNING AND MANAGEMENT  -->
-	<!-- Page: Contact Us Page (contactus.php) -->
+	<!-- Page: Customer Service Page (customerservice.php) -->
 	<!-- Author: DP2 -->
-	<!-- Date: 25/4/2020 -->
+	<!-- Date: 27/5/2020 -->
 	
 	<!-- =========HEAD STARTS HERE========= -->
 <head>
-    <title>Craft Pop House | Contact Us Page</title>
+    <title>Craft Pop House | Customer Service Page</title>
     <meta charset="utf-8">
     <meta name="author" content="DP2">
-    <meta name="description" content="Craft Pop House Contact Us Page">
-    <meta name="keywords" content="contact, us, craft pop house">
+    <meta name="description" content="Craft Pop House Customer Service Page">
+    <meta name="keywords" content="customer, service, craft pop house">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	<!--Boostrap-->
@@ -50,54 +50,30 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	<!-- Page Content -->
 	<div class="container">
 		<!-- Page Heading/Breadcrumbs -->
-		<h1 class="mt-4 mb-3">Contact Us </h1>
+		<h1 class="mt-4 mb-3">Customer Service </h1>
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item">
 				<a href="index.php">Home</a>
 			</li>
-			<li class="breadcrumb-item active">Contact Us</li>
+			<li class="breadcrumb-item active">Customer Service</li>
 		</ol>
 
 		<!-- Content Row -->
-		<div class="row">
-			<!-- Map Column -->
-			<div class="col-lg-8 mb-4">
-				<!-- Embedded Google Map -->
-				<iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;1.5535,110.3593&amp;spn=1.5535,110.3593&amp;t=m&amp;z=4&amp;output=embed"></iframe>
-			</div>
-			<!-- Contact Details Column -->
-			<div class="col-lg-4 mb-4">
-				<h3>Contact Details</h3>
-				<p>
-					Jalan Simpang Tiga, 93550
-					<br>
-					Kuching, Sarawak, Malaysia.
-					<br>
-				</p>
-				<p>
-					<i class="fa fa-phone"></i> : +60 82 415 353
-				</p>
-				<p>
-				<i class="fa fa-envelope"></i> :
-				<a href="mailto:craftpophousekuching@gmail.com">craftpophousekuching@gmail.com
-				</a>
-				</p>
-				<p>
-					Hours : Monday - Friday: 9:00 AM to 5:00 PM
-				</p>
-				<p>
-					Public Holidays : Closed
-				</p>
-			</div>
+		<div style="text-align:center;">
+			<h3>We're Got Your Back</h3>
+				<h5>Can't find what you need in FAQ page? Get in touch with our friendly team here.</h5>
+				<img src="images/custservice.png" alt="Customer Service Team">
+				<p style="font-weight: bold">Click <a href="https://tawk.to/chat/5ec938268ee2956d73a3e401/default" target="_blank">here</a> to chat with us now!</p>
+				</br>
 		</div>
 		<!-- /.row -->
 
-		<!-- Contact Form -->
-		<!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+		<!-- Customer Service Form -->
 		<div class="row">
 			<div class="col-lg-8 mb-4">
-				<h3>Send Us A Message</h3>
-				<form method="post" action="form-to-email.php" name="sentMessage" id="contactForm" >
+				<h3>Send Us An Email Now</h3>
+				<h6>We will get back to you as soon as possible.</h6>
+				<form method="post" action="custservice-to-email.php" name="sentMessage" id="contactForm" >
 					<div class="control-group form-group">
 						<div class="controls">
 							<label>Full Name:</label>
@@ -108,27 +84,27 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 					
 					<div class="control-group form-group">
 						<div class="controls">
-							<label>Phone Number:</label>
-							<input type="tel" class="form-control" name="phone" id="phone" placeholder="+6 019 800 8888" required autofocus>
-						</div>
-					</div>
-					
-					<div class="control-group form-group">
-						<div class="controls">
 							<label>Email Address:</label>
-							<input type="email" class="form-control" name="email" id="email" placeholder="johnlee@gmail.com" required autofocus>
+							<input type="email" class="form-control" name="email" id="email" placeholder="Johnlee@gmail.com" required autofocus>
 						</div>
 					</div>
 					
 					<div class="control-group form-group">
 						<div class="controls">
-							<label>Message:</label>
-							<textarea rows="5" cols="80" class="form-control" name="message" id="message" placeholder="Enter your message here..." required autofocus  maxlength="999" style="resize:none"></textarea>
+							<label>Title</label>
+							<input type="text" class="form-control" name="title" id="title" placeholder="Refund / Return / Others" required autofocus>
+						</div>
+					</div>
+					
+					<div class="control-group form-group">
+						<div class="controls">
+							<label>Descriptions:</label>
+							<textarea rows="5" cols="80" class="form-control" name="message" id="message" placeholder="Enter your descriptions here..." required autofocus  maxlength="999" style="resize:none"></textarea>
 						</div>
 					</div>
 					<div id="success"></div>
 					<!-- For success/fail messages -->
-					<button type="submit" class="btn btn-primary" id="submit" name="submit" value="Send Form">Send Message</button>
+					<button type="submit" class="btn btn-primary" id="submit" name="submit" value="Send Form">Send Email</button>
 				</form>
 			</div>
 		</div>
