@@ -77,16 +77,11 @@ session_start();
 					<div class="product-description" data-name="<?php echo $product['product_title']; ?>" data-price="<?php echo number_format($product['product_price'], 2); ?>">
 						<h1 class="page-header"><?php echo $product['product_title']; ?></h1>
 						
-						<div class="mx-auto">
-							<ul class="list">
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-								<li><i class="fa fa-star"></i></li>
-							</ul>
+						<div>
+						<?php 
+							include'admin/ratings.php';
+						?>
 						</div>
-
 					
 						<h3><b><em class="item_price"> RM <?php echo number_format($product['product_price'], 2); ?></em></b></h3>
 		            	

@@ -300,6 +300,28 @@ INSERT INTO `user_info` (`user_id`, `first_name`, `last_name`, `email`, `passwor
 (2, 'Xavier', 'Lee', 'xavierlee@gmail.com', '1234567890abcd', '0190800991', 'Simpang Tiga');
 
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rating_system`
+--
+
+CREATE TABLE `rating_system` (
+	`rating_id` int(10) NOT NULL,
+	`rateindex` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rating_system`
+--
+
+INSERT INTO `rating_system` (`rating_id`, `rateindex`) VALUES
+(1, '3'),
+(2, '4');
+
+-- --------------------------------------------------------
+
+
 --
 -- Table structure for table `tbl_comment`
 --
@@ -403,7 +425,12 @@ ALTER TABLE `products`
 ALTER TABLE `user_info`
   ADD PRIMARY KEY (`user_id`);
 
-
+--
+-- Indexes for table `rating_system`
+--
+ALTER TABLE `rating_system`
+  ADD PRIMARY KEY (`rating_id`);
+  
 
 --
 -- Indexes for table `tbl_comment`
@@ -483,7 +510,14 @@ ALTER TABLE `user_info`
   MODIFY `user_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+--
+-- AUTO_INCREMENT for table `rating_system`
+--
+ALTER TABLE `rating_system`
+  MODIFY `rating_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+ 
 
+--
 --
 -- AUTO_INCREMENT for table `tbl_comment`
 --

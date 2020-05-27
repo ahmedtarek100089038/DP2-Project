@@ -28,7 +28,7 @@
 					<li><p class="strong"> Support </p></li>
 					<li><a href="termsandconditions.php"> Terms & Conditions </a></li>
 					<li><a href="faq.php"> FAQ </a></li>
-					<li><a href="#"> Feedback </a></li>
+					<li><a href="feedback_form.php"> Feedback </a></li>
 				</ul>
 			</div>
 			

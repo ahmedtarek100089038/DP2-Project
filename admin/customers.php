@@ -36,7 +36,7 @@
             echo "<td>" . $row['email'] . "</td>";
             echo "<td>" . $row['mobile'] . "</td>";
             echo "<td>" . $row['address1'] . "</td>";
-            echo "</tr>";
+			echo "</tr>";
             }
             echo "</table>";                                                                    
 }
