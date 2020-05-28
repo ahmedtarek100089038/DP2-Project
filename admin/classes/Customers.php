@@ -29,7 +29,7 @@ class Customers
 
 
 	public function getCustomersOrder(){
-		$query = $this->con->query("SELECT o.order_id, o.product_id, o.qty, o.trx_id, o.p_status, p.product_title, p.product_image, o.ship_det FROM orders o JOIN products p ON o.product_id = p.product_id");
+		$query = $this->con->query("SELECT o.order_id, o.product_id, o.qty, o.trx_id, o.p_status, o.s_process, p.product_title, p.product_image FROM orders o JOIN products p ON o.product_id = p.product_id");
 		$ar = [];
 		if (@$query->num_rows > 0) {
 			while ($row = $query->fetch_assoc()) {
@@ -42,16 +42,16 @@ class Customers
 	
 	public function updateShipping($post = null){
 		extract($post);
-		if (!empty($shipping_id) && !empty($e_shipping_title)) {
-			$q = $this->con->query("UPDATE orders SET ship_det = '$e_shipping_title' WHERE order_id = '$shipping_id'");
+		if (!empty($order_id) && !empty($e_s_process)) {
+			$q = $this->con->query("UPDATE orders SET s_process = '$e_s_process' WHERE order_id = '$order_id'");
 			if ($q) {
-				return ['status'=> 202, 'message'=> 'Brand updated'];
+				return ['status'=> 202, 'message'=> 'Shipping Process updated'];
 			}else{
 				return ['status'=> 202, 'message'=> 'Failed to run query'];
 			}
 			
 		}else{
-			return ['status'=> 303, 'message'=>'Invalid brand id'];
+			return ['status'=> 303, 'message'=>'Invalid Shipping Process'];
 		}
 
 	}
@@ -82,7 +82,7 @@ if (isset($_POST["GET_CUSTOMER_ORDERS"])) {
 }
 
 if (isset($_POST['edit_shipping'])) {
-	if (!empty($_POST['shipping_id'])) {
+	if (!empty($_POST['order_id'])) {
 		$c = new Customers();
 		echo json_encode($c->updateShipping($_POST));
 		exit();

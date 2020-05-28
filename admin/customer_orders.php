@@ -28,7 +28,17 @@
             </tr>
           </thead>
           <tbody id="customer_order_list">
-           
+            <tr>
+              <td>1</td>
+			  <td>1</td>
+              <td>10001</td>
+              <td>Name</td>
+              <td>1</td>
+              <td>Transaction ID</td>
+			  <td>Successful</td>
+			  <td>Pending</td>
+			  <td>Action</td>
+			</tr>
           </tbody>
         </table>
       </div>
@@ -50,19 +60,19 @@
       </div>
       <div class="modal-body">
         <form id="edit-shipping-form" enctype="multipart/form-data">
-          <div class="row">
-            <div class="col-12">
-              <input type="hidden" name="shipping_id">
-              <div class="form-group">
-                <label>Shipping Process</label>
-                <input type="text" name="e_shipping_title" class="form-control" placeholder="Enter Shipping Process">
-              </div>
-            </div>
-            <input type="hidden" name="edit_shipping" value="1">
-            <div class="col-12">
+			<div class="row">
+			<div class="col-12">
+				<input type="hidden" name="order_id">
+				<div class="form-group">
+					<label>Shipping Process</label>
+					<input type="text" name="e_s_process" class="form-control" placeholder="Update Shipping Process">
+				</div>
+		  </div>
+			<input type="hidden" name="edit_shipping_process" value="1">
+			<div class="col-12">
               <button type="button" class="btn btn-primary edit-shipping-btn">Update Shipping Process</button>
-            </div>
-          </div>
+			</div>
+         </div>
           
         </form>
       </div>

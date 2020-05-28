@@ -7,7 +7,7 @@
         $ratedIndex++;
 
         if (!$uID) {
-            $conn->query("INSERT INTO stars (rateIndex) VALUES ('$ratedIndex')");
+            $conn->query("INSERT INTO rating_system (rateIndex) VALUES ('$ratedIndex')");
             $sql = $conn->query("SELECT id FROM stars ORDER BY id DESC LIMIT 1");
             $uData = $sql->fetch_assoc();
             $uID = $uData['id'];
