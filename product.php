@@ -64,7 +64,7 @@ session_start();
 	
 		<div class="product content-wrapper">
 			<div class="preview col-md-6">	
-				<img src="<?php echo (!empty($product['product_image'])) ? 'images/'.$product['product_image'] : 'images/noimage.jpg'; ?>" width="100%" height="650" class="zoom" data-magnify-src="images/large-<?php echo $product['product_image']; ?>">
+				<img src="<?php echo (!empty($product['product_image'])) ? 'images/'.$product['product_image'] : 'images/noimage.jpg'; ?>" width="100%" height="550" class="zoom" data-magnify-src="images/large-<?php echo $product['product_image']; ?>">
 			</div>
 			<div class="col-md-6 mb-4">
 				<h1 class="name"><?=$product['product_title']?></h1>
