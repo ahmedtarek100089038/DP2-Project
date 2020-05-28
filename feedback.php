@@ -48,3 +48,25 @@ else {
 
 ob_end_flush();*/
 ?>
+
+<?php
+if(isset($_POST['submit'])) {
+	
+$name = $_POST['name'];
+$phone = $_POST['num'];
+$mailFrom = $_POST['email'];
+$message = $_POST['comments'];
+$satisfaction = $_POST['view'];
+$sender = 'From: ' .$mailFrom;
+$info = 'From: Craft Pop House.';
+$sendertxt = "We had received your feedback. Thank you for your submission.\n\n".$info;
+
+$txt = "You have received a feedback from the user: ".$name.".\n\n".$message;
+
+//Admin Receive
+mail('craftpophousekuching@gmail.com','New Feedback Form Submission From: ' .$mailFrom,$txt,$sender);
+
+//Sender Receive
+mail($mailFrom,'Thank you for sending us feedback!',$sendertxt,$sender);
+header("Location: feedback_form.php?feedbacksend");
+}

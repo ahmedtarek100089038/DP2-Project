@@ -42,6 +42,7 @@
 					<li><a href="termsandconditions.php"> Terms & Conditions </a></li>
 					<li><a href="faq.php"> FAQ </a></li>
 					<li><a href="feedback_form.php"> Feedback </a></li>
+					<li><a href="customerservice.php"> Customer Service </a></li>
 				</ul>
 			</div>
 			

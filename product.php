@@ -105,9 +105,6 @@ session_start();
 					<input type="submit" value="Add To Cart">
 				</form>
 				
-				<form  class="contseller" method="post">
-					<input type="submit" value=" Contact Seller">
-				</form>
 			</div>
 		</div>
 		

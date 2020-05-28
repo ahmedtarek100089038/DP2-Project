@@ -64,6 +64,8 @@
 						<a class="dropdown-item" href="termsandconditions.php">Terms and Conditions</a>
 						<div class="dropdown-divider"></div>
 						<a class="dropdown-item" href="feedback_form.php">Feedback</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="customerservice.php">Customer Service</a>
 					</div>
 				</li>	
 			</ul>
