@@ -35,11 +35,29 @@ include "./linker/top.php";
               <th>Quantity</th>
               <th>Transaction Id</th>
               <th>Payment Status</th>
+			  <th>Ratings</th>
             </tr>
           </thead>
-          <tbody id="customer_order_list">
-           
-          </tbody>
+			<tr>
+              <td>1</td>
+			  <td>1</td>
+              <td>10001</td>
+              <td>Pink Checkered Skirt</td>
+              <td>2</td>
+              <td>9L434522M7706801A	</td>
+			  <td>Successful</td>
+			  <td><?php include 'ratings.php'; ?></td>
+			</tr>
+			
+			<tr>
+              <td>2</td>
+			  <td>2</td>
+              <td>10002</td>
+              <td>Vintage Silver Necklace</td>
+              <td>1</td>
+              <td>7K3211222J75566801F</td>
+			  <td>Pending</td>
+			</tr>
         </table>
       </div>
     </main>

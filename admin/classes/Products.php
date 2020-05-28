@@ -496,7 +496,7 @@ if (isset($_POST['DELETE_CATEGORY'])) {
 	}
 }
 
-if (isset($_POST['EDIT_CATEGORY'])) {
+if (isset($_POST['edit_category'])) {
 	if (!empty($_POST['cat_id'])) {
 		$p = new Products();
 		echo json_encode($p->updateCategory($_POST));
@@ -507,7 +507,7 @@ if (isset($_POST['EDIT_CATEGORY'])) {
 	}
 }
 
-if (isset($_POST['ADD_BRAND'])) {
+if (isset($_POST['add_brand'])) {
 	if (isset($_SESSION['admin_id'])) {
 		$brand_title = $_POST['brand_title'];
 		if (!empty($brand_title)) {
@@ -532,7 +532,7 @@ if (isset($_POST['DELETE_BRAND'])) {
 	}
 }
 
-if (isset($_POST['EDIT_BRAND'])) {
+if (isset($_POST['edit_brand'])) {
 	if (!empty($_POST['brand_id'])) {
 		$p = new Products();
 		echo json_encode($p->updateBrand($_POST));

@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php include_once("./linker/top.php"); ?>
-<?php include_once("./linker/navbar1.php"); ?>
+<?php include_once("./linker/navbar.php"); ?>
 <div class="container-fluid">
   <div class="row">
     
@@ -8,7 +8,7 @@
 
       <div class="row">
       	<div class="col-10">
-      		<h2>Customer Orders</h2>
+      		<h2>Customers</h2>
       	</div>
       </div>
       
@@ -17,34 +17,24 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Order #</th>
-              <th>Product Id</th>
-              <th>Product Name</th>
-              <th>Quantity</th>
-              <th>Transaction Id</th>
-              <th>Payment Status</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>Address</th>
+			  <th>Ratings</th>
             </tr>
           </thead>
-			<tr>
-              <td>1</td>
-			  <td>1</td>
-              <td>10001</td>
-              <td>Pink Checkered Skirt</td>
-              <td>2</td>
-              <td>9L434522M7706801A	</td>
-			  <td>Successful</td>
-			  <td><?php include 'ratings.php'; ?></td>
-			</tr>
-			
-			<tr>
-              <td>2</td>
-			  <td>2</td>
-              <td>10002</td>
-              <td>Vintage Silver Necklace</td>
-              <td>1</td>
-              <td>7K3211222J75566801F</td>
-			  <td>Pending</td>
-			</tr>
+          <tbody id="customer_list">
+            <!-- <tr>
+              <td>Customer1</td>
+              <td>Customer2</td>
+              <td>Customer3</td>
+              <td>Customer4</td>
+              <td>Customer5</td>
+              <td>Customer6</td>
+              <td><a class="btn btn-sm btn-info"></a><a class="btn btn-sm btn-danger">Delete</a></td>
+            </tr> -->
+          </tbody>
         </table>
       </div>
     </main>
