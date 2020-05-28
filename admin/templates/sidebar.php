@@ -11,7 +11,7 @@
 
           ?>
 
-
+		</br>
           <li class="nav-item">
             <a class="nav-link <?php echo ($page == '' || $page == 'index.php') ? 'active' : ''; ?>" href="index.php">
               <span data-feather="home"></span>
