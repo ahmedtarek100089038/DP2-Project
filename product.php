@@ -79,7 +79,7 @@ session_start();
 						
 						<div>
 						<?php 
-							include'admin/ratings.php';
+							include'ratings.php';
 						?>
 						</div>
 					

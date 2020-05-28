@@ -62,7 +62,7 @@ $(document).ready(function(){
 								              '<td>'+ value.qty +'</td>'+
 								              '<td>'+ value.trx_id +'</td>'+
 								              '<td>'+ value.p_status +'</td>'+
-								            '</tr>';
+											  '</tr>';
 
 					});
 

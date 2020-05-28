@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php include_once("./linker/top.php"); ?>
-<?php include_once("./linker/navbar1.php"); ?>
+<?php include_once("./linker/navbar.php"); ?>
 <div class="container-fluid">
   <div class="row">
     
@@ -8,7 +8,7 @@
 
       <div class="row">
       	<div class="col-10">
-      		<h2>Customer Orders</h2>
+      		<h2>Customers</h2>
       	</div>
       </div>
       
@@ -17,30 +17,23 @@
           <thead>
             <tr>
               <th>#</th>
-              <th>Order #</th>
-              <th>Product Id</th>
-              <th>Product Name</th>
-              <th>Quantity</th>
-              <th>Transaction Id</th>
-              <th>Payment Status</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Mobile</th>
+              <th>Address</th>
 			  <th>Ratings</th>
-
             </tr>
           </thead>
-          <tbody id="customer_order_list">
-			<tr>
-				<td>1</td>
-				<td>1</td>
-				<td>10001</td>
-				<td>Name</td>
-				<td>1</td>
-				<td>Transaction ID</td>
-				<td>Successful</td>
-				<td><?php 
-					include'ratings.php';
-				?>
-				</td>
-			</tr>
+          <tbody id="customer_list">
+            <!-- <tr>
+              <td>Customer1</td>
+              <td>Customer2</td>
+              <td>Customer3</td>
+              <td>Customer4</td>
+              <td>Customer5</td>
+              <td>Customer6</td>
+              <td><a class="btn btn-sm btn-info"></a><a class="btn btn-sm btn-danger">Delete</a></td>
+            </tr> -->
           </tbody>
         </table>
       </div>

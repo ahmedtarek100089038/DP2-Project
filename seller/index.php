@@ -35,9 +35,20 @@ include "./linker/top.php";
               <th>Quantity</th>
               <th>Transaction Id</th>
               <th>Payment Status</th>
+			  <th>Ratings</th>
             </tr>
           </thead>
-          <tbody id="customer_order_list">
+          
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>10001</td>
+				<td>Name</td>
+				<td>1</td>
+				<td>Transaction ID</td>
+				<td>Successful</td>
+				<td><?php include 'ratings.php'; ?></td>
+			</tr>
            
           </tbody>
         </table>
