@@ -1,11 +1,41 @@
+
 <?php
 session_start();
+
 // Include functions and connect to the database using PDO MySQL
 include 'db.php';
 include 'functions.php';
 
+if(!isset($_SESSION['loggedin'])){
+	header('Location: index.php');
+}
+// We don't have the password or email info stored in sessions so instead we can get the results from the database.
+$stmt = $con->prepare('SELECT first_name, last_name, email, password, mobile, address1, photo FROM user_info WHERE user_id = ?');
+// In this case we can use the account ID to get the account info.
+$stmt->bind_param('i', $_SESSION['user_id']);
+$stmt->execute();
+$stmt->bind_result($first_name, $last_name, $email, $password, $mobile, $address1, $photo);
+$stmt->fetch();
+$stmt->close();
+
+
+if(isset($_SESSION['user_id'])){
+		$con = mysqli_connect("localhost", "root", "", "craftpophouse_db"); //Connection variable
+		$pdo = pdo_connect_mysql();
+		$stmt = $pdo->prepare("SELECT * FROM user_info WHERE user_id=:user_id");
+		$stmt->execute(['user_id'=>$_SESSION['user_id']]);
+		$loggedin = $stmt->fetch();
+		
+	}
+	
 
 ?>
+
+
+
+
+<?=template_header('profile')?>
+
 
 <!DOCTYPE html>
 
@@ -18,7 +48,7 @@ include 'functions.php';
 	
 	<!-- =========HEAD STARTS HERE========= -->
 <head>
-    <title>Craft Pop House | Login Page</title>
+    <title>Craft Pop House | Profile Page</title>
     <meta charset="utf-8">
     <meta name="author" content="DP2">
     <meta name="description" content="Craft Pop House Login Page">
@@ -46,56 +76,86 @@ include 'functions.php';
 		?>
 	
 	<div class="container">
-		<h1 class="mt-4 mb-3">Profile Page</h1>
-		<ol class="breadcrumb">
-			<li class="breadcrumb-item">
-				<a href="index.php">Home</a>
-			</li>
-			<li class="breadcrumb-item active">Profile Page</li>
-		</ol>
-	
-		  <p>Your account details are below:</p>
 		
+		<div class="profile content-wrapper">
+			
+			
+		
+		
+			<h1>Profile Page</h1>
+			
 				
-				<table>
+				
+				
+			<div class="col-md-12">
+				<img src="<?php echo (!empty($loggedin['photo'])) ? 'images/'.$loggedin['photo'] : 'images/profile.jpg'; ?>" class="profile-image">
+			</div>
+			
+			<p>Your account details are below:</p>
+			<?php
+								if(isset($_SESSION['error'])){
+									echo "
+										<div class='callout callout-danger btn btn-danger'>
+											".$_SESSION['error']."
+										</div>
+									";
+									unset($_SESSION['error']);
+								}
+
+								if(isset($_SESSION['success'])){
+									echo "
+										<div class='callout callout-success btn btn-success'>
+											".$_SESSION['success']."
+										</div>
+									";
+									unset($_SESSION['success']);
+								}
+					?>
+			<span class="pull-right">
+				<a href="#edit" class="btn btn-danger btn-flat btn-sm" data-toggle="modal"><i class="fa fa-edit"></i> Edit</a>
+	        </span>
+			
+			<table>
+				
+				<tbody>
 					<tr>
-						<td>First Name:</td>
-						<td></td>
+						<td>Name:</td>
+						<td><?php echo $loggedin['first_name'].' '.$loggedin['last_name'];?></td>
 					</tr>
+						
 					
-					<tr>
-						<td>Last Name:</td>
-						<td></td>
-					</tr>
 					<br />
 					<tr>
 						<td>Email:</td>
-						<td></td>
+						<td><?php echo $loggedin['email']; ?></td>
 					</tr>
 					
 					<tr>
 						<td>Password:</td>
-						<td></td>
+						<td><?php echo $loggedin['password']; ?></td>
 					</tr>
 					
 					<tr>
 						<td>Phone Number:</td>
-						<td></td>
+						<td><?php echo $loggedin['mobile']; ?></td>
 					</tr>
-					
+						
 					<tr>
 						<td>Address:</td>
-						<td></td>
+						<td><?php echo $loggedin['address1']; ?></td>
 					</tr>
-				</table>
-		  
+				</tbody>
+			</table>
+		</div>
 	</div>
+	
+	
 
 	<!-- PHP to launch Footer -->
 		<?php	
 			include_once'footer.php';
 		?>
-	
+		<?php include 'profile_modal.php'; ?>
 		
 	<!-- jQuery – required for Bootstrap's JavaScript plugins) --> 
     <script src="frameworks/js/jquery.min.js"></script>

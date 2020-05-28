@@ -21,11 +21,11 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 	
 	<!-- =========HEAD STARTS HERE========= -->
 <head>
-    <title>Craft Pop House | Feedback Form</title>
+    <title>Craft Pop House | Feedback Page</title>
     <meta charset="utf-8">
     <meta name="author" content="DP2">
-    <meta name="description" content="Craft Pop House Feedback Form">
-    <meta name="keywords" content="feedback, craft pop house">
+    <meta name="description" content="Craft Pop House Clothing Page">
+    <meta name="keywords" content="FeedBack, craft pop house">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	
 	<!--Boostrap-->

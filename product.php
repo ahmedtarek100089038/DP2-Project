@@ -2,7 +2,6 @@
 session_start();
 // Include functions and connect to the database using PDO MySQL
 	include 'functions.php';
-	include 'config.php';
 	$slug = $_GET['product'];
 	$pdo = pdo_connect_mysql();
 	$stmt = $pdo->query("SELECT *, products.product_title, categories.cat_title, products.product_id  FROM products LEFT JOIN categories ON categories.cat_id=products.cat_id where product_id = $slug");
@@ -10,6 +9,7 @@ session_start();
 
 ?>
 
+<?=template_header('Product')?>
 
 <!DOCTYPE html>
 
@@ -60,88 +60,57 @@ session_start();
 			</li>
 			<li class="breadcrumb-item active">Product Details Page</li>
 		</ol>
-		
-		
-		<!--Grid row-->
-		<div class="row wow fadeIn">
-			<!--Grid column-->
+	
+	
+		<div class="product content-wrapper">
 			<div class="preview col-md-6">	
-				<img src="<?php echo (!empty($product['product_image'])) ? 'images/'.$product['product_image'] : 'images/noimage.jpg'; ?>" width="100%" height="600" class="zoom" data-magnify-src="images/large-<?php echo $product['product_image']; ?>">
+				<img src="<?php echo (!empty($product['product_image'])) ? 'images/'.$product['product_image'] : 'images/noimage.jpg'; ?>" width="100%" height="650" class="zoom" data-magnify-src="images/large-<?php echo $product['product_image']; ?>">
 			</div>
-			<!--Grid column-->
-
-			<!--Grid column-->
 			<div class="col-md-6 mb-4">
-			<!--Content-->
-				<div id="site">
-					<div class="product-description" data-name="<?php echo $product['product_title']; ?>" data-price="<?php echo number_format($product['product_price'], 2); ?>">
-						<h1 class="page-header"><?php echo $product['product_title']; ?></h1>
-						
-						<div>
-						<?php 
-							include'admin/ratings.php';
-						?>
-						</div>
-					
-						<h3><b><em class="item_price"> RM <?php echo number_format($product['product_price'], 2); ?></em></b></h3>
-		            	
-						<hr>
-						
-						<p><b>Category:</b>  <?=$product['cat_title']?></p>
-							
-		           		<p><b>Description:</b></p>
-		    
-						<p><?php echo $product['product_desc']; ?></p>
-					
-						<hr>
+				<h1 class="name"><?=$product['product_title']?></h1>
 				
-						<div class="certified">
-							<ul>
-								<li><strong>Delivery time</strong><span>7 Working Days</span></li>
-								<li><strong>Certified</strong><span>Quality Assured</span></li>
-							</ul>
-						</div> 
-						
-						<hr>
+				<?php 
+					if(isset($_SESSION['loggedin'])){
+						include'admin/ratings.php';
+					}
+				?>
 				
-						<form class="form-inline" id="productForm">
-						
-							<div class="form-group">
-								<div class="input-group col-sm-12">
-									<h3 for="qty-1"><strong>Quantity:</strong></h3>
-			            			
-									<span class="input-group-btn">
-			            				<button type="button" id="minus" class="btn btn-default btn-flat btn-lg"><i class="fa fa-minus"></i></button>
-			            			</span>
-							       	
-									<input type="text" name="quantity" id="quantity" class="form-control input-lg" value="1" style="text-align: center;">
-							        
-									<span class="input-group-btn">
-							            <button type="button" id="add" class="btn btn-default btn-flat btn-lg"><i class="fa fa-plus"></i></button>
-							        </span>
-									
-									<input type="hidden" value="<?php echo $product['product_id']; ?>" name="id">
-							        
-								</div>
-								
-								<br><br><br><br>						
-			            			
-			            	</div>
-							
-							<button type="submit" class="btn btn-danger btn-lg btn-flat col-sm-12"><i class="fa fa-shopping-cart"></i> Add to Cart</button>
-		            	</form>
-						<br><br>
-						
-						<form class="form-inline" action="#" method="post">
-							<button type="submit" class="btn btn-primary btn-lg btn-flat col-sm-12"><i class="far fa-comment-dots"></i> Contact Seller</button>
-						</form>
-					</div>
+				<h3><b><em class="item_price"> RM <?php echo number_format($product['product_price'], 2); ?></em></b></h3>
+				
+				<hr>
+				
+				<p><b>Category:</b>  <?=$product['cat_title']?></p>
+				
+				<p><b>Description:</b></p>
+				
+				<div class="description">
+					<?=$product['product_desc']?>
 				</div>
-			<!--Content-->
+				
+				<hr>
+				
+				<div class="certified">
+					<ul>
+						<li><strong>Delivery time</strong><span>7 Working Days</span></li>
+						<li><strong>Certified</strong><span>Quality Assured</span></li>
+					</ul>
 				</div>
-				<!--Grid column-->
+				
+				<hr>
+				
+				<form action="index.php?page=cart" method="post">
+					<h5 ><strong>Quantity:</strong></h5>
+					<input type="number" name="quantity" value="1" min="1" max="<?=$product['product_qty']?>" placeholder="Quantity" required>
+					<input type="hidden" name="product_id" value="<?=$product['product_id']?>">
+					<input type="submit" value="Add To Cart">
+				</form>
+				
+				<form  class="contseller" method="post">
+					<input type="submit" value=" Contact Seller">
+				</form>
+			</div>
 		</div>
-		<!--Grid row-->
+		
 		<hr>
 
 		<!--Grid row-->
@@ -156,19 +125,33 @@ session_start();
 		
 	 <div class="container">
 		  
-		   <form method="POST" id="comment_form">
-			<div class="form-group">
-			 <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
-			</div>
-			<div class="form-group">
-			 <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5"></textarea>
-			</div>
-			<div class="form-group">
-			 <input type="hidden" name="comment_id" id="comment_id" value="0" />
-			 <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
-			</div>
+		  
+			<?php
+
+				if(isset($_SESSION['loggedin'])){
+
+					echo '
+					<form method="POST" id="comment_form">
+				<div class="form-group">
+				 <input type="text" name="comment_name" id="comment_name" class="form-control" placeholder="Enter Name" />
+				</div>
+				<div class="form-group">
+				 <textarea name="comment_content" id="comment_content" class="form-control" placeholder="Enter Comment" rows="5"></textarea>
+				</div>
+				<div class="form-group">
+				 <input type="hidden" name="comment_id" id="comment_id" value="0" />
+				 <input type="submit" name="submit" id="submit" class="btn btn-info" value="Submit" />
+				</div>
+				
+			   </form>
+			   
+			 
+				';
+					
+				}
+			?>
 			
-		   </form>
+		   
 		   
 		   <?php
 			include_once 'db.php';
@@ -183,21 +166,29 @@ session_start();
         <span id="count-number"><?php echo $count;?></span> Comment(s)
         </div>
 		<?php } ?>
+		
+		<?php
 
-		   <span id="comment_message"></span>
-		   <br />
-		   <div id="display_comment"></div>
+				if(isset($_SESSION['loggedin']) || !isset($_SESSION['loggedin'])){
+
+					echo '
+			
+			<span id="comment_message"></span>
+			<br />
+				<div id="display_comment"></div> '; } ?>
+		  
 		  </div>
-	
 
-    </div>
-	
-	
+
+	</div>
+		<!--Grid row-->
+
+
+
 	<!-- PHP to launch Footer -->
 		<?php	
 			include_once'footer.php';
 		?>
-
 	
 	<!-- jQuery – required for Bootstrap's JavaScript plugins) --> 
     <script src="frameworks/js/jquery.min.js"></script>
@@ -207,28 +198,7 @@ session_start();
 	<!--Start of Tawk.to Script-->
 	<script type='text/javascript' src="frameworks/js/livechat.js"></script>
 	
-	
-	<script>
-$(function(){
-	$('#add').click(function(e){
-		e.preventDefault();
-		var quantity = $('#quantity').val();
-		quantity++;
-		$('#quantity').val(quantity);
-	});
-	$('#minus').click(function(e){
-		e.preventDefault();
-		var quantity = $('#quantity').val();
-		if(quantity > 1){
-			quantity--;
-		}
-		$('#quantity').val(quantity);
-	});
-
-});
-</script>
-	
-	<script>
+<script>
 $(document).ready(function(){
  
  $('#comment_form').on('submit', function(event){
@@ -272,6 +242,7 @@ $(document).ready(function(){
   })
  }
 
+
  $(document).on('click', '.reply', function(){
   var comment_id = $(this).attr("id");
   $('#comment_id').val(comment_id);
@@ -280,6 +251,9 @@ $(document).ready(function(){
  
 });
 </script>
-
+	
 </body>
 </html>
+
+
+

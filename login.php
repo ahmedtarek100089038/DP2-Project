@@ -79,7 +79,7 @@ include 'functions.php';
 						<hr>
 				
 						<div class="forgotPassw">
-							<a href="#forgot">Forgot Password?</a>
+							<a href="register.php">Register a new account</a>
 						</div>
 				
 						<hr>

@@ -289,16 +289,18 @@ CREATE TABLE `user_info` (
 	`email` varchar(300) NOT NULL,
 	`password` varchar(300) NOT NULL,
 	`mobile` varchar(10) NOT NULL,
-	`address1` varchar(300) NOT NULL
+	`address1` varchar(300) NOT NULL,
+	`photo` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user_info`
 --
 
-INSERT INTO `user_info` (`user_id`, `first_name`, `last_name`, `email`, `password`, `mobile`, `address1`) VALUES
-(1, 'Simon', 'Lu', 'simonlu@gmail.com', '1234567890abc', '0198008888', 'Simpang Tiga'),
-(2, 'Xavier', 'Lee', 'xavierlee@gmail.com', '1234567890abcd', '0190800991', 'Simpang Tiga');
+INSERT INTO `user_info` (`user_id`, `first_name`, `last_name`, `email`, `password`, `mobile`, `address1`, `photo`) VALUES
+(1, 'Simon', 'Lu', 'simonlu@gmail.com', '1234567890abc', '0198008888', 'Simpang Tiga', 'thanos1.jpg'),
+(2, 'Xavier', 'Lee', 'xavierlee@gmail.com', '1234567890abcd', '0190800991', 'Simpang Tiga', 'thanos1.jpg');
+
 
 
 -- --------------------------------------------------------

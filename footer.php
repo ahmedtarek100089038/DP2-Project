@@ -6,12 +6,25 @@
 			<div class="col-lg-4 col-md-6 column one">	<!-- column 1 -->
 				<ul>
 					<li><p class="strong"> Categories </p></li>
-					<li><a href="product1.php"> Clothing </a></li>
-					<li><a href="product2.php"> Jewellery </a></li>
-					<li><a href="product3.php"> Soft Toys </a></li>
-					<li><a href="product4.php"> Homemade Items </a></li>
-					<li><a href="product5.php"> Room Decor </a></li>
-					<li><a href="product6.php"> Vintage Goods </a></li>
+					<?php
+					 
+						$pdo = pdo_connect_mysql();
+						try{
+						  $stmt = $pdo->prepare("SELECT * FROM categories");
+						  $stmt->execute();
+						  foreach($stmt as $row){
+							echo "
+							  <li><a href='category.php?category=".$row['cat_slug']."'>".$row['cat_title']."</a></li>
+					
+							";                  
+						  }
+						}
+						catch(PDOException $e){
+						  echo "There is some problem in connection: " . $e->getMessage();
+						}
+
+
+					  ?>
 				</ul>
 			</div>
 			
@@ -41,6 +54,6 @@
 		</div>
 		
 		<div class="bottom">	<!-- Page Information -->
-			<p> &copy; Copyright <strong><span>Craft Pop House</span></strong>. All Rights Reserved <br/> Last Updated: 24/05/2020</p>
+			<p> &copy; Copyright <strong><span>Craft Pop House</span></strong>. All Rights Reserved <br/> Last Updated: 28/05/2020</p>
 		</div>
 	</footer>

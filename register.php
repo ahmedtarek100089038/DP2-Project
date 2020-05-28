@@ -106,7 +106,12 @@ include 'functions.php';
 					<button id="btn" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
 					
 	
-				  	
+					<hr>
+					
+					<div class="forgotPassw">
+						<a href="login.php">I already have an account</a>
+					</div>
+				
 					<hr>
 				
 					<div class="hrOr">

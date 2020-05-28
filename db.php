@@ -1,6 +1,5 @@
 <?php
 
-require "constants.php";
 
 $servername = "localhost";
 $username = "root";

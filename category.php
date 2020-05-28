@@ -97,8 +97,6 @@ $pdo = pdo_connect_mysql();
 					<div class="recentlyadded content-wrapper">
 						<div class="products">
 							<?php
-		       			
-
 		       			try{
 		       			 	$inc = 3;	
 						    $stmt = $pdo->prepare("SELECT * FROM products WHERE cat_id = :catid");
@@ -141,8 +139,6 @@ $pdo = pdo_connect_mysql();
 						catch(PDOException $e){
 							echo "There is some problem in connection: " . $e->getMessage();
 						}
-
-
 		       		?>
 						</div>
 					</div>

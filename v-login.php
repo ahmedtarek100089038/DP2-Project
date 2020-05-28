@@ -42,10 +42,18 @@ if ($stmt = $con->prepare('SELECT user_id, password FROM user_info WHERE email =
 		$_SESSION['user_id'] = $id;
 		header('Location: index.php');
 	} else {
-		echo 'Incorrect password!';
+		echo"<script>
+			alert('Incorrect password! Please enter coorect Password!');
+			window.location.href='login.php';
+			</script>
+			";
 	}
 	} else {
-		echo 'Incorrect username!';
+		echo"<script>
+			alert('Incorrect username! Please enter coorect username!');
+			window.location.href='login.php';
+			</script>
+			";
 	}
 
 

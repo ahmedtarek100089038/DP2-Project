@@ -1,3 +1,146 @@
+nav .cart {
+	display: flex;
+	flex-basis: 0;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+}
+nav .cart a {
+	text-decoration: none;
+	color: #ffffff;
+	padding: 0 10px;
+}
+nav .cart a:hover {
+	color: #f0edee;
+}
+nav .cart a i {
+	font-size: 18px;
+}
+nav .cart a span {
+	display: inline-block;
+	text-align: center;
+	background-color: #ffffff;
+	border-radius: 50%;
+	color: #e93059;
+	font-size: 12px;
+	line-height: 16px;
+	width: 16px;
+	height: 16px;
+	font-weight: bold;
+	top: 22px;
+	right: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.content-wrapperr {
+	width: 1050px;
+	margin: 0 auto;
+}
+
+.cartt h1 {
+	display: block;
+	font-weight: normal;
+	margin: 0;
+	padding: 40px 0;
+	font-size: 24px;
+	text-align: center;
+	width: 100%;
+}
+.cartt table {
+	width: 100%;
+}
+ .cartt table thead td {
+	padding: 30px 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+ .cartt table thead td:last-child {
+	text-align: right;
+}
+ .cartt table tbody td {
+	padding: 20px 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+ .cartt table tbody td:last-child {
+	text-align: right;
+}
+ .cartt table .img {
+	width: 80px;
+}
+ .cartt table .remove {
+	color: #777777;
+	font-size: 12px;
+	padding-top: 3px;
+}
+ .cartt table .remove:hover {
+	text-decoration: underline;
+}
+ .cartt table .price {
+	color: #999999;
+}
+ .cartt table a {
+	text-decoration: none;
+	color: #555555;
+}
+ .cartt table input[type="number"] {
+	width: 68px;
+	padding: 10px;
+	border: 1px solid #ccc;
+	color: #555555;
+	border-radius: 5px;
+}
+ .cartt .subtotal {
+	text-align: right;
+	padding: 40px 0;
+}
+ .cartt .subtotal .text {
+	padding-right: 40px;
+	font-size: 18px;
+}
+ .cartt .subtotal .price {
+	font-size: 18px;
+	color: #999999;
+}
+ .cartt .buttons {
+	text-align: right;
+	padding-bottom: 40px;
+}
+ .cartt .buttons input[type="submit"] {
+	margin-left: 5px;
+	padding: 12px 20px;
+	border: 0;
+	background: #4e5c70;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 5px;
+}
+ .cartt .buttons input[type="submit"]:hover {
+	background: #434f61;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*=========================================================
@@ -88,143 +231,40 @@ background: linear-gradient(to bottom, #0083B0, #00B4DB); /* W3C, IE 10+/ Edge, 
 }
 
 
+nav ul li a .user-image {
+  float: left;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 0px;
+
+}
 
 
 
-.navbar-nav > .notifications-menu > .dropdown-menu,
-.navbar-nav > .messages-menu > .dropdown-menu,
-.navbar-nav > .tasks-menu > .dropdown-menu {
-  width: 280px;
-  padding: 0 0 0 0;
-  margin: 0;
-  top: 100%;
+
+.profile-image {
+
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
+
 }
-.navbar-nav > .notifications-menu > .dropdown-menu > li,
-.navbar-nav > .messages-menu > .dropdown-menu > li,
-.navbar-nav > .tasks-menu > .dropdown-menu > li {
-  position: relative;
-}
-.navbar-nav > .notifications-menu > .dropdown-menu > li.header,
-.navbar-nav > .messages-menu > .dropdown-menu > li.header,
-.navbar-nav > .tasks-menu > .dropdown-menu > li.header {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  background-color: #ffffff;
-  padding: 7px 10px;
-  border-bottom: 1px solid #f4f4f4;
-  color: #444444;
-  font-size: 14px;
-}
-.navbar-nav > .notifications-menu > .dropdown-menu > li.footer > a,
-.navbar-nav > .messages-menu > .dropdown-menu > li.footer > a,
-.navbar-nav > .tasks-menu > .dropdown-menu > li.footer > a {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  font-size: 12px;
-  background-color: #fff;
-  padding: 7px 10px;
-  border-bottom: 1px solid #eeeeee;
-  color: #444 !important;
-  text-align: center;
-}
-@media (max-width: 991px) {
-  .navbar-nav > .notifications-menu > .dropdown-menu > li.footer > a,
-  .navbar-nav > .messages-menu > .dropdown-menu > li.footer > a,
-  .navbar-nav > .tasks-menu > .dropdown-menu > li.footer > a {
-    background: #fff !important;
-    color: #444 !important;
+
+
+@media (max-width: 767px) {
+  nav ul li a .user-image {
+    float: none;
+    margin-right: 0;
+    margin-top: -8px;
+    line-height: 10px;
   }
 }
-.navbar-nav > .notifications-menu > .dropdown-menu > li.footer > a:hover,
-.navbar-nav > .messages-menu > .dropdown-menu > li.footer > a:hover,
-.navbar-nav > .tasks-menu > .dropdown-menu > li.footer > a:hover {
-  text-decoration: none;
-  font-weight: normal;
-}
-.navbar-nav > .notifications-menu > .dropdown-menu > li .menu,
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu,
-.navbar-nav > .tasks-menu > .dropdown-menu > li .menu {
-  max-height: 200px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow-x: hidden;
-}
-.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a,
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a,
-.navbar-nav > .tasks-menu > .dropdown-menu > li .menu > li > a {
-  display: block;
-  white-space: nowrap;
-  /* Prevent text from breaking */
-  border-bottom: 1px solid #f4f4f4;
-}
-.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a:hover,
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a:hover,
-.navbar-nav > .tasks-menu > .dropdown-menu > li .menu > li > a:hover {
-  background: #f4f4f4;
-  text-decoration: none;
-}
-.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a {
-  color: #444444;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding: 10px;
-}
-.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > .glyphicon,
-.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > .fa,
-.navbar-nav > .notifications-menu > .dropdown-menu > li .menu > li > a > .ion {
-  width: 20px;
-}
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a {
-  margin: 0;
-  padding: 10px 10px;
-}
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > div > img {
-  margin: auto 10px auto auto;
-  width: 40px;
-  height: 40px;
-}
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > h4 {
-  padding: 0;
-  margin: 0 0 0 45px;
-  color: #444444;
-  font-size: 15px;
-  position: relative;
-}
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > h4 > small {
-  color: #999999;
-  font-size: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > p {
-  margin: 0 0 0 45px;
-  font-size: 12px;
-  color: #888888;
-}
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a:before,
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a:after {
-  content: " ";
-  display: table;
-}
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a:after {
-  clear: both;
-}
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a:before,
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a:after {
-  content: " ";
-  display: table;
-}
-.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a:after {
-  clear: both;
-}
-
-
 
 
 nav ul li ul{
@@ -908,140 +948,6 @@ form input.qty {
 /*====================== CONTACT SELLER BUTTON FOR PRODUCT DETAILS PAGES END =====================*/
 
 
-/*====================== CART PAGE START =====================*/
-
-
-#shopping-cart {
-	margin: 1.5em 0;
-}
-
-#shopping-cart-actions {
-	margin: 1.5em 0;
-	padding: 0;
-	list-style: none;
-	text-align: center;
-}
-
-#shopping-cart-actions li {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.shopping-cart tr:nth-child(even) {
-	background: #fafafa;
-},
-
-.shopping-cart td.pdelete {
-	text-align: center;
-}
-
-.pdelete a,
-.pdelete a:hover {
-	color: #c00;
-	text-decoration: none;
-	font-size: 2.5em;
-	display: block;
-	text-align: center;
-}
-
-/*====================== CART PAGE END =====================*/
-
-/*====================== SHIPPING CART SECTION, SUB TOTAL PRICE & TOTAL PRICE FOR CART, CHECKOUT, ORDER PAGES START =====================*/
-
-.shopping-cart {
-	border: 1px solid #ddd;
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
-	table-layout: fixed;
-}
-
-.shopping-cart th {
-	font-size: 1.3em;
-	padding: 0.3em;
-	width: 33.3%;
-	border: 1px solid #ddd;
-	text-transform: uppercase;
-}
-
-.shopping-cart td {
-	padding: 0.3em;
-	width: 33.3%;
-	border: 1px solid #ddd;
-}
-
-#pricing {
-	padding: 0.5em;
-	margin: 1em 0;
-	background: #e3e3e3;
-}
-
-#sub-total, #shipping {
-	margin: 1.5em 0;
-	text-align: right;
-}
-
-#sub-total span,
-#shipping span {
-	margin-left: 1em;
-}
-
-#content > h1,
-#checkout-order-form h2 {
-	font-size: 2em;
-	text-align: center;
-	
-}
-
-#pricing #sub-total,
-#pricing #shipping {
-	margin: 1em 0;
-}
-
-/*====================== SHIPPING CART SECTION, SUB TOTAL PRICE & TOTAL PRICE FOR CART, CHECKOUT, ORDER PAGES END =====================*/
-
-
-/*====================== CHECKOUT FORM FOR CHECKOUT, ORDER PAGES START =====================*/
-
-#checkout-order-form {
-	margin: 1.5em 0;
-}
-
-#checkout-order-form input[type="text"] {
-	width: 200px;
-	display: block;
-	background: #fff;
-	border: 1px solid #ddd;
-	border-radius: 4px;
-	padding: 0.3em;
-	text-align: center;
-}
-
-#checkout-order-form select {
-	width: 200px;
-	display: block;
-}
-
-
-#checkout-form , #checkout-order-form  {
-	display: inline-block;
-	margin-left: 25%;
-	padding: 0;
-	list-style: none;
-	text-align: center;
-}
-
-
-#paypal-form{
-	margin-left: 45%;
-	margin-right: 50%;
-}
-
-/*====================== CHECKOUT FORM FOR CHECKOUT, ORDER PAGES END =====================*/
-
-
-
-
 /*============ Scroll-up Bottom START ====================*/
 
 #scroll-btn {
@@ -1068,7 +974,60 @@ form input.qty {
 /*============ Scroll-up Bottom END ====================*/
 
 
-/*====================== CARD SECTION FOR HOMEPAGE, CATEGORIES, PRODUCT DETAILS PAGES START =====================*/
+/*====================== PRODUCT DETAILS PAGES START =====================*/
+
+
+
+.product {
+	display: flex;
+	padding: 40px 0;
+}
+.product > div {
+	padding-left: 15px;
+}
+.product h1 {
+	font-size: 34px;
+	font-weight: normal;
+	margin: 0;
+	padding: 20px 0 10px 0;
+}
+.product .price {
+	display: block;
+	font-size: 22px;
+	color: #999999;
+}
+.product form {
+	display: flex;
+	flex-flow: column;
+	margin: 40px 0;
+}
+.product form input[type="number"] {
+	width: 400px;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	color: #555555;
+	border-radius: 5px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+}
+.product form input[type="submit"] {
+	background: #4e5c70;
+	border: 0;
+	color: #FFFFFF;
+	width: 400px;
+	padding: 12px 0;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.product form input[type="submit"]:hover {
+	background: #434f61;
+}
+
 
 .mid-2 p{
 	font-size:0.9em;
@@ -1095,46 +1054,46 @@ form input.qty {
 }
 
 
-.product-description .list {
+.product .list {
   display: inline-block;
   padding-left: 10px;
   padding-right: 10px;
 }
 
-.product-description .list li {
+.product .list li {
   display: inline-block;
 }
 
-.product-description .list li i {
+.product .list li i {
   display: inline-block;
   color: #fbd600;
 }
 
-.product-description .list li last{
+.product .list li last{
   display: inline-block;
   color: #DCDCDC;
 }
 
-.product-description .list li p {
+.product .list li p {
   font-size: 12px;
 }
 
 
-.product-description .certified {
+.product .certified {
     margin-top: 10px;
 }
 
-.product-description .certified ul {
+.product .certified ul {
     padding-left: 0;
 	
 }
 
-.product-description .certified ul li:not(first-child) {
+.product .certified ul li:not(first-child) {
 	margin-left: 70px;
 	margin-right: 50px;
 }
 
-.product-description .certified ul li {
+.product .certified ul li {
     display: inline-block;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
@@ -1148,7 +1107,7 @@ form input.qty {
 }
 
 
-.product-description .certified ul li  span {
+.product .certified ul li  span {
     display: block;
     color: #f51651;
     font-size: 13px;
@@ -1157,7 +1116,87 @@ form input.qty {
 	margin-top: 5px;
 }
 
-/*====================== CARD SECTION FOR HOMEPAGE, CATEGORIES, PRODUCT DETAILS PAGES END =====================*/
+
+.product .contseller {
+	display: flex;
+	flex-flow: column;
+	margin: 40px 0;
+}
+.product .contseller input[type="submit"] {
+	background: #1d77de;
+	border: 0;
+	color: #FFFFFF;
+	width: 400px;
+	padding: 12px 0;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.product .contseller input[type="submit"]:hover {
+	background: #4f94e3;
+}
+
+/*====================== PRODUCT DETAILS PAGE END =====================*/
+
+
+/*====================== Profile PAGE START =====================*/
+
+
+
+.profile h1 {
+	display: block;
+	font-weight: normal;
+	margin: 0;
+	padding: 40px 0;
+	font-size: 38px;
+	text-align: center;
+	width: 100%;
+}
+.profile p {
+	text-align: center;
+	font-size: 28px;
+}
+
+.profile table {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.profile table tbody td {
+	padding: 20px 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+.profile table tbody td:last-child {
+	text-align: left;
+}
+
+.profile .pull-right{
+	float: right;
+}
+
+/*====================== Profile PAGE END =====================*/
+
+
+
+/*====================== Placeorder PAGES START =====================*/
+
+.placeorder h1 {
+	display: block;
+	font-weight: normal;
+	margin-top: 40px;
+	padding: 40px 0;
+	font-size: 24px;
+	text-align: center;
+	width: 100%;
+}
+.placeorder p {
+	text-align: center;
+}
+
+/*====================== Placeorder PAGES END =====================*/
+
 
 
 /*=================== SUBSCRIBE SECTION START ====================*/
