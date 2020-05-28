@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php include_once("./templates/top.php"); ?>
-<?php include_once("./templates/navbar1.php"); ?>
+<?php include_once("./templates/navbar.php"); ?>
 <div class="container-fluid">
   <div class="row">
     
@@ -26,6 +26,7 @@
               <th>Quantity</th>
               <th>Category</th>
               <th>Brand</th>
+			  <th>Status</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -113,6 +114,12 @@
 		        		<input type="file" name="product_image" class="form-control">
 		        	</div>
         		</div>
+				<div class="col-12">
+        			<div class="form-group">
+		        		<label>Product Status</label>
+		        		<input type="text" name="product_status" class="form-control" placeholder="Product Status">
+		        	</div>
+        		</div>
         		<input type="hidden" name="add_product" value="1">
         		<div class="col-12">
         			<button type="button" class="btn btn-primary add-product">Add Product</button>
@@ -131,7 +138,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Product</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Update Product</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -189,15 +196,19 @@
               <div class="form-group">
                 <label>Product Image <small>(format: jpg, jpeg, png)</small></label>
                 <input type="file" name="e_product_image" class="form-control">
-
                 <img src="../images/clothing1.jpg" class="img-fluid" width="50">
-
               </div>
             </div>
+			<div class="col-12">
+        		<div class="form-group">
+		        	<label>Product Status</label>
+		        	<input type="text" name="e_product_status" class="form-control" placeholder="Product Status">
+		        </div>
+        	</div>
             <input type="hidden" name="pid">
             <input type="hidden" name="edit_product" value="1">
             <div class="col-12">
-              <button type="button" class="btn btn-primary submit-edit-product">Add Product</button>
+              <button type="button" class="btn btn-primary submit-edit-product">Update Product</button>
             </div>
           </div>
           

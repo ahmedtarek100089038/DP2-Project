@@ -6,7 +6,7 @@
     	<?php
     		if (isset($_SESSION['seller_id'])) {
     			?>
-    				<a class="nav-link" href="../seller/seller-logout.php"><p style="color:white;margin-top:10%;font-size:15px;" alt="click here to sign off">Hi: <?php echo $_SESSION["seller_name"]; ?></p></a>
+    				<a class="nav-link" href="../seller/seller-logout.php"><p style="color:white;margin-top:10%;font-size:15px;" alt="click here to sign off">Welcome: <?php echo $_SESSION["seller_name"]; ?></p></a>
     			<?php
     		}else{
     			$uriAr = explode("/", $_SERVER['REQUEST_URI']);

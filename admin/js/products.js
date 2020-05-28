@@ -27,6 +27,7 @@ $(document).ready(function(){
 								              '<td>'+ value.product_qty +'</td>'+
 								              '<td>'+ value.cat_title +'</td>'+
 								              '<td>'+ value.brand_title +'</td>'+
+											  '<td>'+ value.product_status +'</td>'+
 								              '<td><a class="btn btn-sm btn-info edit-product" style="color:#fff;"><span style="display:none;">'+JSON.stringify(value)+'</span><i class="fas fa-pencil-alt"></i></a>&nbsp;<a pid="'+value.product_id+'" class="btn btn-sm btn-danger delete-product" style="color:#fff;"><i class="fas fa-trash-alt"></i></a></td>'+
 								            '</tr>';
 
@@ -108,6 +109,7 @@ $(document).ready(function(){
 		$("input[name='e_product_price']").val(product.product_price);
 		$("input[name='e_product_keywords']").val(product.product_keywords);
 		$("input[name='e_product_image']").siblings("img").attr("src", "../images/"+product.product_image);
+		$("input[name='e_product_status']").val(product.product_status);
 		$("input[name='pid']").val(product.product_id);
 		$("#edit_product_modal").modal('show');
 

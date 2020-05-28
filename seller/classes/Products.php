@@ -33,7 +33,7 @@ class Products
 	}
 
 	public function getProducts(){
-		$q = $this->con->query("SELECT p.product_id, p.product_title, p.product_price,p.product_qty, p.product_desc, p.product_image, p.product_keywords, c.cat_title, c.cat_id, b.brand_id, b.brand_title FROM products p JOIN categories c ON c.cat_id = p.cat_id JOIN brands b ON b.brand_id = p.product_brand");
+		$q = $this->con->query("SELECT p.product_id, p.product_title, p.product_price, p.product_qty, p.product_desc, p.product_image, p.product_keywords, p.product_status, c.cat_title, c.cat_id, b.brand_id, b.brand_title FROM products p JOIN categories c ON c.cat_id = p.cat_id JOIN brands b ON b.brand_id = p.product_brand");
 		
 		$products = [];
 		if ($q->num_rows > 0) {
@@ -75,7 +75,8 @@ class Products
 								$product_qty,
 								$product_price,
 								$product_keywords,
-								$file){
+								$file,
+								$product_status){
 
 
 		$fileName = $file['name'];
@@ -92,7 +93,7 @@ class Products
 				$uniqueImageName = time()."_".$file['name'];
 				if (move_uploaded_file($file['tmp_name'], $_SERVER['DOCUMENT_ROOT']."/DP2-Project/images/".$uniqueImageName)) {
 					
-					$q = $this->con->query("INSERT INTO `products`(`cat_id`, `product_brand`, `product_title`, `product_qty`, `product_price`, `product_desc`, `product_image`, `product_keywords`) VALUES ('$category_id', '$brand_id', '$product_name', '$product_qty', '$product_price', '$product_desc', '$uniqueImageName', '$product_keywords')");
+					$q = $this->con->query("INSERT INTO `products`(`cat_id`, `product_brand`, `product_title`, `product_qty`, `product_price`, `product_desc`, `product_image`, `product_keywords`, `product_status`) VALUES ('$category_id', '$brand_id', '$product_name', '$product_qty', '$product_price', '$product_desc', '$uniqueImageName', '$product_keywords', '$product_status')");
 
 					if ($q) {
 						return ['status'=> 202, 'message'=> 'Product Added Successfully..!'];
@@ -123,7 +124,8 @@ class Products
 										$product_qty,
 										$product_price,
 										$product_keywords,
-										$file){
+										$file,
+										$product_status){
 
 
 		$fileName = $file['name'];
@@ -148,11 +150,12 @@ class Products
 										`product_price` = '$product_price', 
 										`product_desc` = '$product_desc', 
 										`product_image` = '$uniqueImageName', 
-										`product_keywords` = '$product_keywords'
+										`product_keywords` = '$product_keywords',
+										`product_status` = '$product_status'
 										WHERE product_id = '$pid'");
 
 					if ($q) {
-						return ['status'=> 202, 'message'=> 'Product Modified Successfully..!'];
+						return ['status'=> 202, 'message'=> 'Product Updated Successfully..!'];
 					}else{
 						return ['status'=> 303, 'message'=> 'Failed to run query'];
 					}
@@ -178,7 +181,8 @@ class Products
 										$product_desc,
 										$product_qty,
 										$product_price,
-										$product_keywords){
+										$product_keywords,
+										$product_status){
 
 		if ($pid != null) {
 			$q = $this->con->query("UPDATE `products` SET 
@@ -188,7 +192,8 @@ class Products
 										`product_qty` = '$product_qty', 
 										`product_price` = '$product_price', 
 										`product_desc` = '$product_desc',
-										`product_keywords` = '$product_keywords'
+										`product_keywords` = '$product_keywords',
+										`product_status` = '$product_status'
 										WHERE product_id = '$pid'");
 
 			if ($q) {
@@ -359,7 +364,8 @@ if (isset($_POST['add_product'])) {
 	&& !empty($product_qty)
 	&& !empty($product_price)
 	&& !empty($product_keywords)
-	&& !empty($_FILES['product_image']['name'])) {
+	&& !empty($_FILES['product_image']['name'])
+	&& !empty($product_status)) {
 		
 
 		$p = new Products();
@@ -370,7 +376,8 @@ if (isset($_POST['add_product'])) {
 								$product_qty,
 								$product_price,
 								$product_keywords,
-								$_FILES['product_image']);
+								$_FILES['product_image'],
+								$product_status);
 		
 		echo json_encode($result);
 		
@@ -398,7 +405,8 @@ if (isset($_POST['edit_product'])) {
 	&& !empty($e_product_desc)
 	&& !empty($e_product_qty)
 	&& !empty($e_product_price)
-	&& !empty($e_product_keywords) ) {
+	&& !empty($e_product_keywords)
+	&& !empty($product_status)	) {
 		
 		$p = new Products();
 
@@ -412,7 +420,8 @@ if (isset($_POST['edit_product'])) {
 								$e_product_qty,
 								$e_product_price,
 								$e_product_keywords,
-								$_FILES['e_product_image']);
+								$_FILES['e_product_image'],
+								$e_product_status);
 		}else{
 			$result = $p->editProductWithoutImage($pid,
 								$e_product_name,
@@ -421,7 +430,8 @@ if (isset($_POST['edit_product'])) {
 								$e_product_desc,
 								$e_product_qty,
 								$e_product_price,
-								$e_product_keywords);
+								$e_product_keywords,
+								$e_product_status);
 		}
 
 		echo json_encode($result);

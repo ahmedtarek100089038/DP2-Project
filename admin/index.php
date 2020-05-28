@@ -8,7 +8,7 @@ include "./templates/top.php";
 
 ?>
  
-<?php include "./templates/navbar1.php"; ?>
+<?php include "./templates/navbar.php"; ?>
 
 <div class="container-fluid">
   <div class="row">
