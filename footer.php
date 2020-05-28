@@ -55,6 +55,6 @@
 		</div>
 		
 		<div class="bottom">	<!-- Page Information -->
-			<p> &copy; Copyright <strong><span>Craft Pop House</span></strong>. All Rights Reserved <br/> Last Updated: 28/05/2020</p>
+			<p> &copy; Copyright <strong><span>Craft Pop House</span></strong>. All Rights Reserved <br/> Last Updated: 29/05/2020</p>
 		</div>
 	</footer>
