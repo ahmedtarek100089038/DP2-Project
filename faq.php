@@ -62,9 +62,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		<div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
 			<div class="card">
 				<div class="card-header" role="tab" id="headingOne">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">HOW CAN I TRACK MY ORDERS & PAYMENT?</a>
-					</h5>
+					</h6>
 				</div>
 
 				<div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
@@ -76,9 +76,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			
 			<div class="card">
 				<div class="card-header" role="tab" id="headingTwo">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">HOW DO I CANCEL MY ORDERS BEFORE I MAKE A PAYMENT?</a>
-					</h5>
+					</h6>
 				</div>
 				
 				<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
@@ -90,9 +90,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			
 			<div class="card">
 				<div class="card-header" role="tab" id="headingThree">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">HOW CAN I CHANGE MY SHIPPING ADDRESS?</a>
-					</h5>
+					</h6>
 				</div>
 				
 				<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
@@ -104,9 +104,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			
 			<div class="card">
 				<div class="card-header" role="tab" id="headingFour">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">HOW DO YOU SHIP MY ORDERS?</a>
-					</h5>
+					</h6>
 				</div>
 				
 				<div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
@@ -118,9 +118,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		  
 			<div class="card">
 				<div class="card-header" role="tab" id="headingFive">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">WHY MUST I MAKE PAYMENT IMMEDIATELY AT CHECKOUT?</a>
-					</h5>
+					</h6>
 				</div>
 			
 				<div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
@@ -132,9 +132,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			
 			<div class="card">
 				<div class="card-header" role="tab" id="headingSix">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">WHAT HAPPENS IF THERE'S BEEN A DELIVERY MISHAP TO MY ORDER? (DAMAGED OR LOST DELIVERY)</a>
-					</h5>
+					</h6>
 				</div>
 				
 				<div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingSix">
@@ -152,9 +152,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			
 			<div class="card">
 				<div class="card-header" role="tab" id="headingSeven">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">HOW SOON WILL I RECEIVE MY REFUND AFTER CANCELLING AN ORDER?</a>
-					</h5>
+					</h6>
 				</div>
 			
 				<div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingSeven">
@@ -170,9 +170,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			
 			<div class="card">
 				<div class="card-header" role="tab" id="headingEight">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight" aria-expanded="false" aria-controls="collapseEight">HOW CAN I RECEIVE THE LATEST PROMOTION NEWS FROM CRAFT POP HOUSE?</a>
-					</h5>
+					</h6>
 				</div>
 			
 				<div id="collapseEight" class="collapse" role="tabpanel" aria-labelledby="headingEight">
@@ -184,9 +184,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			
 			<div class="card">
 				<div class="card-header" role="tab" id="headingNine">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseNine" aria-expanded="false" aria-controls="collapseNine">WILL THE REFUNDED AMOUNT INCLUDE SHIPPING FEE?</a>
-					</h5>
+					</h6>
 				</div>
 			
 				<div id="collapseNine" class="collapse" role="tabpanel" aria-labelledby="headingNine">
@@ -203,9 +203,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		<div class="mb-4" id="accordion" role="tablist" aria-multiselectable="true">
 			<div class="card">
 				<div class="card-header" role="tab" id="headingTen">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTen" aria-expanded="false" aria-controls="collapseTen">WHAT ACTION IS NEEDED IF THE BUYER KEPT ON DELAYING THE PAYMENTS?</a>
-					</h5>
+					</h6>
 				</div>
 			
 				<div id="collapseTen" class="collapse" role="tabpanel" aria-labelledby="headingTen">
@@ -219,9 +219,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				</div>
 				
 				<div class="card-header" role="tab" id="headingEleven">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">WHAT IS THE PROCEDURE IF THE BUYER WOULD LIKE TO CANCEL THE ORDER?</a>
-					</h5>
+					</h6>
 				</div>
 			
 				<div id="collapseEleven" class="collapse" role="tabpanel" aria-labelledby="headingEleven">
@@ -235,9 +235,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				
 								
 				<div class="card-header" role="tab" id="headingTwelve">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">THE BUYER IS NOT HAPPY WITH MY PRODUCTS, WHAT SHOULD I DO?</a>
-					</h5>
+					</h6>
 				</div>
 			
 				<div id="collapseTwelve" class="collapse" role="tabpanel" aria-labelledby="headingTwelve">
@@ -252,9 +252,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				</div>
 				
 				<div class="card-header" role="tab" id="headingThirteen">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">CAN I SELL MY PRODUCT(S) OUTSIDE OF MALAYSIA?</a>
-					</h5>
+					</h6>
 				</div>
 			
 				<div id="collapseThirteen" class="collapse" role="tabpanel" aria-labelledby="headingThirteen">
@@ -265,9 +265,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				</div>
 				
 				<div class="card-header" role="tab" id="headingFourteen">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">DOES CRAFT POP HOUSE CHARGE SELLERS ANY COMMISSIONS OR FEES?</a>
-					</h5>
+					</h6>
 				</div>
 			
 				<div id="collapseFourteen" class="collapse" role="tabpanel" aria-labelledby="headingFourteen">
@@ -279,9 +279,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				</div>
 				
 				<div class="card-header" role="tab" id="headingFifteen">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">DO I HAVE TO PAY FOR MY PARCEL DELIVERIES?</a>
-					</h5>
+					</h6>
 				</div>
 			
 				<div id="collapseFifteen" class="collapse" role="tabpanel" aria-labelledby="headingFifteen">
@@ -292,9 +292,9 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 				
 				
 				<div class="card-header" role="tab" id="headingSixteen">
-					<h5 class="mb-0">
+					<h6 class="mb-0">
 						<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">WHEN AND HOW WILL I GET PAID?</a>
-					</h5>
+					</h6>
 				</div>
 			
 				<div id="collapseSixteen" class="collapse" role="tabpanel" aria-labelledby="headingSixteen">

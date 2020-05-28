@@ -87,7 +87,7 @@ $recently_added_products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 			<input type="text" placeholder="Your Name (optional)" name="name" required=""  />
 			<input type="email" placeholder="Your Email (optional)" name="email" required=""/>
 			<input type="text" placeholder="Your Number (optional)" name="num" required="" /><br>
-			<center><input type="submit" value="submit Feedback" class="agileinfo"/></center>
+			<center><input type="submit" name="submit" value="submit Feedback" class="agileinfo"/></center>
 	  </form>
 	</div>
 	</div>
