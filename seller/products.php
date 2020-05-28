@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php include_once("./linker/top.php"); ?>
-<?php include_once("./linker/navbar.php"); ?>
+<?php include_once("./linker/navbar1.php"); ?>
 <div class="container-fluid">
   <div class="row">
     

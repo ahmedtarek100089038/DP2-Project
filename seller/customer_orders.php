@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <?php include_once("./linker/top.php"); ?>
-<?php include_once("./linker/navbar.php"); ?>
+<?php include_once("./linker/navbar1.php"); ?>
 <div class="container-fluid">
   <div class="row">
     
@@ -8,7 +8,7 @@
 
       <div class="row">
       	<div class="col-10">
-      		<h2>Customers</h2>
+      		<h2>Customer Orders</h2>
       	</div>
       </div>
       

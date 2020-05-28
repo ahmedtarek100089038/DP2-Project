@@ -26,7 +26,6 @@ class Credentials
 			if ($q) {
 				return ['status'=> 202, 'message'=> 'Seller Created Successfully'];
 			}
-
 		}
 	}
 
