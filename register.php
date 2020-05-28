@@ -103,7 +103,7 @@ include 'functions.php';
 					</div>
 				
 					<br/>
-					<button id="btn" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Register</button>
+					<button id="btn" class="btn btn-lg btn-primary btn-block text-uppercase" name="submit" type="submit">Register</button>
 					
 	
 					<hr>

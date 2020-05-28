@@ -81,8 +81,26 @@ $con->close();
 
 
 ?>
+
+<?php
+if(isset($_POST['submit'])) {
+	
+$name = $_POST['first_name'];
+$mailFrom = $_POST['email'];
+$sender = 'From: ' .$mailFrom;
+$info = 'From: Craft Pop House.';
+$sendertxt = "We had received your registration. Thank you for choosing Craft Pop House.\n\n".$info;
+
+$txt = "A new account registration from the user: ".$name;
+
+//Admin Receive
+mail('craftpophousekuching@gmail.com','New Account Registration From: ' .$mailFrom,$txt,$sender);
+
+//Sender Receive
+mail($mailFrom,'Thank you for your registration!',$sendertxt,$sender);
+}
 		
-		
+?>		
 		
 		
 		
