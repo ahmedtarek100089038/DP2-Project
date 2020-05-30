@@ -44,7 +44,7 @@ Third: Log in to the live chat API.
 2. Log in using the following account.
 3. Email Address: craftpophousekuching@gmail.com
 4. Password: craftpophouseadmin
-5. Join the live chat with seller in that site.
+5. Join the live chat with customer in that site.
 
 Forth: Log in to the Gmail account of the website.
 1. Go to https://mail.google.com/mail/u/0/#inbox
